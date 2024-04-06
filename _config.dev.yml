@@ -1,0 +1,7 @@
+#
+# Use this file in local development to override Production settings
+# 
+
+title: Democratizing Data (dev)
+url: "http://localhost:4000"
+baseurl: "/site"
