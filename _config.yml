@@ -23,7 +23,8 @@ email: democratizing.data.project@gmail.com
 domain: democratizingdata.ai       # if you want to force HTTPS, specify the domain
 url: "https://democratizingdata.ai" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""          # the subpath of your site, e.g. /blog
-
+include:
+  - CNAME
 #theme: minima
 #plugins:
 #  - jekyll-feed
