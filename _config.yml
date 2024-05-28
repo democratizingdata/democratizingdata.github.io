@@ -25,6 +25,7 @@ url: "https://democratizingdata.ai" # the base hostname & protocol for your site
 baseurl: ""          # the subpath of your site, e.g. /blog
 include:
   - CNAME
+#  - events/2024/havard-data-science-review/index.html
 #theme: minima
 #plugins:
 #  - jekyll-feed
