@@ -1417,7 +1417,7 @@ Styleguide Trumps.Scopes.DropCaps
         // highlight active page in navigation menu
         const activeMenu = $('li.nav-item > a.nav-link').filter(function(idx) { return window.location.pathname.indexOf(this.pathname) >= 0 });
         activeMenu.parent().addClass('active');
-        const activeMenuItem = $('a.dropdown-item').filter(function(idx) { return this.pathname === window.location.pathname });
+        const activeMenuItem = $('a.dropdown-item').filter(function(idx) { return this.host === "democratizingdata.ai" && this.pathname === window.location.pathname });
         activeMenuItem.addClass('active');
     </script>
 
