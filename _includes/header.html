@@ -1,4 +1,4 @@
-f<header>
+<header>
     <!-- Sponsor Logos -->
     <div id="header-branding" class="branding-header ">
 
@@ -34,30 +34,22 @@ f<header>
 
             <ul class="s-cms-nav  navbar-nav  ml-auto">
                 <!-- All top-level CMS controlled nav elements handled here. -->
-                <li class="nav-item dropdown">
-                    <a href="{{ site.baseurl }}/agencies" class="nav-link dropdown-toggle"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Agencies
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </a>
-                    <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item"
-                            href="{{ site.baseurl }}/agencies/usda-landing/" role="menuitem">
-                            Economic Research Service (ERS) - USDA
-                        </a>
-                        <!-- <a class="dropdown-item"
-                            href="https://public.tableau.com/app/profile/national.agricultural.statistics.service/viz/5WsofNASSDataUsage/The5Ws"
-                            role="menuitem" target="_blank">
-                            National Agricultural Statistics Service (NASS) - USDA
-                        </a> -->
-                        <a class="dropdown-item" href="https://nces.ed.gov/" role="menuitem" target="_blank">
-                            National Center for Education Statistics (NCES) - ED
-                        </a>
-                        <a class="dropdown-item" href="{{ site.baseurl }}/agencies/ncses-landing/" role="menuitem">
-                            National Center for Science and Engineering Statistics (NCSES) - NSF
-                        </a>
-                        <a class="dropdown-item" href="https://www.noaa.gov/" role="menuitem" target="_blank">
-                            National Oceanic and Atmospheric Administration (NOAA)
+                <li class="nav-item dropdown"><a href="{{ site.baseurl }}/tools" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Our Tools
+                        <span class="sr-only">Toggle Dropdown</span></a>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"
+                            href="{{ site.baseurl }}/dashboards/usda-landing/" role="menuitem">
+                            USDA Data Usage Dashboard
+                        </a><a class="dropdown-item"
+                            href="{{ site.baseurl }}/dashboards/workforce-landing/" role="menuitem">
+                            Workforce & Skills Data Usage Dashboard
+                        </a><a class="dropdown-item"
+                            href="{{ site.baseurl }}/tools/national-data-platform/" role="menuitem">
+                            National Data Platform
+                        </a><a class="dropdown-item"
+                            href="{{ site.baseurl }}/tools/github-repository/" role="menuitem">
+                            GitHub Repository
                         </a>
                     </div>
                 </li>
@@ -65,27 +57,13 @@ f<header>
                         Events
 
                     </a></li>
-                <li class="nav-item dropdown"><a href="{{ site.baseurl }}/tools" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Our Tools
-                        <span class="sr-only">Toggle Dropdown</span></a>
-                    <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"
-                            href="{{ site.baseurl }}/tools/our-approach/" role="menuitem">
-                            Our Approach
-                        </a><a class="dropdown-item" href="{{ site.baseurl }}/tools/dashboards/" role="menuitem">
-                            Dashboards
-                        </a><a class="dropdown-item" href="{{ site.baseurl }}/tools/jupyter-notebooks/" role="menuitem">
-                            Jupyter Notebooks
-                        </a>
-                    </div>
-                </li>
                 <li class="nav-item dropdown"><a href="{{ site.baseurl }}/resources" class="nav-link dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Resources
                         <span class="sr-only">Toggle Dropdown</span></a>
                     <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"
-                            href="https://democratizingdata.gitbook.io/userguide/" role="menuitem" target="_blank">
-                            User Guide
+                            href="{{ site.baseurl }}/resources/technical-report/" role="menuitem">
+                            Technical Report
                         </a><a class="dropdown-item"
                             href="https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data" role="menuitem"
                             target="_blank">
@@ -102,10 +80,10 @@ f<header>
                     <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"
                             href="{{ site.baseurl }}/about/overview/" role="menuitem">
                             Overview
+                        </a><a class="dropdown-item" href="{{ site.baseurl }}/tools/our-approach/" role="menuitem">
+                            Our Approach
                         </a><a class="dropdown-item" href="{{ site.baseurl }}/about/team/" role="menuitem">
-                            Our Team
-                        </a><a class="dropdown-item" href="{{ site.baseurl }}/about/data-partners/" role="menuitem">
-                            Data Partners
+                            Our Team & Partners
                         </a><a class="dropdown-item" href="{{ site.baseurl }}/about/contact-us/" role="menuitem">
                             Contact Us
                         </a>
