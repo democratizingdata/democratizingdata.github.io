@@ -23,12 +23,56 @@ email: democratizing.data.project@gmail.com
 domain: democratizingdata.ai       # if you want to force HTTPS, specify the domain
 url: "https://democratizingdata.ai" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""          # the subpath of your site, e.g. /blog
+
+# SEO and Performance
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /:collection/:year/:title/
+  tools:
+    output: true
+    permalink: /:collection/:title/
+  resources:
+    output: true
+    permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "tools"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "resources"
+    values:
+      layout: "default"
+
 include:
   - CNAME
-#  - events/2024/havard-data-science-review/index.html
-#theme: minima
-#plugins:
-#  - jekyll-feed
+
+# Markdown processing
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Exclude from processing.
 # The following items will not be processed, by default.

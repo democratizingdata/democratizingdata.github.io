@@ -1,0 +1,61 @@
+{% comment %}
+  Learning section include
+  Usage: {% include learning-section.html %}
+{% endcomment %}
+
+<div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+        <img src="{{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__680.0x352.0_subsampling-2.png"
+             alt="Understanding" srcset="
+                 {{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__576x576_subsampling-2.png 576w,
+                 {{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__680.0x352.0_subsampling-2.png 680.0w
+             " sizes="
+                 (max-width: 576px) 576px,
+                 680.0px
+             " class="img-fluid">
+        <div class="purplebg">
+            <h2 style="font-size: 24px; color: white;">{{ site.data.learning.podcasts.title }}</h2>
+            {% include podcast-carousel.html %}
+        </div>
+    </div>
+
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+        <img src="{{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png"
+             alt="Insights" srcset="
+                 {{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__576x576_subsampling-2.png 576w,
+                 {{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png 684.0w
+             " sizes="(max-width: 576px) 576px,684.0px
+             " class="img-fluid">
+        <div class="purplebg">
+            <h2 style="font-size: 24px; color: white;">{{ site.data.learning.presentations.title }}</h2>
+            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.presentations.description }}</p>
+            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.presentations.additional_info }}</p>
+            <p class="purplebg" style="font-size: 18px;">Learn more <a href="{{ site.baseurl }}{{ site.data.learning.presentations.learn_more_link }}"
+                    style="color: #ffffff;" target="_blank">here</a></p>
+        </div>
+    </div>
+
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+        <img src="{{ site.baseurl }}/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__684.0x352.0_q85_subsampling-2.jpg"
+             alt="COPAFS" srcset="
+                 {{ site.baseurl }}/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__576x576_q85_subsampling-2.jpg 576w,
+                 {{ site.baseurl }}/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__684.0x352.0_q85_subsampling-2.jpg 684.0w
+             " sizes="
+                 (max-width: 576px) 576px,
+                 684.0px
+             " class="img-fluid">
+        <div class="purplebg">
+            <h2 style="font-size: 24px; color: white;">{{ site.data.learning.trusted_data.title }}</h2>
+            <h3 style="font-size: 20px;">{{ site.data.learning.trusted_data.subtitle }}</h3>
+            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.trusted_data.description }}</p>
+            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.trusted_data.call_to_action }}</p>
+            <center style="margin: 20px 0;">
+                <a class="c-button c-button--primary" href="{{ site.data.learning.trusted_data.questionnaire_link }}" target="_blank" 
+                   style="background-color: white; color: #6f42c1; border: 2px solid white; font-weight: bold;">
+                   {{ site.data.learning.trusted_data.questionnaire_text }}
+                </a>
+            </center>
+            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.trusted_data.contact_info }}</p>
+        </div>
+    </div>
+</div> 

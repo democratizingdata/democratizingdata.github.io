@@ -1,0 +1,18 @@
+{% if site.data.site.event_banner.enabled %}
+<div class="dd-event-banner">
+    <div class="container">
+        <h1 class="dd-event-bannertext" style="margin-bottom: 0px;">{{ site.data.site.event_banner.title }}</h1>
+        <h1 class="dd-event-bannertext">
+            <a class="dd-event-banner-a" href="{{ site.baseurl }}{{ site.data.site.event_banner.link }}">
+                "{{ site.data.site.event_banner.event_title }}"
+            </a>
+        </h1>
+        <p class="dd-event-bannertext2">{{ site.data.site.event_banner.description }}</p>
+        <center>
+            <a class="c-button c-button--primary header-button" href="{{ site.baseurl }}{{ site.data.site.event_banner.link }}">
+                {{ site.data.site.event_banner.button_text }}
+            </a>
+        </center>
+    </div>
+</div>
+{% endif %} 

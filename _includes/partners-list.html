@@ -1,0 +1,33 @@
+{% comment %}
+  Partners list include
+  Usage: {% include partners-list.html %}
+{% endcomment %}
+
+<div class="row">
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <p class="bottom-spacer"><b><a href="{{ site.baseurl }}{{ site.data.site.about.team_link }}">{{ site.data.site.about.team_text }}</a></b></p>
+        
+        <p style="font-size: 17px; margin-bottom: 15px;"><strong>{{ site.data.partners.federal_agencies.title }}</strong></p>
+        <ul style="font-size: 17px;">
+            {% for partner in site.data.partners.federal_agencies.partners %}
+            <li><a href="{{ partner.url }}" style="text-decoration: none;" target="_blank">{{ partner.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="col">
+        <p style="font-size: 17px; margin-bottom: 15px; margin-top: 30px;"><strong>{{ site.data.partners.current_team.title }}</strong></p>
+        <ul style="font-size: 17px;">
+            {% for member in site.data.partners.current_team.members %}
+            <li><a href="{{ member.url }}" style="text-decoration: none;" target="_blank">{{ member.name }}</a></li>
+            {% endfor %}
+        </ul>
+        
+        <p style="font-size: 17px; margin-bottom: 15px; margin-top: 20px;"><strong>{{ site.data.partners.previous_team.title }}</strong></p>
+        <ul style="font-size: 17px;">
+            {% for member in site.data.partners.previous_team.members %}
+            <li><a href="{{ member.url }}" style="text-decoration: none;" target="_blank">{{ member.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div> 

@@ -1,0 +1,20 @@
+podcasts:
+  title: "Learn from listening to podcasts"
+  image: "/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png"
+
+presentations:
+  title: "Learn from presentations and webinars"
+  description: "The federal agencies have made a number of presentations – at the Federal Committee on Survey Methodology and, <a href=\"https://copafs.org/\" style=\"color: #ffffff;\" target=\"_blank\">The Council of Professional Associations on Federal Statistics.</a>"
+  additional_info: "There have also been a number of <a href=\"/events/2023/usda-webinar/\" style=\"color: #ffffff;\" target=\"_blank\">webinars</a> and conferences on how data contribute to the <a href=\"https://hdsr.mitpress.mit.edu/value-of-science\" style=\"color: #ffffff;\" target=\"_blank\">value of science</a>."
+  learn_more_link: "/events/"
+  image: "/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png"
+
+trusted_data:
+  title: "Help Shape the Future of Trusted Data"
+  subtitle: "Complete the Trusted Data Questionnaire"
+  description: "This June, C-FARE will host a webinar \"Envisioning food and agricultural data for the future: Developing a new roadmap for trusted data.\" The webinar will look at what it means for data to be trusted from different perspectives. It will feature presentations and new ideas from national experts who are working to build trusted data infrastructures."
+  call_to_action: "We want to hear from you. Your input will help shape the conversation about the future of trusted data infrastructures."
+  questionnaire_link: "https://forms.gle/pdogioD6D9h1DtTG9"
+  questionnaire_text: "Complete Questionnaire"
+  contact_info: "Contact us <a href=\"/about/contact-us/\" style=\"color: #ffffff;\" target=\"_blank\">here</a> to stay informed about upcoming events and opportunities."
+  image: "/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg" 

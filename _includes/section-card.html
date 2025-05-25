@@ -1,0 +1,31 @@
+{% comment %}
+  Section card include
+  Usage: {% include section-card.html section=site.data.site.sections.federal_agencies %}
+{% endcomment %}
+
+<div class="card--plain">
+    <h5>{{ include.section.title }}</h5>
+    <h2>{{ include.section.heading }}</h2>
+    <p>{{ include.section.description }}</p>
+    
+    {% if include.section.working_group %}
+    <div class="card--plain" style="background-color: #e3f2fd; padding: 15px; margin: 20px 0; border-left: 4px solid #2196f3;">
+        <h5 style="color: #1976d2; margin-bottom: 10px;">{{ include.section.working_group.title }}</h5>
+        <p style="margin-bottom: 10px;">{{ include.section.working_group.description }}</p>
+        <a class="c-button c-button--primary" href="{{ include.section.working_group.link }}" target="_blank">
+            {{ include.section.working_group.button_text }}
+        </a>
+    </div>
+    {% endif %}
+    
+    <div class="row"></div>
+    
+    {% if include.section.links %}
+    <p>Read more 
+        {% for link in include.section.links %}
+            <a href="{{ link.url }}"{% if link.external %} target="_blank"{% endif %}>{{ link.text }}</a>
+            {% unless forloop.last %} and {% endunless %}
+        {% endfor %}
+    </p>
+    {% endif %}
+</div> 

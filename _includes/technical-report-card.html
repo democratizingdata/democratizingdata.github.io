@@ -1,0 +1,17 @@
+<div class="card--plain" style="background-color: #e8f5e8; padding: 20px; margin: 20px 0; border-left: 4px solid #28a745;">
+    <h4 style="color: #155724; margin-bottom: 15px;">{{ site.data.site.technical_report.title }}</h4>
+    <p style="margin-bottom: 15px; color: #155724;">{{ site.data.site.technical_report.description }}</p>
+    <div style="margin-bottom: 15px;">
+        <h5 style="color: #155724;">Report Highlights:</h5>
+        <ul style="color: #155724; font-size: 0.9rem;">
+            {% for highlight in site.data.site.technical_report.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a class="c-button c-button--primary" href="{{ site.baseurl }}{{ site.data.site.technical_report.link }}">
+            {{ site.data.site.technical_report.button_text }}
+        </a>
+    </div>
+</div> 

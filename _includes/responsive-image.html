@@ -1,0 +1,17 @@
+{% comment %}
+  Responsive image include
+  Usage: {% include responsive-image.html src="path/to/image" alt="Alt text" class="additional-classes" %}
+  Note: src should be the base path without the size suffix
+{% endcomment %}
+
+<img src="{{ site.baseurl }}{{ include.src }}__684.0x352.0_subsampling-2.png"
+     alt="{{ include.alt | default: '' }}"
+     srcset="
+         {{ site.baseurl }}{{ include.src }}__576x576_subsampling-2.png 576w,
+         {{ site.baseurl }}{{ include.src }}__684.0x352.0_subsampling-2.png 684.0w
+     "
+     sizes="
+         (max-width: 576px) 576px,
+         684.0px
+     "
+     class="img-fluid{% if include.class %} {{ include.class }}{% endif %}"> 

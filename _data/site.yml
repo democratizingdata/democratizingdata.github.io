@@ -1,0 +1,72 @@
+title: "Democratizing Data"
+description: "A Search And Discovery Platform For Public Data Assets"
+tagline: "Show how public data are being used in science so that the government can make more transparent public investments. We use machine learning and natural language processing to enable government agencies and researchers to quickly find the information they need."
+
+# Event Banner
+event_banner:
+  enabled: true
+  title: "Upcoming Webinar"
+  event_title: "Envisioning food and agricultural data for the future: Developing a new roadmap for trusted data"
+  description: "Join us on June 20, 2025 at 12:00 PM Eastern for this important discussion on the future of trusted data infrastructures"
+  link: "/events/2025/june-20-webinar/"
+  button_text: "Register for Webinar"
+
+# Main sections
+sections:
+  federal_agencies:
+    title: "FOR FEDERAL AGENCIES"
+    heading: "Evidence-based policy making"
+    description: "The platform provides federal agencies with comprehensive insights into how their data assets are being utilized in scientific research. Our machine learning algorithms analyze over 90 million documents to identify dataset citations, research applications, and impact metrics that support evidence-based decision making."
+    links:
+      - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
+        text: "here"
+        external: true
+  
+  researchers:
+    title: "FOR RESEARCHERS"
+    heading: "Discover trusted datasets"
+    description: "Researchers can use our platform to discover relevant federal datasets for their work, understand how data have been used in similar studies, and access tools that facilitate responsible data use. Our search and discovery tools help connect researchers with the data they need for high-quality research."
+    links:
+      - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
+        text: "here"
+        external: true
+      - url: "https://www.bea.gov/system/files/2022-10/acdeb-year-2-report.pdf"
+        text: "here"
+        external: true
+  
+  get_involved:
+    title: "GET INVOLVED"
+    heading: "Join our community"
+    description: "Help us build a more transparent and accessible data ecosystem. Join our working group to contribute to the development of trusted data infrastructures, participate in our webinars and workshops, and help shape the future of data democratization."
+    working_group:
+      title: "Join Our Working Group"
+      description: "Sign up to be part of our working group and contribute to the development of a roadmap for improving the accessibility, transparency, and relevance of trusted data infrastructures."
+      link: "https://forms.gle/3kmVojPBE4Y37Dk17"
+      button_text: "Join Working Group"
+    links:
+      - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
+        text: "here"
+        external: true
+      - url: "https://mitpress.mit.edu/9780262542746/democratizing-our-data/"
+        text: "here"
+        external: true
+
+# Technical Report
+technical_report:
+  title: "📋 Technical Report Available"
+  description: "Access comprehensive technical documentation for federal agencies and research institutions. Our technical report provides detailed documentation of the Democratizing Data platform's architecture, methodology, and implementation guidelines."
+  highlights:
+    - "150+ pages of technical documentation"
+    - "Machine learning algorithms and NLP techniques"
+    - "Implementation guidelines for federal agencies"
+    - "Performance metrics and evaluation results"
+    - "API documentation and integration strategies"
+  link: "/resources/technical-report/"
+  button_text: "Access Technical Report"
+
+# About section
+about:
+  title: "About us"
+  description: "The Democratizing Data initiative is working with a number of government agencies to ensure that data are more effectively used for public decision-making."
+  team_link: "/about/team/"
+  team_text: "Our Team & Partners" 
