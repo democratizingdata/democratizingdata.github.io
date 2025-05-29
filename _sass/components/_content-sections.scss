@@ -65,7 +65,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 15px;
-    color: #0056b3;
+    color: #003d82; // Darker blue for better contrast (was #0056b3)
   }
   
   &__title {
@@ -110,7 +110,7 @@
         position: relative;
         
         &::marker {
-          color: #0056b3;
+          color: #003d82; // Darker blue for better contrast (was #0056b3)
         }
       }
     }
@@ -161,7 +161,7 @@
     border-top-color: #0056b3;
     
     .c-section-card__category {
-      color: #0056b3;
+      color: #003d82; // Darker blue for better contrast (was #0056b3)
     }
   }
   
@@ -169,7 +169,7 @@
     border-top-color: #1e7e34;
     
     .c-section-card__category {
-      color: #1e7e34;
+      color: #155724; // Darker green for better contrast (was #1e7e34)
     }
   }
   
@@ -177,7 +177,7 @@
     border-top-color: #6f42c1;
     
     .c-section-card__category {
-      color: #6f42c1;
+      color: #4c2a85; // Darker purple for better contrast (was #6f42c1)
     }
   }
   
@@ -221,12 +221,12 @@
     margin-top: 30px;
     
     a {
-      color: #0056b3;
+      color: #003d82; // Darker blue for better contrast (was #0056b3)
       text-decoration: none;
       font-weight: 500;
       
       &:hover {
-        color: #0056b3;
+        color: #002a5c; // Even darker on hover for better contrast
         text-decoration: underline;
       }
     }
