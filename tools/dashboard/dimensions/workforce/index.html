@@ -1,0 +1,56 @@
+---
+title: Workforce Dashboard - Dimensions
+layout: default
+description: "Analyze workforce and skills dataset usage in research through our interactive dashboard powered by machine learning and natural language processing."
+---
+
+<!-- Workforce Dashboard Hero Section -->
+<section class="c-hero c-hero--dashboard">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="c-hero__content">
+                    <div class="c-hero__category">
+                        <span class="c-category-badge c-category-badge--tools">DASHBOARD</span>
+                    </div>
+                    <h1 class="c-hero__title">
+                        Workforce & Skills Dataset Analysis
+                    </h1>
+                    <p class="c-hero__description">
+                        Discover how workforce and skills datasets are being utilized in research and policy development. This interactive dashboard reveals usage patterns, research trends, and impact across employment, education, and skills development domains.
+                    </p>
+                    <div class="c-hero__actions">
+                        <a href="#dashboard-content" class="c-button c-button--primary">
+                            Explore Dashboard
+                            <svg class="c-button__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                        <a href="/tools/dashboard/workforce-landing/" class="c-button c-button--secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="c-hero__image">
+                    <img src="{{ site.baseurl }}/assets/img/hero/workforce-skills.jpg"
+                         alt="Workforce and skills data analysis dashboard with employment analytics"
+                         class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard Content Section -->
+<section id="dashboard-content" class="c-content-section">
+    <div class="container-fluid">
+        <div class="c-dashboard-container">
+            <iframe frameborder="0" 
+                    src="https://appserver.democratizingdata.ai:5601/app/dashboards?auth_provider_hint=anonymous1#/view/fdbe9fa3-7275-4e5b-b850-939575cc85a6?embed=true&_g=(time%3A(from%3Anow-15m%2Cto%3Anow))&show-time-filter=false" 
+                    id="dashboard"
+                    title="Workforce and Skills Dataset Usage Dashboard"
+                    aria-label="Interactive dashboard showing workforce and skills dataset usage patterns and research impact">
+            </iframe>
+        </div>
+    </div>
+</section>

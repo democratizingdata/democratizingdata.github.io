@@ -20,6 +20,9 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
 end
 
+# Add faraday-retry for Faraday v2.0+ compatibility
+gem "faraday-retry", "~> 2.2"
+
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
 

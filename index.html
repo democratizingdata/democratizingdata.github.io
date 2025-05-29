@@ -7,83 +7,62 @@ layout: default
 
 {% include main-banner.html %}
 
-<div class="o-section">
+<section class="c-content-sections" aria-labelledby="featured-content-heading">
     <div class="container">
-        <div class="card--plain">
-            <div class="row">
-                <div class="col">
+        <h2 id="featured-content-heading" class="sr-only">Featured Content</h2>
+        <div class="row">
+            <div class="col-12">
+                <article class="c-technical-report-wrapper">
                     {% include technical-report-card.html %}
-                </div>
-                <div class="col">
-                    <img src="{{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png"
-                         alt="" srcset="
-                             {{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__576x576_subsampling-2.png 576w,
-                             {{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png 684.0w
-                         " sizes="
-                             (max-width: 576px) 576px,
-                             684.0px
-                         " class="img-fluid bottom-spacer">
-                </div>
+                </article>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="o-section">
-        <div class="row">
-            <div class="col col-12 col-sm-12 col-md-6 col-lg-4 offset-lg-0 col-xl-4 offset-xl-0">
-                {% include section-card.html section=site.data.site.sections.federal_agencies %}
-            </div>
-            <div class="col col-12 col-sm-12 col-md-6 col-lg-4 offset-lg-0 col-xl-4 offset-xl-0">
-                {% include section-card.html section=site.data.site.sections.researchers %}
-            </div>
-            <div class="col col-12 col-sm-12 col-md-6 col-lg-4 offset-lg-0 col-xl-4 offset-xl-0">
-                {% include section-card.html section=site.data.site.sections.get_involved %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="o-section o-section--style-muted o-section graybg">
+<section class="c-main-sections" aria-labelledby="main-sections-heading">
     <div class="container">
+        <h2 id="main-sections-heading" class="sr-only">Key Areas</h2>
         <div class="row">
-            <div class="col col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                <h5>HOW TO LEARN AND CONTRIBUTE</h5>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="c-section-card-wrapper">
+                    {% include section-card.html section=site.data.site.sections.federal_agencies %}
+                </article>
             </div>
-            <div class="col col-12 col-sm-12 col-md-6 col-lg-4 offset-lg-1 col-xl-4 offset-xl-1 d-none d-lg-block">
-                <img src="{{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__647.0x100.0_subsampling-2.png"
-                     alt="" srcset="  
-                         {{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__576x576_subsampling-2.png 576w,
-                         {{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__647.0x100.0_subsampling-2.png 647.0w
-                     " sizes="
-                         (max-width: 576px) 576px,
-                         647.0px
-                     " class="img-fluid">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="c-section-card-wrapper">
+                    {% include section-card.html section=site.data.site.sections.researchers %}
+                </article>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <article class="c-section-card-wrapper">
+                    {% include section-card.html section=site.data.site.sections.get_involved %}
+                </article>
             </div>
         </div>
-        {% include learning-section.html %}
     </div>
-</div>
+</section>
 
-<div class="container">
-    <div class="o-section">
-        <div class="row">
-            <div class="col col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7">
-                <h2>{{ site.data.site.about.title }}</h2>
-                <p class="bottom-spacer">{{ site.data.site.about.description }}</p>
+{% include learning-section.html %}
+
+<section class="c-about-section">
+    <div class="container">
+        <article class="c-about-content">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h2 class="c-about-section__title">{{ site.data.site.about.title }}</h2>
+                    <p class="c-about-section__description">{{ site.data.site.about.description }}</p>
+                </div>
+                <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                    <img src="{{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__647.0x100.0_subsampling-2.png" alt="Elegant decorative flourish design element complementing the about section content" class="c-about-section__flourish">
+                </div>
             </div>
-            <div class="col col-12 col-sm-12 col-md-6 col-lg-4 offset-lg-1 col-xl-4 offset-xl-1 d-none d-lg-block">
-                <img src="{{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__647.0x100.0_subsampling-2.png"
-                     alt="" srcset="
-                         {{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__576x576_subsampling-2.png 576w,
-                         {{ site.baseurl }}/assets/img/thumbnails/03/16/0316cb21-3711-47bf-96cf-ff48c0c54aa5/flourish1.png__647.0x100.0_subsampling-2.png 647.0w
-                     " sizes="
-                         (max-width: 576px) 576px,
-                         647.0px
-                     " class="img-fluid">
-            </div>
-        </div>
+        </article>
+    </div>
+</section>
+
+<aside class="c-partners-section">
+    <div class="container">
         {% include partners-list.html %}
     </div>
-</div>
+</aside>

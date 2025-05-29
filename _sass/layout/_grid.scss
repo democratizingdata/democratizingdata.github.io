@@ -1,0 +1,283 @@
+/*! Responsive Grid System */
+/*! Based on Credential Engine design analysis and modern CSS Grid practices */
+
+// =============================================================================
+// GRID CONTAINER
+// =============================================================================
+
+.grid {
+  display: grid;
+  gap: var(--ce-space-layout-md);
+  
+  @include respond-to(sm) {
+    gap: var(--ce-space-layout-lg);
+  }
+}
+
+// =============================================================================
+// GRID COLUMNS
+// =============================================================================
+
+// Auto-fit grid (responsive columns)
+.grid-auto {
+  @include grid-auto-fit(250px, var(--ce-space-layout-md));
+  
+  @include respond-to(sm) {
+    @include grid-auto-fit(300px, var(--ce-space-layout-lg));
+  }
+  
+  @include respond-to(lg) {
+    @include grid-auto-fit(350px, var(--ce-space-layout-xl));
+  }
+}
+
+// Fixed column grids
+.grid-1 { @include grid-columns(1); }
+.grid-2 { @include grid-columns(2); }
+.grid-3 { @include grid-columns(3); }
+.grid-4 { @include grid-columns(4); }
+.grid-5 { @include grid-columns(5); }
+.grid-6 { @include grid-columns(6); }
+
+// Responsive column grids
+.grid-responsive-2 {
+  @include grid-columns(1);
+  
+  @include respond-to(sm) {
+    @include grid-columns(2);
+  }
+}
+
+.grid-responsive-3 {
+  @include grid-columns(1);
+  
+  @include respond-to(sm) {
+    @include grid-columns(2);
+  }
+  
+  @include respond-to(lg) {
+    @include grid-columns(3);
+  }
+}
+
+.grid-responsive-4 {
+  @include grid-columns(1);
+  
+  @include respond-to(sm) {
+    @include grid-columns(2);
+  }
+  
+  @include respond-to(md) {
+    @include grid-columns(3);
+  }
+  
+  @include respond-to(lg) {
+    @include grid-columns(4);
+  }
+}
+
+// =============================================================================
+// GRID GAPS
+// =============================================================================
+
+.grid-gap-xs { gap: var(--ce-space-component-xs); }
+.grid-gap-sm { gap: var(--ce-space-component-sm); }
+.grid-gap-md { gap: var(--ce-space-component-md); }
+.grid-gap-lg { gap: var(--ce-space-component-lg); }
+.grid-gap-xl { gap: var(--ce-space-component-xl); }
+
+.grid-gap-layout-xs { gap: var(--ce-space-layout-xs); }
+.grid-gap-layout-sm { gap: var(--ce-space-layout-sm); }
+.grid-gap-layout-md { gap: var(--ce-space-layout-md); }
+.grid-gap-layout-lg { gap: var(--ce-space-layout-lg); }
+.grid-gap-layout-xl { gap: var(--ce-space-layout-xl); }
+
+// =============================================================================
+// GRID ITEM UTILITIES
+// =============================================================================
+
+// Column span utilities
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-full { grid-column: 1 / -1; }
+
+// Row span utilities
+.row-span-1 { grid-row: span 1; }
+.row-span-2 { grid-row: span 2; }
+.row-span-3 { grid-row: span 3; }
+.row-span-4 { grid-row: span 4; }
+.row-span-full { grid-row: 1 / -1; }
+
+// Grid item positioning
+.col-start-1 { grid-column-start: 1; }
+.col-start-2 { grid-column-start: 2; }
+.col-start-3 { grid-column-start: 3; }
+.col-start-4 { grid-column-start: 4; }
+.col-start-5 { grid-column-start: 5; }
+.col-start-6 { grid-column-start: 6; }
+
+.col-end-1 { grid-column-end: 1; }
+.col-end-2 { grid-column-end: 2; }
+.col-end-3 { grid-column-end: 3; }
+.col-end-4 { grid-column-end: 4; }
+.col-end-5 { grid-column-end: 5; }
+.col-end-6 { grid-column-end: 6; }
+.col-end-7 { grid-column-end: 7; }
+
+// =============================================================================
+// FLEXBOX GRID ALTERNATIVE
+// =============================================================================
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ce-space-layout-md);
+  
+  @include respond-to(sm) {
+    gap: var(--ce-space-layout-lg);
+  }
+}
+
+.flex-grid > * {
+  flex: 1 1 250px;
+  min-width: 0; // Prevent flex items from overflowing
+}
+
+// Flex grid column controls
+.flex-grid-2 > * { flex-basis: calc(50% - var(--ce-space-layout-md) / 2); }
+.flex-grid-3 > * { flex-basis: calc(33.333% - var(--ce-space-layout-md) * 2 / 3); }
+.flex-grid-4 > * { flex-basis: calc(25% - var(--ce-space-layout-md) * 3 / 4); }
+
+// =============================================================================
+// RESPONSIVE GRID UTILITIES
+// =============================================================================
+
+// Mobile-specific grids
+@include respond-to-max(sm) {
+  .grid-mobile-1 { @include grid-columns(1); }
+  .grid-mobile-2 { @include grid-columns(2); }
+  .grid-mobile-stack { @include grid-columns(1); }
+}
+
+// Tablet-specific grids
+@include respond-between($breakpoint-sm, $breakpoint-lg) {
+  .grid-tablet-2 { @include grid-columns(2); }
+  .grid-tablet-3 { @include grid-columns(3); }
+}
+
+// Desktop-specific grids
+@include respond-to(lg) {
+  .grid-desktop-3 { @include grid-columns(3); }
+  .grid-desktop-4 { @include grid-columns(4); }
+  .grid-desktop-5 { @include grid-columns(5); }
+  .grid-desktop-6 { @include grid-columns(6); }
+}
+
+// =============================================================================
+// SPECIAL LAYOUT PATTERNS
+// =============================================================================
+
+// Sidebar layout
+.grid-sidebar {
+  display: grid;
+  gap: var(--ce-space-layout-lg);
+  
+  @include respond-to(lg) {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.grid-sidebar-right {
+  display: grid;
+  gap: var(--ce-space-layout-lg);
+  
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+// Hero layout
+.grid-hero {
+  display: grid;
+  gap: var(--ce-space-layout-lg);
+  align-items: center;
+  min-height: 60vh;
+  
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+  }
+}
+
+// Card grid with consistent heights
+.grid-cards {
+  @include grid-auto-fit(300px, var(--ce-space-layout-md));
+  align-items: start;
+  
+  > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Feature grid (asymmetric)
+.grid-features {
+  display: grid;
+  gap: var(--ce-space-layout-lg);
+  
+  @include respond-to(md) {
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// =============================================================================
+// GRID ALIGNMENT UTILITIES
+// =============================================================================
+
+// Justify content (horizontal alignment)
+.grid-justify-start { justify-content: start; }
+.grid-justify-center { justify-content: center; }
+.grid-justify-end { justify-content: end; }
+.grid-justify-between { justify-content: space-between; }
+.grid-justify-around { justify-content: space-around; }
+.grid-justify-evenly { justify-content: space-evenly; }
+
+// Align content (vertical alignment)
+.grid-align-start { align-content: start; }
+.grid-align-center { align-content: center; }
+.grid-align-end { align-content: end; }
+.grid-align-between { align-content: space-between; }
+.grid-align-around { align-content: space-around; }
+.grid-align-evenly { align-content: space-evenly; }
+
+// Justify items (horizontal alignment of grid items)
+.grid-items-start { justify-items: start; }
+.grid-items-center { justify-items: center; }
+.grid-items-end { justify-items: end; }
+.grid-items-stretch { justify-items: stretch; }
+
+// Align items (vertical alignment of grid items)
+.grid-items-align-start { align-items: start; }
+.grid-items-align-center { align-items: center; }
+.grid-items-align-end { align-items: end; }
+.grid-items-align-stretch { align-items: stretch; }
+
+// Individual item alignment
+.grid-item-justify-start { justify-self: start; }
+.grid-item-justify-center { justify-self: center; }
+.grid-item-justify-end { justify-self: end; }
+.grid-item-justify-stretch { justify-self: stretch; }
+
+.grid-item-align-start { align-self: start; }
+.grid-item-align-center { align-self: center; }
+.grid-item-align-end { align-self: end; }
+.grid-item-align-stretch { align-self: stretch; } 

@@ -1,0 +1,327 @@
+// =============================================================================
+// HEADER COMPONENT
+// =============================================================================
+// Main site header with branding bar and navigation
+// Based on Credential Engine design system analysis
+
+// Site Header Container
+.site-header {
+  position: relative;
+  z-index: 1000;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+// =============================================================================
+// BRANDING HEADER REMOVED
+// =============================================================================
+// Sponsor logos (TACC/UT Austin) removed per user request
+// These should only appear on team/partners pages
+
+// =============================================================================
+// MAIN NAVIGATION
+// =============================================================================
+
+.main-navigation {
+  background-color: $color-white;
+  padding: $space-md 0;
+  position: relative;
+  
+  .container-fluid {
+    max-width: $container-xl;
+    padding: 0 $space-md;
+    
+    @media (max-width: 575.98px) {
+      padding: 0 $space-sm;
+    }
+  }
+}
+
+// =============================================================================
+// SITE LOGO
+// =============================================================================
+
+.navbar-brand {
+  padding: 0;
+  margin-right: auto;
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.portal-logo {
+  height: 48px;
+  width: auto;
+  transition: opacity $transition-fast ease-in-out;
+  
+  @media (max-width: 767.98px) {
+    height: 40px;
+  }
+  
+  @media (max-width: 575.98px) {
+    height: 36px;
+  }
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// =============================================================================
+// MOBILE MENU TOGGLE
+// =============================================================================
+
+.mobile-menu-toggle {
+  border: 2px solid $color-border;
+  border-radius: $border-radius-md;
+  padding: $space-xs;
+  background-color: transparent;
+  transition: all $transition-fast ease-in-out;
+  
+  &:hover {
+    background-color: $color-background-secondary;
+    border-color: $color-primary;
+  }
+  
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+    border-color: $color-primary;
+  }
+  
+  &[aria-expanded="true"] {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$color-white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+  
+  &:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$color-primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  &[aria-expanded="true"]:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$color-white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+// =============================================================================
+// NAVIGATION MENU
+// =============================================================================
+
+.main-nav {
+  // Desktop: horizontal layout
+  @media (min-width: 992px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0 $space-xs;
+    
+    @media (min-width: 992px) {
+      margin: 0 $space-sm;
+    }
+  }
+  
+  .nav-link {
+    color: $color-text-primary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    padding: $space-sm $space-md;
+    border-radius: $border-radius-md;
+    transition: all $transition-fast ease-in-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+    
+    &:hover {
+      color: $color-primary;
+      background-color: $color-background-secondary;
+    }
+    
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+    
+    &.active,
+    &[aria-expanded="true"] {
+      color: $color-primary;
+      background-color: lighten($color-primary, 45%);
+    }
+  }
+}
+
+// Dropdown Icons - Remove custom implementation to avoid double arrows with Bootstrap
+.dropdown-toggle {
+  // Bootstrap already provides dropdown arrows, so we don't need custom ones
+  &::after {
+    margin-left: $space-xs;
+  }
+}
+
+// Hide our custom dropdown icon since Bootstrap handles this
+.dropdown-icon {
+  display: none;
+}
+
+// External Link Icons
+.external-link-icon {
+  &::after {
+    content: '↗';
+    font-size: $font-size-sm;
+    margin-left: $space-xs;
+    opacity: 0.7;
+  }
+}
+
+// =============================================================================
+// DROPDOWN MENUS
+// =============================================================================
+
+.dropdown-menu {
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  padding: $space-sm 0;
+  margin-top: 0;
+  background-color: $color-white;
+  min-width: 220px;
+  
+  .dropdown-item {
+    color: $color-text-primary;
+    padding: $space-sm $space-lg;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    transition: all $transition-fast ease-in-out;
+    border: none;
+    display: flex;
+    align-items: center;
+    
+    &:hover {
+      color: $color-primary;
+      background-color: lighten($color-primary, 48%);
+    }
+    
+    &:focus {
+      color: $color-primary;
+      background-color: lighten($color-primary, 45%);
+      outline: 2px solid $color-primary;
+      outline-offset: -2px;
+    }
+    
+    &:active {
+      background-color: lighten($color-primary, 40%);
+    }
+  }
+}
+
+// =============================================================================
+// RESPONSIVE BEHAVIOR
+// =============================================================================
+
+// Mobile and tablet responsive behavior (below lg breakpoint - 992px)
+@media (max-width: 991.98px) {
+  .main-navigation {
+    .navbar-collapse {
+      margin-top: $space-md;
+      padding-top: $space-md;
+      border-top: 1px solid $color-border;
+    }
+    
+    .main-nav {
+      flex-direction: column;
+      width: 100%;
+      
+      .nav-item {
+        margin: $space-xs 0;
+        width: 100%;
+      }
+      
+      .nav-link {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    
+    .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+      margin-top: 0;
+      background-color: $color-background-secondary;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      
+      .dropdown-item {
+        padding-left: $space-xl;
+        font-size: $font-size-sm;
+        
+        &:hover {
+          background-color: lighten($color-primary, 45%);
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// ACCESSIBILITY ENHANCEMENTS
+// =============================================================================
+
+// Skip to main content link
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: $color-primary;
+  color: $color-white;
+  padding: $space-sm $space-md;
+  text-decoration: none;
+  border-radius: $border-radius-md;
+  z-index: 1000;
+  
+  &:focus {
+    top: 6px;
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .site-header {
+    border-bottom: 2px solid $color-text-primary;
+  }
+  
+  .main-nav .nav-link {
+    border: 1px solid transparent;
+    
+    &:hover,
+    &:focus {
+      border-color: currentColor;
+    }
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .branding-link,
+  .site-logo,
+  .nav-link,
+  .dropdown-item,
+  .mobile-menu-toggle {
+    transition: none;
+  }
+  
+  .dropdown-icon::after {
+    transition: none;
+  }
+} 

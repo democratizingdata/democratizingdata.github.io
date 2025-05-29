@@ -1,0 +1,39 @@
+// =============================================================================
+// BADGE COMPONENTS
+// =============================================================================
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $space-xs $space-sm;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  border-radius: $border-radius-full;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge--primary {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.badge--secondary {
+  background-color: $color-secondary;
+  color: $color-white;
+}
+
+.badge--success {
+  background-color: $color-success;
+  color: $color-white;
+}
+
+.badge--warning {
+  background-color: $color-warning;
+  color: $color-white;
+}
+
+.badge--error {
+  background-color: $color-error;
+  color: $color-white;
+} 

@@ -1,0 +1,357 @@
+/*! Header Layout */
+/*! Header layout styles based on Credential Engine design analysis */
+
+// =============================================================================
+// HEADER CONTAINER
+// =============================================================================
+
+.header {
+  position: relative;
+  background-color: var(--ce-color-bg-white);
+  border-bottom: 1px solid var(--ce-color-border-light);
+  z-index: var(--ce-z-index-sticky);
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--ce-color-bg-white);
+  box-shadow: var(--ce-shadow-sm);
+  z-index: var(--ce-z-index-sticky);
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--ce-color-bg-white);
+  box-shadow: var(--ce-shadow-sm);
+  z-index: var(--ce-z-index-fixed);
+}
+
+// =============================================================================
+// HEADER CONTENT
+// =============================================================================
+
+.header-content {
+  @include container;
+  @include flex-between;
+  padding-top: var(--ce-space-layout-sm);
+  padding-bottom: var(--ce-space-layout-sm);
+  
+  @include respond-to(md) {
+    padding-top: var(--ce-space-layout-md);
+    padding-bottom: var(--ce-space-layout-md);
+  }
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--ce-space-component-md);
+  text-decoration: none;
+  color: var(--ce-color-primary);
+  font-weight: var(--ce-font-weight-bold);
+  font-size: var(--ce-font-size-h5);
+  
+  &:hover {
+    color: var(--ce-color-primary-light);
+  }
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+  
+  @include respond-to(md) {
+    height: 48px;
+  }
+}
+
+.header-title {
+  @include respond-to-max(sm) {
+    display: none;
+  }
+}
+
+// =============================================================================
+// HEADER NAVIGATION
+// =============================================================================
+
+.header-nav {
+  display: none;
+  
+  @include respond-to(lg) {
+    display: flex;
+    align-items: center;
+    gap: var(--ce-space-layout-md);
+  }
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--ce-space-layout-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-item {
+  position: relative;
+}
+
+.header-nav-link {
+  display: flex;
+  align-items: center;
+  padding: var(--ce-space-component-sm) var(--ce-space-component-md);
+  color: var(--ce-color-text-primary);
+  text-decoration: none;
+  font-weight: var(--ce-font-weight-medium);
+  border-radius: var(--ce-radius-md);
+  transition: all var(--ce-duration-normal) var(--ce-ease-out);
+  
+  &:hover {
+    background-color: var(--ce-color-bg-light);
+    color: var(--ce-color-primary);
+  }
+  
+  &.active {
+    background-color: var(--ce-color-primary);
+    color: var(--ce-color-text-white);
+  }
+}
+
+// =============================================================================
+// HEADER ACTIONS
+// =============================================================================
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--ce-space-component-md);
+}
+
+.header-search {
+  display: none;
+  
+  @include respond-to(md) {
+    display: block;
+    width: 200px;
+  }
+  
+  @include respond-to(lg) {
+    width: 250px;
+  }
+}
+
+.header-cta {
+  display: none;
+  
+  @include respond-to(sm) {
+    display: inline-flex;
+  }
+}
+
+// =============================================================================
+// MOBILE MENU TOGGLE
+// =============================================================================
+
+.header-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  color: var(--ce-color-text-primary);
+  cursor: pointer;
+  border-radius: var(--ce-radius-md);
+  transition: background-color var(--ce-duration-normal) var(--ce-ease-out);
+  
+  @include respond-to(lg) {
+    display: none;
+  }
+  
+  &:hover {
+    background-color: var(--ce-color-bg-light);
+  }
+  
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+.header-menu-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  
+  &::before,
+  &::after,
+  span {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: all var(--ce-duration-normal) var(--ce-ease-out);
+  }
+  
+  &::before {
+    top: 6px;
+  }
+  
+  span {
+    top: 11px;
+  }
+  
+  &::after {
+    top: 16px;
+  }
+  
+  .menu-open & {
+    &::before {
+      transform: rotate(45deg);
+      top: 11px;
+    }
+    
+    span {
+      opacity: 0;
+    }
+    
+    &::after {
+      transform: rotate(-45deg);
+      top: 11px;
+    }
+  }
+}
+
+// =============================================================================
+// MOBILE MENU
+// =============================================================================
+
+.header-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--ce-color-bg-white);
+  border-bottom: 1px solid var(--ce-color-border-light);
+  box-shadow: var(--ce-shadow-lg);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--ce-duration-normal) var(--ce-ease-out);
+  z-index: var(--ce-z-index-dropdown);
+  
+  @include respond-to(lg) {
+    display: none;
+  }
+  
+  &.menu-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.header-mobile-nav {
+  padding: var(--ce-space-layout-md);
+}
+
+.header-mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-mobile-nav-item {
+  border-bottom: 1px solid var(--ce-color-border-light);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.header-mobile-nav-link {
+  display: block;
+  padding: var(--ce-space-component-lg);
+  color: var(--ce-color-text-primary);
+  text-decoration: none;
+  font-weight: var(--ce-font-weight-medium);
+  transition: all var(--ce-duration-normal) var(--ce-ease-out);
+  
+  &:hover {
+    background-color: var(--ce-color-bg-light);
+    color: var(--ce-color-primary);
+  }
+  
+  &.active {
+    background-color: var(--ce-color-primary);
+    color: var(--ce-color-text-white);
+  }
+}
+
+// =============================================================================
+// HEADER VARIANTS
+// =============================================================================
+
+.header-transparent {
+  background-color: transparent;
+  border-bottom: none;
+  
+  .header-nav-link {
+    color: var(--ce-color-text-white);
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  .header-brand {
+    color: var(--ce-color-text-white);
+  }
+  
+  .header-menu-toggle {
+    color: var(--ce-color-text-white);
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.header-compact {
+  .header-content {
+    padding-top: var(--ce-space-component-md);
+    padding-bottom: var(--ce-space-component-md);
+  }
+  
+  .header-logo {
+    height: 32px;
+    
+    @include respond-to(md) {
+      height: 36px;
+    }
+  }
+}
+
+// =============================================================================
+// HEADER UTILITIES
+// =============================================================================
+
+.header-spacer {
+  height: 80px; // Default header height
+  
+  &.header-compact {
+    height: 64px;
+  }
+  
+  &.header-large {
+    height: 96px;
+  }
+} 

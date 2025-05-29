@@ -1,0 +1,92 @@
+// =============================================================================
+// BUTTON COMPONENTS
+// =============================================================================
+// Button styles that complement the existing design system
+
+// Base button styles (using existing placeholders and mixins)
+.btn {
+  @extend %button-primary;
+  @include button-base();
+  
+  // Ensure consistent sizing
+  min-height: 44px; // Accessibility requirement
+  padding: $space-sm $space-md;
+  
+  // Typography
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: 1.2;
+  text-decoration: none;
+  
+  // Layout
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+  
+  // Interaction
+  cursor: pointer;
+  transition: all $transition-fast ease-in-out;
+  
+  &:focus {
+    @extend %focus-ring;
+  }
+  
+  &:disabled {
+    @extend %disabled;
+    cursor: not-allowed;
+  }
+}
+
+// Button variants (extending existing system)
+.btn--primary {
+  @include button-variant($color-primary, $color-white, $color-primary-dark);
+}
+
+.btn--secondary {
+  @include button-variant($color-secondary, $color-white, $color-secondary-dark);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+.btn--accent {
+  @include button-variant($color-accent, $color-white, $color-accent-dark);
+}
+
+// Button sizes
+.btn--sm {
+  min-height: 36px;
+  padding: $space-xs $space-sm;
+  font-size: $font-size-sm;
+}
+
+.btn--lg {
+  min-height: 52px;
+  padding: $space-md $space-lg;
+  font-size: $font-size-lg;
+}
+
+// Button as link
+.btn--link {
+  background: none;
+  border: none;
+  color: $color-primary;
+  text-decoration: underline;
+  min-height: auto;
+  padding: 0;
+  
+  &:hover {
+    color: $color-primary-dark;
+    text-decoration-style: dashed;
+  }
+} 

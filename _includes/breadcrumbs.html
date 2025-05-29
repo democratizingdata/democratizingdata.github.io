@@ -1,0 +1,126 @@
+<!-- Breadcrumbs Component -->
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+{% assign crumb_limit = crumbs | size | minus: 1 %}
+
+{% if crumbs.size > 1 %}
+<nav class="c-breadcrumbs" aria-label="Breadcrumb navigation">
+  <ol class="c-breadcrumbs__list">
+    <!-- Home breadcrumb -->
+    <li class="c-breadcrumbs__item">
+      <a href="{{ site.baseurl }}/" class="c-breadcrumbs__link" aria-label="Navigate to homepage">
+        <span class="c-breadcrumbs__text">Home</span>
+      </a>
+    </li>
+
+    <!-- Generate breadcrumbs for each path segment -->
+    {% for crumb in crumbs offset: 1 %}
+      {% unless crumb == '' %}
+        {% assign crumb_url = '' %}
+        {% for c in crumbs offset: 1 limit: forloop.index %}
+          {% assign crumb_url = crumb_url | append: '/' | append: c %}
+        {% endfor %}
+        
+        <!-- Determine if this is the current page -->
+        {% assign is_current = false %}
+        {% if forloop.index == crumb_limit %}
+          {% assign is_current = true %}
+        {% endif %}
+        
+        <li class="c-breadcrumbs__item">
+          <svg class="c-breadcrumbs__separator" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+          </svg>
+          
+          {% if is_current %}
+            <span class="c-breadcrumbs__current" aria-current="page">
+              {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+              {% case crumb %}
+                {% when 'about' %}
+                  {% assign crumb_title = 'About' %}
+                {% when 'overview' %}
+                  {% assign crumb_title = 'Overview' %}
+                {% when 'team' %}
+                  {% assign crumb_title = 'Team' %}
+                {% when 'contact-us' %}
+                  {% assign crumb_title = 'Contact Us' %}
+                {% when 'privacy-policy' %}
+                  {% assign crumb_title = 'Privacy Policy' %}
+                {% when 'terms-and-conditions' %}
+                  {% assign crumb_title = 'Terms and Conditions' %}
+                {% when 'accessibility-statement' %}
+                  {% assign crumb_title = 'Accessibility Statement' %}
+                {% when 'tools' %}
+                  {% assign crumb_title = 'Tools' %}
+                {% when 'dashboards' %}
+                  {% assign crumb_title = 'Dashboards' %}
+                {% when 'jupyter-notebooks' %}
+                  {% assign crumb_title = 'Jupyter Notebooks' %}
+                {% when 'our-approach' %}
+                  {% assign crumb_title = 'Our Approach' %}
+                {% when 'events' %}
+                  {% assign crumb_title = 'Events' %}
+                {% when 'resources' %}
+                  {% assign crumb_title = 'Resources' %}
+                {% when 'technical-report' %}
+                  {% assign crumb_title = 'Technical Report' %}
+                {% when 'usda' %}
+                  {% assign crumb_title = 'USDA Dashboard' %}
+                {% when 'workforce' %}
+                  {% assign crumb_title = 'Workforce Dashboard' %}
+                {% when 'dimensions' %}
+                  {% assign crumb_title = 'Dimensions' %}
+                {% else %}
+                  {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+              {% endcase %}
+              {{ crumb_title }}
+            </span>
+          {% else %}
+            <a href="{{ crumb_url }}" class="c-breadcrumbs__link">
+              {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+              {% case crumb %}
+                {% when 'about' %}
+                  {% assign crumb_title = 'About' %}
+                {% when 'overview' %}
+                  {% assign crumb_title = 'Overview' %}
+                {% when 'team' %}
+                  {% assign crumb_title = 'Team' %}
+                {% when 'contact-us' %}
+                  {% assign crumb_title = 'Contact Us' %}
+                {% when 'privacy-policy' %}
+                  {% assign crumb_title = 'Privacy Policy' %}
+                {% when 'terms-and-conditions' %}
+                  {% assign crumb_title = 'Terms and Conditions' %}
+                {% when 'accessibility-statement' %}
+                  {% assign crumb_title = 'Accessibility Statement' %}
+                {% when 'tools' %}
+                  {% assign crumb_title = 'Tools' %}
+                {% when 'dashboards' %}
+                  {% assign crumb_title = 'Dashboards' %}
+                {% when 'jupyter-notebooks' %}
+                  {% assign crumb_title = 'Jupyter Notebooks' %}
+                {% when 'our-approach' %}
+                  {% assign crumb_title = 'Our Approach' %}
+                {% when 'events' %}
+                  {% assign crumb_title = 'Events' %}
+                {% when 'resources' %}
+                  {% assign crumb_title = 'Resources' %}
+                {% when 'technical-report' %}
+                  {% assign crumb_title = 'Technical Report' %}
+                {% when 'usda' %}
+                  {% assign crumb_title = 'USDA Dashboard' %}
+                {% when 'workforce' %}
+                  {% assign crumb_title = 'Workforce Dashboard' %}
+                {% when 'dimensions' %}
+                  {% assign crumb_title = 'Dimensions' %}
+                {% else %}
+                  {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
+              {% endcase %}
+              {{ crumb_title }}
+            </a>
+          {% endif %}
+        </li>
+      {% endunless %}
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %} 

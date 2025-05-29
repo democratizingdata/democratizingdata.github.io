@@ -1,0 +1,231 @@
+/*! Modern CSS Reset */
+/*! Based on modern reset practices and accessibility guidelines */
+
+// =============================================================================
+// BOX SIZING
+// =============================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// =============================================================================
+// REMOVE DEFAULT MARGINS
+// =============================================================================
+
+* {
+  margin: 0;
+}
+
+// =============================================================================
+// HTML & BODY
+// =============================================================================
+
+html {
+  // Improve text rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  // Prevent adjustments of font size after orientation changes
+  -webkit-text-size-adjust: 100%;
+  
+  // Enable smooth scrolling (respecting user preferences)
+  @include smooth-scroll;
+}
+
+body {
+  line-height: $line-height-normal;
+  font-family: $font-family-primary;
+  font-size: $font-size-body;
+  color: $color-text-primary;
+  background-color: $color-bg-white;
+  
+  // Improve text rendering
+  text-rendering: optimizeSpeed;
+  
+  // Prevent horizontal scroll
+  overflow-x: hidden;
+}
+
+// =============================================================================
+// TYPOGRAPHY ELEMENTS
+// =============================================================================
+
+// Remove default margins from headings
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+// Remove default margins from paragraphs
+p {
+  margin: 0;
+}
+
+// Remove default list styles
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Remove default margins from blockquotes
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+// =============================================================================
+// MEDIA ELEMENTS
+// =============================================================================
+
+// Make images responsive by default
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Remove border from images inside links
+img {
+  border: 0;
+}
+
+// =============================================================================
+// FORM ELEMENTS
+// =============================================================================
+
+// Remove default form element styling
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Remove default button styling
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+// Remove default fieldset styling
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Remove default legend styling
+legend {
+  padding: 0;
+}
+
+// =============================================================================
+// TABLE ELEMENTS
+// =============================================================================
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+}
+
+// =============================================================================
+// INTERACTIVE ELEMENTS
+// =============================================================================
+
+// Remove default link styling
+a {
+  color: inherit;
+  text-decoration: none;
+  
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+// Remove default summary styling
+summary {
+  cursor: pointer;
+  list-style: none;
+  
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+// =============================================================================
+// ACCESSIBILITY
+// =============================================================================
+
+// Respect user's motion preferences
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Improve focus visibility for keyboard users
+:focus-visible {
+  @include focus-ring;
+}
+
+// Hide focus ring for mouse users
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// =============================================================================
+// UTILITY CLASSES
+// =============================================================================
+
+// Screen reader only content
+.sr-only {
+  @include visually-hidden;
+}
+
+// Skip link for keyboard navigation
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: $color-primary;
+  color: $color-text-white;
+  padding: $space-2 $space-4;
+  border-radius: $radius-md;
+  text-decoration: none;
+  z-index: $z-index-tooltip;
+  
+  &:focus {
+    top: 6px;
+  }
+} 

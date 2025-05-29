@@ -1,0 +1,67 @@
+// =============================================================================
+// MODAL COMPONENTS
+// =============================================================================
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-fast ease-in-out;
+  
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal__content {
+  background-color: $color-background-primary;
+  border-radius: $border-radius-lg;
+  padding: $space-xl;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: $shadow-xl;
+  transform: scale(0.9);
+  transition: transform $transition-fast ease-in-out;
+  
+  .modal.is-open & {
+    transform: scale(1);
+  }
+}
+
+.modal__header {
+  margin-bottom: $space-lg;
+  padding-bottom: $space-md;
+  border-bottom: 1px solid $color-border;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+.modal__close {
+  position: absolute;
+  top: $space-md;
+  right: $space-md;
+  background: none;
+  border: none;
+  font-size: $font-size-lg;
+  cursor: pointer;
+  color: $color-text-secondary;
+  
+  &:hover {
+    color: $color-text-primary;
+  }
+} 

@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with logo purple color -->
+  <circle cx="32" cy="32" r="30" fill="#6667AB"/>
+  
+  <!-- First D letter -->
+  <path d="M12 16 L12 48 L24 48 C28.4 48 32 44.4 32 40 L32 24 C32 19.6 28.4 16 24 16 L12 16 Z M18 22 L24 22 C25.1 22 26 22.9 26 24 L26 40 C26 41.1 25.1 42 24 42 L18 42 L18 22 Z" fill="white"/>
+  
+  <!-- Second D letter -->
+  <path d="M36 16 L36 48 L48 48 C52.4 48 56 44.4 56 40 L56 24 C56 19.6 52.4 16 48 16 L36 16 Z M42 22 L48 22 C49.1 22 50 22.9 50 24 L50 40 C50 41.1 49.1 42 48 42 L42 42 L42 22 Z" fill="white"/>
+  
+  <!-- Small accent circle (green) -->
+  <circle cx="32" cy="52" r="2" fill="#006850"/>
+</svg> 

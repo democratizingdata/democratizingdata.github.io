@@ -1,0 +1,377 @@
+// =============================================================================
+// HERO SECTION COMPONENT
+// =============================================================================
+// Modern hero section based on Credential Engine design patterns
+// Implementation following Task 2 design specifications
+
+.c-hero {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: #ffffff;
+  padding: 120px 0 80px 0;
+  overflow: hidden;
+  
+  @media (max-width: 991.98px) {
+    padding: 80px 0 60px 0;
+  }
+  
+  @media (max-width: 767.98px) {
+    padding: 60px 0 40px 0;
+  }
+  
+  // Background image overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover;
+    opacity: 0.2;
+    z-index: 1;
+  }
+  
+  // Gradient overlay for better text contrast
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 64, 175, 0.9) 100%);
+    z-index: 2;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+  
+  // Ensure buttons are clickable above overlays
+  .c-hero__actions {
+    position: relative !important;
+    z-index: 1000 !important;
+    pointer-events: auto !important;
+  }
+  
+  .c-button {
+    position: relative !important;
+    z-index: 1001 !important;
+    pointer-events: auto !important;
+    display: inline-flex !important;
+    
+    &:hover {
+      pointer-events: auto !important;
+    }
+  }
+}
+
+// Hero layout wrapper
+.c-hero__layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  
+  @media (max-width: 991.98px) {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+// Hero content wrapper
+.c-hero__content {
+  flex: 1;
+  max-width: 600px;
+  
+  @media (max-width: 991.98px) {
+    max-width: 100%;
+  }
+  
+  @media (max-width: 767.98px) {
+    padding: 0 16px;
+  }
+}
+
+// Hero visual wrapper
+.c-hero__visual {
+  flex: 0 0 400px;
+  
+  @media (max-width: 991.98px) {
+    flex: none;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  @media (max-width: 767.98px) {
+    max-width: 350px;
+  }
+}
+
+.c-hero__image-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) scale(1.02);
+  }
+  
+  @media (max-width: 991.98px) {
+    transform: none;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.c-hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Hero headline
+.c-hero__headline {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 3.5rem; // 56px - larger than Task 2 H1 for hero impact
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  color: #ffffff;
+  
+  @media (max-width: 991.98px) {
+    font-size: 3rem; // 48px
+  }
+  
+  @media (max-width: 767.98px) {
+    font-size: 2.5rem; // 40px
+    margin-bottom: 24px;
+  }
+  
+  @media (max-width: 575.98px) {
+    font-size: 2rem; // 32px
+  }
+}
+
+// Hero subheadline
+.c-hero__subheadline {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.375rem; // 22px
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 48px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  
+  @media (max-width: 767.98px) {
+    font-size: 1.25rem; // 20px
+    margin-bottom: 32px;
+  }
+  
+  @media (max-width: 575.98px) {
+    font-size: 1.125rem; // 18px
+  }
+}
+
+// Hero actions container
+.c-hero__actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  
+  @media (max-width: 991.98px) {
+    justify-content: center;
+  }
+  
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+// Primary CTA button
+.c-hero__cta-primary {
+  background-color: #ffffff;
+  color: #1f4e79;
+  border: 2px solid #ffffff;
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
+  &:hover {
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  &:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+  }
+  
+  @media (max-width: 575.98px) {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+  }
+}
+
+// Secondary CTA button
+.c-hero__cta-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
+  &:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+  }
+  
+  @media (max-width: 575.98px) {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+  }
+}
+
+// Hero features/highlights
+.c-hero__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 48px;
+  
+  @media (max-width: 991.98px) {
+    align-items: center;
+  }
+  
+  @media (max-width: 767.98px) {
+    gap: 16px;
+  }
+}
+
+.c-hero__feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 500;
+  
+  @media (max-width: 991.98px) {
+    justify-content: center;
+  }
+}
+
+.c-hero__feature-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+// Event banner integration
+.c-hero--with-event-banner {
+  padding-top: 80px;
+  
+  @media (max-width: 991.98px) {
+    padding-top: 60px;
+  }
+  
+  @media (max-width: 767.98px) {
+    padding-top: 40px;
+  }
+}
+
+// Accessibility enhancements
+@media (prefers-reduced-motion: reduce) {
+  .c-hero__cta-primary,
+  .c-hero__cta-secondary {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .c-hero {
+    background: var(--global-color-primary--dark);
+    
+    &::before {
+      display: none;
+    }
+  }
+  
+  .c-hero__cta-primary,
+  .c-hero__cta-secondary {
+    border-width: 3px;
+  }
+}
+
+// Force button clickability - override any conflicting styles
+.c-hero .c-button,
+.c-hero .c-hero__actions .c-button,
+.c-section-card .c-button,
+.c-event-banner .c-button,
+.c-button {
+  position: relative !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  
+  &:before,
+  &:after {
+    pointer-events: none !important;
+  }
+  
+  &:hover {
+    pointer-events: auto !important;
+  }
+}
+
+// Ensure all button containers are clickable
+.c-hero__actions,
+.c-section-card__button,
+.c-event-banner__button,
+.c-technical-report__button {
+  position: relative !important;
+  z-index: 9998 !important;
+  pointer-events: auto !important;
+} 

@@ -1,0 +1,30 @@
+// =============================================================================
+// COLOR UTILITIES
+// =============================================================================
+
+// Text colors
+.text-primary { color: $color-primary !important; }
+.text-secondary { color: $color-secondary !important; }
+.text-accent { color: $color-accent !important; }
+.text-success { color: $color-success !important; }
+.text-warning { color: $color-warning !important; }
+.text-error { color: $color-error !important; }
+.text-info { color: $color-info !important; }
+
+.text-heading { color: $color-text-heading !important; }
+.text-body { color: $color-text-primary !important; }
+.text-muted { color: $color-text-secondary !important; }
+.text-white { color: $color-white !important; }
+
+// Background colors
+.bg-primary { background-color: $color-primary !important; }
+.bg-secondary { background-color: $color-secondary !important; }
+.bg-accent { background-color: $color-accent !important; }
+.bg-success { background-color: $color-success !important; }
+.bg-warning { background-color: $color-warning !important; }
+.bg-error { background-color: $color-error !important; }
+.bg-info { background-color: $color-info !important; }
+
+.bg-white { background-color: $color-white !important; }
+.bg-light { background-color: $color-background-secondary !important; }
+.bg-transparent { background-color: transparent !important; } 

@@ -1,0 +1,84 @@
+/*! Carousel Component Styles */
+/*! Responsive carousel with image optimization support */
+
+// =============================================================================
+// PODCAST CAROUSEL
+// =============================================================================
+
+.carousel {
+  &.slide {
+    .carousel-item {
+      // Ensure carousel images maintain consistent height
+      picture,
+      img {
+        height: 620px;
+        object-fit: cover;
+        object-position: center;
+      }
+      
+      // Responsive height adjustments
+      @media (max-width: 768px) {
+        picture,
+        img {
+          height: 400px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        picture,
+        img {
+          height: 300px;
+        }
+      }
+    }
+    
+    // Caption styling
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+      padding: 1.5rem;
+      
+      h3 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      
+      .purplebg {
+        background: rgba(108, 99, 255, 0.9) !important;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+        
+        a {
+          color: #ffffff !important;
+          text-decoration: underline;
+          
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// CAROUSEL ACCESSIBILITY
+// =============================================================================
+
+.carousel-control-prev,
+.carousel-control-next {
+  &:focus {
+    outline: 2px solid #6c63ff;
+    outline-offset: 2px;
+  }
+}
+
+.carousel-indicators {
+  li {
+    &:focus {
+      outline: 2px solid #6c63ff;
+      outline-offset: 2px;
+    }
+  }
+} 

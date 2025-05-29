@@ -1,0 +1,198 @@
+/*! Design System Functions */
+/*! SCSS Functions for Credential Engine Design System */
+
+// =============================================================================
+// SPACING FUNCTIONS
+// =============================================================================
+
+// Convert spacing scale to rem
+@function space($multiplier) {
+  @return ($space-base * $multiplier) / 16px * 1rem;
+}
+
+// Get spacing value by name
+@function get-space($name) {
+  $spaces: (
+    '0': $space-0,
+    '1': $space-1,
+    '2': $space-2,
+    '3': $space-3,
+    '4': $space-4,
+    '5': $space-5,
+    '6': $space-6,
+    '8': $space-8,
+    '10': $space-10,
+    '12': $space-12,
+    '16': $space-16,
+    '20': $space-20,
+    '24': $space-24,
+    '32': $space-32,
+    '40': $space-40,
+    '48': $space-48,
+    '56': $space-56,
+    '64': $space-64
+  );
+  
+  @return map-get($spaces, $name);
+}
+
+// =============================================================================
+// COLOR FUNCTIONS
+// =============================================================================
+
+// Lighten color by percentage
+@function lighten-color($color, $percentage) {
+  @return lighten($color, $percentage);
+}
+
+// Darken color by percentage
+@function darken-color($color, $percentage) {
+  @return darken($color, $percentage);
+}
+
+// Create color with opacity
+@function color-alpha($color, $alpha) {
+  @return rgba($color, $alpha);
+}
+
+// Get color from palette
+@function get-color($name) {
+  $colors: (
+    'primary': $color-primary,
+    'primary-light': $color-primary-light,
+    'primary-dark': $color-primary-dark,
+    'secondary': $color-secondary,
+    'secondary-light': $color-secondary-light,
+    'secondary-dark': $color-secondary-dark,
+    'accent-orange': $color-accent-orange,
+    'accent-green': $color-accent-green,
+    'text-primary': $color-text-primary,
+    'text-secondary': $color-text-secondary,
+    'text-light': $color-text-light,
+    'bg-white': $color-bg-white,
+    'bg-light': $color-bg-light,
+    'bg-gray': $color-bg-gray,
+    'border-light': $color-border-light,
+    'border-medium': $color-border-medium,
+    'border-dark': $color-border-dark,
+    'success': $color-success,
+    'warning': $color-warning,
+    'error': $color-error,
+    'info': $color-info
+  );
+  
+  @return map-get($colors, $name);
+}
+
+// =============================================================================
+// TYPOGRAPHY FUNCTIONS
+// =============================================================================
+
+// Convert px to rem
+@function rem($pixels, $base: 16px) {
+  @return ($pixels / $base) * 1rem;
+}
+
+// Convert px to em
+@function em($pixels, $base: 16px) {
+  @return ($pixels / $base) * 1em;
+}
+
+// Get font size by name
+@function get-font-size($name) {
+  $font-sizes: (
+    'h1': $font-size-h1,
+    'h2': $font-size-h2,
+    'h3': $font-size-h3,
+    'h4': $font-size-h4,
+    'h5': $font-size-h5,
+    'h6': $font-size-h6,
+    'large': $font-size-large,
+    'body': $font-size-body,
+    'small': $font-size-small,
+    'caption': $font-size-caption
+  );
+  
+  @return map-get($font-sizes, $name);
+}
+
+// =============================================================================
+// LAYOUT FUNCTIONS
+// =============================================================================
+
+// Calculate container width with padding
+@function container-width($max-width, $padding: $space-4) {
+  @return $max-width + ($padding * 2);
+}
+
+// Get breakpoint value
+@function get-breakpoint($name) {
+  $breakpoints: (
+    'xs': $breakpoint-xs,
+    'sm': $breakpoint-sm,
+    'md': $breakpoint-md,
+    'lg': $breakpoint-lg,
+    'xl': $breakpoint-xl,
+    'xxl': $breakpoint-xxl
+  );
+  
+  @return map-get($breakpoints, $name);
+}
+
+// =============================================================================
+// UTILITY FUNCTIONS
+// =============================================================================
+
+// Strip units from a value
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Power function (for modular scale)
+@function pow($number, $exponent) {
+  $value: 1;
+  
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  }
+  
+  @return $value;
+}
+
+// Modular scale function
+@function modular-scale($increment, $base: $font-size-body, $ratio: 1.25) {
+  @return $base * pow($ratio, $increment);
+}
+
+// Map deep get function
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// =============================================================================
+// VALIDATION FUNCTIONS
+// =============================================================================
+
+// Check if value is a valid length
+@function is-length($value) {
+  @return type-of($value) == "number" and not unitless($value);
+}
+
+// Check if value is a valid color
+@function is-color($value) {
+  @return type-of($value) == "color";
+}
+
+// Check if value is a valid number
+@function is-number($value) {
+  @return type-of($value) == "number";
+} 

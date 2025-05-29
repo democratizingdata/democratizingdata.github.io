@@ -1,61 +1,121 @@
 {% comment %}
-  Learning section include
+  Learning section include - Redesigned for better UX and accessibility
   Usage: {% include learning-section.html %}
 {% endcomment %}
 
-<div class="row">
-    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-        <img src="{{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__680.0x352.0_subsampling-2.png"
-             alt="Understanding" srcset="
-                 {{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__576x576_subsampling-2.png 576w,
-                 {{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__680.0x352.0_subsampling-2.png 680.0w
-             " sizes="
-                 (max-width: 576px) 576px,
-                 680.0px
-             " class="img-fluid">
-        <div class="purplebg">
-            <h2 style="font-size: 24px; color: white;">{{ site.data.learning.podcasts.title }}</h2>
-            {% include podcast-carousel.html %}
+<section class="c-learning-section" aria-labelledby="learning-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <header class="c-learning-section__header c-learning-section__header--clean">
+                    <h2 id="learning-heading">HOW TO LEARN AND CONTRIBUTE</h2>
+                    <p class="c-learning-section__intro">Discover insights from leading researchers and contribute to the future of trusted data through podcasts, presentations, and community engagement.</p>
+                </header>
+            </div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                <img src="{{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__680.0x352.0_subsampling-2.png" alt="Learning and understanding data visualization representing knowledge sharing and research insights" class="c-learning-section__flourish">
+            </div>
         </div>
-    </div>
 
-    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-        <img src="{{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png"
-             alt="Insights" srcset="
-                 {{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__576x576_subsampling-2.png 576w,
-                 {{ site.baseurl }}/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png 684.0w
-             " sizes="(max-width: 576px) 576px,684.0px
-             " class="img-fluid">
-        <div class="purplebg">
-            <h2 style="font-size: 24px; color: white;">{{ site.data.learning.presentations.title }}</h2>
-            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.presentations.description }}</p>
-            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.presentations.additional_info }}</p>
-            <p class="purplebg" style="font-size: 18px;">Learn more <a href="{{ site.baseurl }}{{ site.data.learning.presentations.learn_more_link }}"
-                    style="color: #ffffff;" target="_blank">here</a></p>
-        </div>
-    </div>
+        <!-- Podcasts Section -->
+        <div class="c-learning-content">
+            <div class="c-learning-category">
+                <div class="c-learning-category__header">
+                    <div class="c-learning-category__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="c-learning-category__title">{{ site.data.learning.podcasts.title }}</h3>
+                        <p class="c-learning-category__description">Listen to researchers share how they used federal data to drive meaningful insights and policy changes.</p>
+                    </div>
+                </div>
 
-    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-        <img src="{{ site.baseurl }}/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__684.0x352.0_q85_subsampling-2.jpg"
-             alt="COPAFS" srcset="
-                 {{ site.baseurl }}/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__576x576_q85_subsampling-2.jpg 576w,
-                 {{ site.baseurl }}/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__684.0x352.0_q85_subsampling-2.jpg 684.0w
-             " sizes="
-                 (max-width: 576px) 576px,
-                 684.0px
-             " class="img-fluid">
-        <div class="purplebg">
-            <h2 style="font-size: 24px; color: white;">{{ site.data.learning.trusted_data.title }}</h2>
-            <h3 style="font-size: 20px;">{{ site.data.learning.trusted_data.subtitle }}</h3>
-            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.trusted_data.description }}</p>
-            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.trusted_data.call_to_action }}</p>
-            <center style="margin: 20px 0;">
-                <a class="c-button c-button--primary" href="{{ site.data.learning.trusted_data.questionnaire_link }}" target="_blank" 
-                   style="background-color: white; color: #6f42c1; border: 2px solid white; font-weight: bold;">
-                   {{ site.data.learning.trusted_data.questionnaire_text }}
-                </a>
-            </center>
-            <p class="purplebg" style="font-size: 18px;">{{ site.data.learning.trusted_data.contact_info }}</p>
+                <div class="c-podcast-grid">
+                    {% for podcast in site.data.podcasts %}
+                    <article class="c-podcast-card c-podcast-card--content-only">
+                        <div class="c-podcast-card__content">
+                            <h4 class="c-podcast-card__title">{{ podcast.title }}</h4>
+                            <p class="c-podcast-card__description">{{ podcast.description }}</p>
+                            <a href="{{ podcast.link }}" class="c-podcast-card__link" target="_blank" rel="noopener noreferrer">
+                                Listen Now
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Presentations Section -->
+            <div class="c-learning-category">
+                <div class="c-learning-category__header">
+                    <div class="c-learning-category__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="c-learning-category__title">{{ site.data.learning.presentations.title }}</h3>
+                        <p class="c-learning-category__description">{{ site.data.learning.presentations.header_description }}</p>
+                    </div>
+                </div>
+
+                <div class="c-presentation-card">
+                    <div class="c-presentation-card__image">
+                        <img src="{{ site.baseurl }}{{ site.data.learning.presentations.image }}" alt="Data insights and analytics visualization from presentations and webinars" class="c-presentation-card__img">
+                    </div>
+                    <div class="c-presentation-card__content">
+                        <div class="c-presentation-card__text">
+                            <p>{{ site.data.learning.presentations.description }}</p>
+                            <p>{{ site.data.learning.presentations.additional_info }}</p>
+                        </div>
+                        <a href="{{ site.data.learning.presentations.learn_more_link }}" class="c-presentation-card__link">
+                            Explore Events
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trusted Data Section -->
+            <div class="c-learning-category c-learning-category--featured">
+                <div class="c-learning-category__header">
+                    <div class="c-learning-category__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="c-learning-category__title">{{ site.data.learning.trusted_data.title }}</h3>
+                        <p class="c-learning-category__subtitle">{{ site.data.learning.trusted_data.subtitle }}</p>
+                    </div>
+                </div>
+
+                <div class="c-trusted-data-card">
+                    <div class="c-trusted-data-card__image">
+                        <img src="{{ site.baseurl }}{{ site.data.learning.trusted_data.image }}" alt="Trusted data infrastructure and collaboration visualization" class="c-trusted-data-card__img">
+                    </div>
+                    <div class="c-trusted-data-card__content">
+                        <p class="c-trusted-data-card__description">{{ site.data.learning.trusted_data.description }}</p>
+                        <p class="c-trusted-data-card__call-to-action">{{ site.data.learning.trusted_data.call_to_action }}</p>
+                        
+                        <div class="c-trusted-data-card__actions">
+                            <a href="{{ site.data.learning.trusted_data.questionnaire_link }}" class="c-button c-button--primary" target="_blank" rel="noopener noreferrer">
+                                {{ site.data.learning.trusted_data.questionnaire_text }}
+                            </a>
+                            <a href="{{ site.baseurl }}{{ site.data.learning.trusted_data.contact_link }}" class="c-button c-button--secondary" target="_blank" rel="noopener noreferrer">
+                                {{ site.data.learning.trusted_data.contact_text }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div> 
+</section> 

@@ -1,0 +1,89 @@
+// =============================================================================
+// BASE ELEMENTS
+// =============================================================================
+// Base styles for common HTML elements
+
+// Images and media
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0 0 $space-md;
+  
+  img {
+    display: block;
+  }
+}
+
+figcaption {
+  margin-top: $space-sm;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  font-style: italic;
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $space-md;
+}
+
+th, td {
+  padding: $space-sm $space-md;
+  text-align: left;
+  border-bottom: 1px solid $color-border;
+}
+
+th {
+  font-weight: $font-weight-semibold;
+  background-color: $color-background-secondary;
+}
+
+// Horizontal rules
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $color-border;
+  margin: $space-xl 0;
+}
+
+// Form elements (basic reset)
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Focus styles for interactive elements
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: 2px solid $color-focus;
+  outline-offset: 2px;
+}
+
+// Remove default button styles
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+// Embedded content
+iframe, embed, object, video {
+  max-width: 100%;
+  height: auto;
+}
+
+// Address
+address {
+  font-style: normal;
+  margin-bottom: $space-md;
+} 

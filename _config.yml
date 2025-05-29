@@ -81,15 +81,30 @@ kramdown:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  # Task Master AI files
+  - tasks/
+  - scripts/
+  - .taskmasterconfig
+  # Cursor IDE files
+  - .cursor/
+  - .windsurfrules
+  - .roomodes
+  # Git and development files
+  - .git/
+  - .gitignore
+  - README.md
+  - LICENSE
+  # Original SCSS files (now in _sass)
+  - assets/scss/

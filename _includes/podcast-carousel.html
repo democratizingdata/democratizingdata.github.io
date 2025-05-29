@@ -16,7 +16,8 @@
         <div class="carousel-item{% if forloop.first %} active{% endif %} cms-plugin cms-plugin-12122">
             <img class="d-block w-100"
                  src="{{ site.baseurl }}{{ podcast.image }}"
-                 style="height: 620px;" alt="{{ podcast.title }}">
+                 alt="{{ podcast.title }} - Podcast episode featuring research insights"
+                 loading="lazy">
             <div class="carousel-caption" style="top: 0;">
                 <h3 style="font-size: {% if podcast.title contains 'Dr. Janet Currie' %}18px{% else %}20px{% endif %};">{{ podcast.title }}</h3>
                 <p class="purplebg" style="font-size: 18px;">{{ podcast.description }}</p>
