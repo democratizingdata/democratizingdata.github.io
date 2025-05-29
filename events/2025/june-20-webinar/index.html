@@ -20,9 +20,8 @@ description: "Join us for an upcoming webinar on Democratizing Data on June 20, 
                         Join us for an engaging webinar exploring the latest developments in data democratization, featuring insights from leading experts in the field and practical applications for evidence-based policy making.
                     </p>
                     <div class="c-hero__actions">
-                        <a href="https://umd.zoom.us/webinar/register/WN_example" 
-                           class="c-button c-button--primary c-button--large" 
-                           target="_blank">
+                        <a href="#webinar-registration-form" 
+                           class="c-button c-button--primary c-button--large scroll-to-form">
                             Register Now
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M7 17l9.2-9.2M17 17V7H7"></path>
@@ -55,18 +54,6 @@ description: "Join us for an upcoming webinar on Democratizing Data on June 20, 
                             <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
                         </svg>
                         <span>Virtual Event</span>
-                    </div>
-                    <div class="c-event-details__item">
-                        <svg class="c-event-details__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                        <span>Free Registration</span>
-                    </div>
-                    <div class="c-event-details__status">
-                        <span class="c-status-badge c-status-badge--open">Registration Open</span>
                     </div>
                 </div>
             </div>
@@ -115,9 +102,8 @@ description: "Join us for an upcoming webinar on Democratizing Data on June 20, 
                         <p>Registration is free and open to all interested participants. After registering, you will receive a confirmation email with the webinar link and additional details.</p>
                         
                         <div class="c-registration-actions">
-                            <a href="https://umd.zoom.us/webinar/register/WN_example" 
-                               class="c-button c-button--primary" 
-                               target="_blank">
+                            <a href="#webinar-registration-form" 
+                               class="c-button c-button--primary scroll-to-form">
                                 Register for Webinar
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M7 17l9.2-9.2M17 17V7H7"></path>
@@ -175,8 +161,13 @@ description: "Join us for an upcoming webinar on Democratizing Data on June 20, 
                     <div class="c-sidebar-card">
                         <h3 class="c-sidebar-card__title">Stay Connected</h3>
                         <p>Follow our updates and join our community to stay informed about future events and opportunities.</p>
-                        <a href="{{ site.baseurl }}/about/get-involved/" class="c-button c-button--outline c-button--small">
-                            Join Our Community
+                        <a href="https://forms.gle/3kmVojPBE4Y37Dk17" 
+                           class="c-button c-button--primary c-button--small" 
+                           target="_blank">
+                            Join Working Group
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17l9.2-9.2M17 17V7H7"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -186,7 +177,7 @@ description: "Join us for an upcoming webinar on Democratizing Data on June 20, 
 </section>
 
 <!-- Webinar Registration Form Section -->
-<section class="c-content-section c-content-section--alt">
+<section class="c-content-section c-content-section--alt" id="registration-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
@@ -221,3 +212,30 @@ description: "Join us for an upcoming webinar on Democratizing Data on June 20, 
         </div>
     </div>
 </section>
+
+<!-- JavaScript for smooth scrolling to registration form -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add smooth scroll behavior to registration buttons
+    const scrollButtons = document.querySelectorAll('.scroll-to-form');
+    
+    scrollButtons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetElement = document.getElementById('webinar-registration-form');
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Add a small delay to ensure the iframe is in view, then focus on it
+                setTimeout(function() {
+                    targetElement.focus();
+                }, 500);
+            }
+        });
+    });
+});
+</script>
