@@ -18,6 +18,16 @@
                 "AZURE_OPENAI_API_KEY": "AZURE_OPENAI_API_KEY_HERE",
                 "OLLAMA_API_KEY": "OLLAMA_API_KEY_HERE"
             }
+        },
+        "memory": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-memory"
+            ],
+            "env": {
+              "MEMORY_FILE_PATH": "/Users/rafaelladislau/env/julia/DemocratizingData.github.io/memory-mcp/memory.json"
+            }
         }
     }
 }
