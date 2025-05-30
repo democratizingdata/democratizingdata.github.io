@@ -742,6 +742,27 @@
     }
   }
 
+  &--tertiary {
+    background-color: #8b5cf6;
+    color: white;
+    border-color: #8b5cf6;
+    
+    &:hover {
+      background-color: #7c3aed;
+      border-color: #7c3aed;
+      color: white;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    
+    &:focus {
+      outline: 2px solid #8b5cf6;
+      outline-offset: 2px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
   // Hero button variants for white text on colored backgrounds
   .c-hero & {
     position: relative;
@@ -3159,6 +3180,14 @@ iframe#dashboard {
 
         .c-partner-card__header h3 {
             color: #047857;
+        }
+    }
+
+    &--tertiary {
+        border-left: 4px solid #8b5cf6;
+
+        .c-partner-card__header h3 {
+            color: #7c3aed;
         }
     }
 
