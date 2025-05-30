@@ -1,43 +1,37 @@
 ---
-title: "USDA Data Usage Dashboard"
+title: "Food And Agricultural Research Data Usage Dashboard"
 layout: default
-description: "Explore how USDA data assets are referenced and utilized in agricultural research, food policy studies, and rural development publications."
+description: "Explore how Food And Agricultural Research data assets are referenced and utilized in agricultural research, food policy studies, and rural development publications."
 ---
 
-<!-- USDA Dashboard Hero Section -->
-<section class="c-hero c-hero--dashboard">
+<!-- Food And Agricultural Research Dashboard Hero Section -->
+<section class="c-hero c-hero--dashboard" style="padding: 30px 0 20px;">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8">
+            <div class="col-lg-4">
                 <div class="c-hero__content">
-                    <div class="c-hero__category">
-                        <span class="c-category-badge">USDA DASHBOARD</span>
-                    </div>
-                    <h1 class="c-hero__title">
-                        USDA Data Usage 
-                        <span class="c-hero__title-highlight">Dashboard</span>
+                    <h1 class="c-hero__title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">
+                        Food And Agricultural Research Data Usage Dashboard
+                        <span class="c-hero__beta-badge" style="display: block; font-size: 0.5em; color: rgba(255, 255, 255, 0.8); font-weight: 400; margin-top: 0.25rem;">BETA VERSION</span>
                     </h1>
-                    <p class="c-hero__description">
-                        Explore how USDA data assets are referenced and utilized in agricultural research, food policy studies, and rural development publications.
-                    </p>
-                    <div class="c-hero__actions">
-                        <a href="{{ site.baseurl }}/tools/dashboard/dimensions/usda/" class="c-button c-button--primary c-button--large">
-                            Launch Dashboard
-                            <svg class="c-button__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#dashboard-features" class="c-button c-button--secondary">
-                            Learn More
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-5">
-                <div class="c-hero__image">
-                    <img src="{{ site.baseurl }}/assets/img/events/agricultural-data-technology.jpg"
-                         alt="Farmers working with agricultural equipment during harvest season in green field collection activities"
-                         class="img-fluid">
+                <p class="c-hero__description" style="margin-bottom: 0; font-size: 0.95rem;">
+                    <strong>This is a beta version dashboard.</strong> We are currently validating the collected metadata and refining our analysis methods. Explore how Food And Agricultural Research data assets are referenced and utilized in agricultural research, food policy studies, and rural development publications.
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <div class="c-hero__actions" style="text-align: left;">
+                    <a href="{{ site.baseurl }}/tools/dashboard/dimensions/food-agricultural-research/" class="c-button c-button--primary" style="margin-bottom: 0.5rem; display: block;" target="_blank" rel="noopener noreferrer">
+                        Launch Beta Dashboard
+                        <svg class="c-button__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#dashboard-features" class="c-button c-button--secondary" style="display: block;">
+                        Learn More
+                    </a>
                 </div>
             </div>
         </div>
@@ -49,11 +43,11 @@ description: "Explore how USDA data assets are referenced and utilized in agricu
     <div class="container">
         <div class="c-content-section__header">
             <div class="c-category-badge">DASHBOARD OVERVIEW</div>
-            <h2 class="c-content-section__title">Understanding USDA Data Impact</h2>
+            <h2 class="c-content-section__title">Understanding Food And Agricultural Research Data Impact</h2>
         </div>
         <div class="row">
             <div class="col-lg-8">
-                <p>The USDA Dashboard provides comprehensive insights into how data assets from the U.S. Department of Agriculture are used in published research. Our machine learning algorithms analyze research publications to identify dataset citations, research applications, and impact metrics that support evidence-based agricultural and food policy making.</p>
+                <p>The Food And Agricultural Research Dashboard provides comprehensive insights into how data assets from food and agricultural research are used in published research. Our machine learning algorithms analyze research publications to identify dataset citations, research applications, and impact metrics that support evidence-based agricultural and food policy making.</p>
 
                 <h3>Key Research Areas</h3>
                 <div class="c-feature-card">
@@ -77,7 +71,7 @@ description: "Explore how USDA data assets are referenced and utilized in agricu
                     </div>
                 </div>
 
-                <h3>Featured USDA Datasets</h3>
+                <h3>Featured Food And Agricultural Research Datasets</h3>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="c-dataset-card">
@@ -102,8 +96,8 @@ description: "Explore how USDA data assets are referenced and utilized in agricu
                 </div>
 
                 <div class="text-center" style="margin-top: 30px;">
-                    <a class="c-button c-button--primary c-button--large" href="{{ site.baseurl }}/tools/dashboard/dimensions/usda/">
-                        Launch USDA Dashboard
+                    <a class="c-button c-button--primary c-button--large" href="{{ site.baseurl }}/tools/dashboard/dimensions/food-agricultural-research/" target="_blank" rel="noopener noreferrer">
+                        Launch Food And Agricultural Research Dashboard
                         <svg class="c-button__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -153,9 +147,10 @@ description: "Explore how USDA data assets are referenced and utilized in agricu
 <section class="c-content-section c-content-section--gray">
     <div class="container">
         <div class="c-info-card c-info-card--about">
-            <h4>About This Dashboard</h4>
-            <p>The USDA Dashboard is part of the Democratizing Data Initiative's effort to enable different communities to understand how government data assets are used. The dashboard draws from a database that describes how USDA data assets are referenced in research publications, linking mentions with research topics, authors, and their affiliated institutions.</p>
-            <p><strong>Note:</strong> This pilot project reflects information associated with datasets specifically requested for analysis and is not intended to capture all references to all USDA datasets. The project continues through America's Datahub Consortium.</p>
+            <h4>About This Beta Dashboard</h4>
+            <p><strong>Beta Version Notice:</strong> This is a beta version of the Food And Agricultural Research Dashboard. We are actively working on validating the collected metadata and improving our data analysis methods. The results shown should be considered preliminary as we continue to refine our approach.</p>
+            <p>The Food And Agricultural Research Dashboard is part of the Democratizing Data Initiative's effort to enable different communities to understand how government data assets are used. The dashboard draws from a database that describes how Food And Agricultural Research data assets are referenced in research publications, linking mentions with research topics, authors, and their affiliated institutions.</p>
+            <p><strong>Important:</strong> This pilot project reflects information associated with datasets specifically requested for analysis and is not intended to capture all references to all Food And Agricultural Research datasets. As this is a beta version, we are continuously working to validate and improve the accuracy of our metadata collection and analysis processes. The project continues through America's Datahub Consortium.</p>
         </div>
     </div>
 </section> 
