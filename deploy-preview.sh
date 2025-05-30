@@ -86,10 +86,22 @@ cd "$WORK_DIR"
 
 # Update deployment configuration
 echo "⚙️ Updating configuration for GitHub Pages..."
+
+# Update _config.deploy.yml if it exists
 if [ -f "_config.deploy.yml" ]; then
     sed -i.bak "s/YourOrgName/$ORG_NAME/g" _config.deploy.yml
     sed -i.bak "s/democratizingdata-preview/$REPO_NAME/g" _config.deploy.yml
     rm -f _config.deploy.yml.bak
+fi
+
+# Update main _config.yml for GitHub Pages
+if [ -f "_config.yml" ]; then
+    echo "📝 Updating baseurl in _config.yml for GitHub Pages..."
+    # Update the baseurl to use the repository name for GitHub Pages
+    sed -i.bak "s|^baseurl:.*|baseurl: \"/$REPO_NAME\"|g" _config.yml
+    # Update the URL to use GitHub Pages domain
+    sed -i.bak "s|^url:.*|url: \"https://$ORG_NAME.github.io\"|g" _config.yml
+    rm -f _config.yml.bak
 fi
 
 # Stage all changes
