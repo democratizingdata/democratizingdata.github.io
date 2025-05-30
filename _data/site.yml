@@ -36,11 +36,8 @@ sections:
   
   get_involved:
     title: "GET INVOLVED"
-    heading: "Join Our Working Group"
-    description: "Sign up to be part of our working group and contribute to the development of a roadmap for improving the accessibility, transparency, and relevance of trusted data infrastructures."
-    button:
-      link: "https://forms.gle/3kmVojPBE4Y37Dk17"
-      text: "Join Working Group"
+    heading: "Ways to democratize data"
+    description: "The goal is to develop a community of practice through workshops, webinars, and direct engagement with the user community. The user community built the initial models through <a href=\"https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data\" target=\"_blank\">a Kaggle</a> competition; a <a href=\"https://coleridgeinitiative.org/show-us-the-data-conference\" target=\"_blank\">Show Us the Data</a> conference brought together researchers, academic institutions, chief data officers, and publishers; subsequent conferences have built on the ideas. More are planned."
     links:
       - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
         text: "here"
