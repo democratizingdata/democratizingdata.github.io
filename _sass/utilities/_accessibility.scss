@@ -59,7 +59,7 @@
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 6px;
   background: $color-primary;
   color: $color-bg-white;
@@ -70,9 +70,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: top $duration-fast $ease-out;
   z-index: 10000;
+  transform: translateY(-100%);
+  opacity: 0;
   
   &:focus {
     top: 0;
+    transform: translateY(0);
+    opacity: 1;
     outline: 2px solid $color-bg-white;
     outline-offset: 2px;
   }
@@ -445,7 +449,7 @@ a:not([aria-label]):not([aria-labelledby]):empty {
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 6px;
   background: $color-primary;
   color: $color-bg-white;
@@ -456,9 +460,13 @@ a:not([aria-label]):not([aria-labelledby]):empty {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: top $duration-fast $ease-out;
   z-index: 10000;
+  transform: translateY(-100%);
+  opacity: 0;
   
   &:focus {
     top: 0;
+    transform: translateY(0);
+    opacity: 1;
     outline: 2px solid $color-bg-white;
     outline-offset: 2px;
   }
