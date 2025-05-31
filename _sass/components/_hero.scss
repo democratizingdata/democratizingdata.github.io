@@ -19,7 +19,7 @@
     padding: 20px 0 10px 0;
   }
   
-  // Background image overlay - default fallback
+  // Background image overlay
   &::before {
     content: '';
     position: absolute;
@@ -27,7 +27,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/assets/img/hero/data-analytics-research.jpg') center/cover;
+    // Background image now handled in hero-backgrounds.css for proper baseurl support
     opacity: 0.3;
     z-index: 1;
   }
@@ -49,38 +49,7 @@
     z-index: 3;
   }
   
-  // Specific background images for different hero types
-  &--about::before {
-    background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
-  }
-  
-  &--tools::before {
-    background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
-  }
-  
-  &--dashboard::before {
-    background-image: url('/assets/img/hero/data-analytics-research.jpg');
-  }
-  
-  &--events::before {
-    background-image: url('/assets/img/hero/data-analytics-research.jpg');
-  }
-  
-  &--event::before {
-    background-image: url('/assets/img/hero/data-analytics-research.jpg');
-  }
-  
-  &--team::before {
-    background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
-  }
-  
-  &--contact::before {
-    background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
-  }
-  
-  &--legal::before {
-    background-image: url('/assets/img/hero/data-analytics-research.jpg');
-  }
+  // Specific background images now handled in hero-backgrounds.css for proper baseurl support
   
   // Ensure buttons are clickable above overlays
   .c-hero__actions {

@@ -77,7 +77,7 @@
               {{ crumb_title }}
             </span>
           {% else %}
-            <a href="{{ crumb_url }}" class="c-breadcrumbs__link">
+            <a href="{{ site.baseurl }}{{ crumb_url }}" class="c-breadcrumbs__link">
               {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% case crumb %}
                 {% when 'about' %}

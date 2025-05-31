@@ -1,0 +1,44 @@
+/* Hero background images with proper baseurl support */
+.c-hero::before {
+  background: url('/assets/img/hero/data-analytics-research.jpg') center/cover;
+}
+
+.c-hero--about::before {
+  background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+}
+
+.c-hero--tools::before {
+  background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+}
+
+.c-hero--dashboard::before {
+  background-image: url('/assets/img/hero/data-analytics-research.jpg');
+}
+
+.c-hero--events::before {
+  background-image: url('/assets/img/hero/data-analytics-research.jpg');
+}
+
+.c-hero--event::before {
+  background-image: url('/assets/img/hero/data-analytics-research.jpg');
+}
+
+.c-hero--team::before {
+  background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+}
+
+.c-hero--contact::before {
+  background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+}
+
+.c-hero--legal::before {
+  background-image: url('/assets/img/hero/privacy-security.jpg');
+}
+
+.c-hero--terms::before {
+  background-image: url('/assets/img/hero/legal-documents.jpg');
+}
+
+.c-hero--accessibility::before {
+  background-image: url('/assets/img/hero/accessibility-support.jpg');
+} 

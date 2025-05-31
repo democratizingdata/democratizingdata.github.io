@@ -1,3 +1,6 @@
+---
+layout: null
+---
 /**
  * Performance Optimizations for Democratizing Data Website
  * Includes lazy loading, intersection observer, and Core Web Vitals improvements
@@ -73,7 +76,7 @@
     }
 
     // Preload critical CSS for next page navigation
-    const criticalPages = ['/about/', '/tools/', '/resources/'];
+    const criticalPages = ['{{ site.baseurl }}/about/', '{{ site.baseurl }}/tools/', '{{ site.baseurl }}/resources/'];
     criticalPages.forEach(page => {
       const link = document.createElement('link');
       link.rel = 'prefetch';
