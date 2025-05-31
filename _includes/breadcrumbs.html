@@ -71,6 +71,12 @@
                   {% assign crumb_title = 'Workforce Dashboard' %}
                 {% when 'dimensions' %}
                   {% assign crumb_title = 'Dimensions' %}
+                {% when '2025' %}
+                  {% assign crumb_title = '2025' %}
+                {% when 'june-20-webinar' %}
+                  {% assign crumb_title = 'June 20 Webinar' %}
+                {% when 'trusted-data-webinar' %}
+                  {% assign crumb_title = 'Trusted Data Webinar' %}
                 {% else %}
                   {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% endcase %}
@@ -116,6 +122,12 @@
                   {% assign crumb_title = 'Workforce Dashboard' %}
                 {% when 'dimensions' %}
                   {% assign crumb_title = 'Dimensions' %}
+                {% when '2025' %}
+                  {% assign crumb_title = '2025' %}
+                {% when 'june-20-webinar' %}
+                  {% assign crumb_title = 'June 20 Webinar' %}
+                {% when 'trusted-data-webinar' %}
+                  {% assign crumb_title = 'Trusted Data Webinar' %}
                 {% else %}
                   {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% endcase %}
