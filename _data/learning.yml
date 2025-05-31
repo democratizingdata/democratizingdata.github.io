@@ -8,15 +8,4 @@ presentations:
   description: "Federal agencies have shared valuable insights through presentations at the Federal Committee on Survey Methodology and <a href=\"https://copafs.org/\" target=\"_blank\">The Council of Professional Associations on Federal Statistics</a>."
   additional_info: "Explore our collection of <a href=\"/events/2023/usda-webinar/\" target=\"_blank\">webinars</a> and conferences that showcase how data contributes to the <a href=\"https://hdsr.mitpress.mit.edu/value-of-science\" target=\"_blank\">value of science</a>."
   learn_more_link: "/events/"
-  image: "/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png"
-
-trusted_data:
-  title: "Help Shape the Future of Trusted Data"
-  subtitle: "Complete the Trusted Data Questionnaire"
-  description: "This June, C-FARE will host a webinar \"Envisioning food and agricultural data for the future: Developing a new roadmap for trusted data.\" The webinar will look at what it means for data to be trusted from different perspectives. It will feature presentations and new ideas from national experts who are working to build trusted data infrastructures."
-  call_to_action: "We want to hear from you. Your input will help shape the conversation about the future of trusted data infrastructures."
-  questionnaire_link: "https://forms.gle/pdogioD6D9h1DtTG9"
-  questionnaire_text: "Complete Questionnaire"
-  contact_link: "/about/contact-us/"
-  contact_text: "Contact Us"
-  image: "/assets/img/thumbnails/8e/8d/8e8d945b-b1cd-4433-b45d-88bc3c42a070/copafs.jpg__684.0x352.0_q85_subsampling-2.jpg" 
+  image: "/assets/img/thumbnails/ff/af/ffaf3c79-a9ae-452c-bfe3-a6bac71c69f4/insights.png__684.0x352.0_subsampling-2.png" 

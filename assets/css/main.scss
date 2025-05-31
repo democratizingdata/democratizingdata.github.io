@@ -124,4 +124,24 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.c-hero--june-20-webinar::before {
+  background-image: url('{{ site.baseurl }}/assets/img/events/alexandr-podvalny-WOxddhzhC1w-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Event card type badge link styling */
+.c-event-card__type {
+  text-decoration: none !important;
+}
+
+.c-event-card__type:hover {
+  text-decoration: none !important;
+}
+
+.c-event-card__type:focus {
+  text-decoration: none !important;
 } 
