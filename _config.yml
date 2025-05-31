@@ -67,6 +67,7 @@ defaults:
 
 include:
   - CNAME
+  - .well-known
 
 # Markdown processing
 markdown: kramdown

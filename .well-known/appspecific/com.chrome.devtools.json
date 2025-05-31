@@ -1,0 +1,9 @@
+{
+  "name": "Democratizing Data",
+  "short_name": "DD",
+  "description": "Democratizing Data - Making data accessible and actionable for everyone",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#6667AB",
+  "background_color": "#ffffff"
+} 
