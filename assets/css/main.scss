@@ -144,4 +144,31 @@
 
 .c-event-card__type:focus {
   text-decoration: none !important;
+}
+
+/* Footer disclaimers styling */
+.footer-disclaimers {
+  border-top: 1px solid #4b5563;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-disclaimer-item {
+  margin-bottom: 0.75rem;
+}
+
+.footer-disclaimer-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-disclaimer-item p {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-disclaimer-item strong {
+  color: #f9fafb;
+  font-weight: 600;
 } 
