@@ -171,4 +171,32 @@
 .footer-disclaimer-item strong {
   color: #f9fafb;
   font-weight: 600;
+}
+
+/* Fix for National Data Platform blue card height */
+.c-dataset-card--blue {
+  height: auto !important;
+  border-left-color: #3b82f6;
+  background: #eff6ff;
+  
+  h3 {
+    color: #1e40af;
+    margin-bottom: 16px;
+  }
+  
+  h4 {
+    color: #1e40af;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Fix for National Data Platform green cards height */
+.c-dataset-card--green {
+  height: auto !important;
+  
+  h5 {
+    color: #10b981;
+    margin-bottom: 12px;
+  }
 } 
