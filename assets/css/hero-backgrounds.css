@@ -7,6 +7,10 @@
   background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
 }
 
+.c-hero--overview::before {
+  background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+}
+
 .c-hero--tools::before {
   background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
 }
@@ -16,7 +20,7 @@
 }
 
 .c-hero--events::before {
-  background-image: url('/assets/img/hero/data-analytics-research.jpg');
+  background-image: url('/assets/img/hero/events-workshop.jpg');
 }
 
 .c-hero--event::before {
@@ -24,11 +28,27 @@
 }
 
 .c-hero--team::before {
-  background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+  background-image: url('/assets/img/hero/team-collaboration.jpg');
 }
 
 .c-hero--contact::before {
+  background-image: url('/assets/img/hero/contact-communication.jpg');
+}
+
+.c-hero--national-data-platform::before {
+  background-image: url('/assets/img/hero/jupyter-notebooks.jpg');
+}
+
+.c-hero--technical-report::before {
   background-image: url('/assets/img/hero/data-analysis-workspace.jpg');
+}
+
+.c-hero--resources::before {
+  background-image: url('/assets/img/hero/data-analytics-research.jpg');
+}
+
+.c-hero--additional-resources::before {
+  background-image: url('/assets/img/hero/research-publications.jpg');
 }
 
 .c-hero--legal::before {
