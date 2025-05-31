@@ -95,6 +95,7 @@ exclude:
   - vendor/ruby/
   # Task Master AI files
   - tasks/
+  - memory-mcp/
   - scripts/
   - .taskmasterconfig
   # Cursor IDE files

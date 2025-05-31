@@ -6,4 +6,122 @@
 /*! Based on comprehensive analysis of credentialengine.org/credentialtransparency-ai/ */
 
 // Import the main SCSS architecture
-@import 'main'; 
+@import 'main';
+
+// =============================================================================
+// HERO BACKGROUND IMAGES
+// =============================================================================
+// Background images for hero sections with proper baseurl support
+// These need to be in the main entry point for Jekyll to process the variables
+
+.c-hero::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analytics-research.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--about::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analysis-workspace.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--overview::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analysis-workspace.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--tools::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analysis-workspace.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--dashboard::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analytics-research.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--events::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/events-workshop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--event::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analytics-research.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--team::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/team-collaboration.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--contact::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/contact-communication.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--national-data-platform::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/jupyter-notebooks.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--technical-report::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analysis-workspace.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--resources::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/data-analytics-research.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--additional-resources::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/research-publications.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--legal::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/privacy-security.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--terms::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/legal-documents.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hero--accessibility::before {
+  background-image: url('{{ site.baseurl }}/assets/img/hero/accessibility-support.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} 
