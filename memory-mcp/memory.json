@@ -20,6 +20,8 @@
 {"type":"entity","name":"Advisory Committee on Data for Evidence Building","entityType":"government_committee","observations":["Produced final report calling for dataset search and discovery platform","Report available at https://www.bea.gov/system/files/2022-10/acdeb-year-2-report.pdf"]}
 {"type":"entity","name":"National AI Research Resources Taskforce","entityType":"government_taskforce","observations":["Produced final report calling for dataset search and discovery platform","Report available at https://www.ai.gov/wp-content/uploads/2023/01/NAIRR-TF-Final-Report-2023.pdf"]}
 {"type":"entity","name":"Dimensions database","entityType":"data_platform","observations":["Source publication corpus for the Food and Agricultural Research Platform","Covers years 2017-2024","Website at https://www.dimensions.ai/"]}
+{"type":"entity","name":"Lauren Chenarides","entityType":"person","observations":["Has a technical report at https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html","Report compares Scopus and OpenAlex data sources","User wants to direct people specifically to Lauren's report instead of mixed content"]}
+{"type":"entity","name":"Technical Report Page","entityType":"webpage","observations":["Located at /resources/technical-report/","Currently includes text about both Johns Hopkins/TACC report and Lauren's report","User wants to remove explanatory text and have button directly open Lauren's report","Already points people to HDSR special issue elsewhere","Methodology from Johns Hopkins/TACC not being used in current context"]}
 {"type":"relation","from":"default_user","to":"DemocratizingData.github.io","relationType":"works on"}
 {"type":"relation","from":"default_user","to":"DemocratizingData.github.io","relationType":"owns"}
 {"type":"relation","from":"default_user","to":"Credential Engine Website","relationType":"wants_to_emulate"}
@@ -31,3 +33,6 @@
 {"type":"relation","from":"Rafael Ladislau","to":"Task 6 Homepage Modernization","relationType":"is working on"}
 {"type":"relation","from":"Task 6 Homepage Modernization","to":"Democratizing Data Website","relationType":"is part of"}
 {"type":"relation","from":"Image Optimization System","to":"Task 6 Homepage Modernization","relationType":"is component of"}
+{"type":"relation","from":"default_user","to":"Technical Report Page","relationType":"wants to modify"}
+{"type":"relation","from":"default_user","to":"Lauren Chenarides","relationType":"wants to promote work of"}
+{"type":"relation","from":"Technical Report Page","to":"Lauren Chenarides","relationType":"should link to report by"}
