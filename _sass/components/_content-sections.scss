@@ -1355,11 +1355,19 @@
 // =============================================================================
 
 .c-hero {
-  padding: 8px 0 5px; // Reduced mobile padding - proportional to desktop reduction
+  padding: 30px 0 20px 0; // Consistent with main hero.scss
   background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   color: white;
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 991.98px) {
+    padding: 25px 0 15px 0;
+  }
+  
+  @media (max-width: 767.98px) {
+    padding: 20px 0 10px 0;
+  }
   
   .container {
     position: relative;
@@ -1371,20 +1379,10 @@
       position: relative;
       z-index: 3;
     }
-    
-    .c-hero__image {
-      position: relative;
-      z-index: 3;
-      
-      img {
-        border-radius: 16px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      }
-    }
   }
   
   &__category {
-    margin-bottom: 15px; // Slightly increased from 10px
+    margin-bottom: 12px;
     
     .c-category-badge {
       background: rgba(255, 255, 255, 0.2);
@@ -1394,14 +1392,22 @@
   }
   
   &__title {
-    font-size: 2.25rem; // Slightly increased from 2rem
+    font-size: 1.875rem; // Consistent with main hero.scss
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 12px; // Slightly increased from 8px
+    margin-bottom: 12px;
     color: white;
     
-    @media (max-width: 768px) {
-      font-size: 1.75rem; // Slightly increased from 1.5rem
+    @media (max-width: 991.98px) {
+      font-size: 1.5rem;
+    }
+    
+    @media (max-width: 767.98px) {
+      font-size: 1.25rem;
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 1.125rem;
     }
   }
   
@@ -1413,16 +1419,24 @@
   }
   
   &__description {
-    font-size: 1.125rem; // Slightly increased from 1rem
+    font-size: 0.875rem; // Consistent with main hero.scss
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 16px; // Slightly increased from 12px
+    margin-bottom: 16px;
     max-width: 500px;
+    
+    @media (max-width: 767.98px) {
+      font-size: 0.8rem;
+    }
+    
+    @media (max-width: 575.98px) {
+      font-size: 0.75rem;
+    }
   }
   
   &__actions {
     display: flex;
-    gap: 12px; // Slightly increased from 8px
+    gap: 12px;
     flex-wrap: wrap;
     position: relative;
     z-index: 10;
@@ -1456,7 +1470,7 @@
   }
   
   .c-hero {
-    padding: 8px 0 5px; // Reduced mobile padding - proportional to desktop reduction
+    padding: 20px 0 10px 0; // Consistent with main hero.scss
     text-align: center;
     
     &__actions {
@@ -1575,13 +1589,13 @@
   }
 }
 
-// Dashboard-specific hero styling
-.c-hero--dashboard {
-  .c-hero__image img {
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-}
+// // Dashboard-specific hero styling
+// .c-hero--dashboard {
+//   .c-hero__image img {
+//     border-radius: 16px;
+//     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+//   }
+// }
 
 // Additional dashboard card variants
 .c-dataset-card--green {
@@ -3838,128 +3852,128 @@ iframe#dashboard {
         }
     }
 }
-
-// Dashboard Hero variant
-.c-hero--dashboard {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    color: white;
-    padding: 120px 0 80px;
-    position: relative;
-    overflow: hidden;
-    
-    .container {
-        position: relative;
-        z-index: 3;
-    }
-    
-    .c-hero__title {
-        color: white;
-        font-size: 3.5rem;
-        font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-
-        @media (max-width: 768px) {
-            font-size: 2.5rem;
-        }
-    }
-    
-    .c-hero__description {
-        color: rgba(255, 255, 255, 0.95);
-        font-size: 1.25rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-    }
-
-    .c-hero__actions {
-        position: relative;
-        z-index: 10;
-    }
-    
-    .c-category-badge--tools {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .c-hero__image img {
-        border-radius: 12px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-}
-
-// =============================================================================
-// TOOLS PAGE COMPONENTS
-// =============================================================================
-
-// Tools Hero Section
-.c-hero--tools {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    color: white;
-    padding: 120px 0 80px;
-    position: relative;
-    overflow: hidden;
-    
-    .container {
-        position: relative;
-        z-index: 3;
-    }
-
-    .c-hero__title {
-        color: white;
-        font-size: 3.5rem;
-        font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-
-        @media (max-width: 768px) {
-            font-size: 2.5rem;
-        }
-    }
-
-    .c-hero__description {
-        color: rgba(255, 255, 255, 0.95);
-        font-size: 1.25rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-    }
-
-    .c-hero__actions {
-        position: relative;
-        z-index: 10;
-    }
-
-    .c-hero__image img {
-        border-radius: 12px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-    
-    @media (max-width: 991.98px) {
-        padding: 80px 0 60px;
-    }
-    
-    @media (max-width: 767.98px) {
-        padding: 60px 0 40px;
-    }
-}
-
-.c-category-badge--tools {
-    background: rgba(34, 197, 94, 0.2);
-    color: #22c55e;
-    border: 1px solid rgba(34, 197, 94, 0.3);
-}
-
-// Methodology Highlights
-.c-methodology-highlights {
-    margin-top: 3rem;
-    
-    h3 {
-        color: #1f2937;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-    }
-}
+// 
+// // Dashboard Hero variant
+// .c-hero--dashboard {
+//     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+//     color: white;
+//     padding: 120px 0 80px;
+//     position: relative;
+//     overflow: hidden;
+//     
+//     .container {
+//         position: relative;
+//         z-index: 3;
+//     }
+//     
+//     .c-hero__title {
+//         color: white;
+//         font-size: 3.5rem;
+//         font-weight: 700;
+//         line-height: 1.1;
+//         margin-bottom: 1.5rem;
+// 
+//         @media (max-width: 768px) {
+//             font-size: 2.5rem;
+//         }
+//     }
+//     
+//     .c-hero__description {
+//         color: rgba(255, 255, 255, 0.95);
+//         font-size: 1.25rem;
+//         line-height: 1.6;
+//         margin-bottom: 2rem;
+//     }
+// 
+//     .c-hero__actions {
+//         position: relative;
+//         z-index: 10;
+//     }
+//     
+//     .c-category-badge--tools {
+//         background: rgba(255, 255, 255, 0.2);
+//         color: white;
+//         border: 1px solid rgba(255, 255, 255, 0.3);
+//     }
+// 
+//     .c-hero__image img {
+//         border-radius: 12px;
+//         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+//     }
+// }
+// 
+// // =============================================================================
+// // TOOLS PAGE COMPONENTS
+// // =============================================================================
+// 
+// // Tools Hero Section
+// .c-hero--tools {
+//     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+//     color: white;
+//     padding: 120px 0 80px;
+//     position: relative;
+//     overflow: hidden;
+//     
+//     .container {
+//         position: relative;
+//         z-index: 3;
+//     }
+// 
+//     .c-hero__title {
+//         color: white;
+//         font-size: 3.5rem;
+//         font-weight: 700;
+//         line-height: 1.1;
+//         margin-bottom: 1.5rem;
+// 
+//         @media (max-width: 768px) {
+//             font-size: 2.5rem;
+//         }
+//     }
+// 
+//     .c-hero__description {
+//         color: rgba(255, 255, 255, 0.95);
+//         font-size: 1.25rem;
+//         line-height: 1.6;
+//         margin-bottom: 2rem;
+//     }
+// 
+//     .c-hero__actions {
+//         position: relative;
+//         z-index: 10;
+//     }
+// 
+//     .c-hero__image img {
+//         border-radius: 12px;
+//         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+//     }
+//     
+//     @media (max-width: 991.98px) {
+//         padding: 80px 0 60px;
+//     }
+//     
+//     @media (max-width: 767.98px) {
+//         padding: 60px 0 40px;
+//     }
+// }
+// 
+// .c-category-badge--tools {
+//     background: rgba(34, 197, 94, 0.2);
+//     color: #22c55e;
+//     border: 1px solid rgba(34, 197, 94, 0.3);
+// }
+// 
+// // Methodology Highlights
+// .c-methodology-highlights {
+//     margin-top: 3rem;
+//     
+//     h3 {
+//         color: #1f2937;
+//         font-size: 1.5rem;
+//         font-weight: 600;
+//         margin-bottom: 1rem;
+//     }
+// }
 
 .c-methodology-highlight {
     display: flex;
