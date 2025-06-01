@@ -49,13 +49,12 @@ sections:
 # Technical Report
 technical_report:
   title: "📋 Technical Report Available"
-  description: "Access comprehensive technical documentation for federal agencies and research institutions. Our technical report provides detailed documentation of the Democratizing Data platform's architecture, methodology, and implementation guidelines."
+  description: "This report introduces a methodology for identifying dataset mentions in research publications and comparing coverage across citation databases. Tracking these mentions helps measure the reach of federal datasets and supports future data investment decisions. The analysis also highlights the range of research topics where these datasets are used across disciplines."
   highlights:
-    - "150+ pages of technical documentation"
-    - "Machine learning algorithms and NLP techniques"
-    - "Implementation guidelines for federal agencies"
-    - "Performance metrics and evaluation results"
-    - "API documentation and integration strategies"
+    - "Code repository for data cleaning and standardization"
+    - "Data schemas by citation database"
+    - "Standardized institution tables using IPEDS identifiers"
+    - "Data visualizations summarizing report findings"
   link: "/resources/technical-report/"
   button_text: "Access Technical Report"
 
