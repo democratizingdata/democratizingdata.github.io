@@ -2573,7 +2573,7 @@ iframe#dashboard {
 .c-hero--events {
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     color: white;
-    padding: 80px 0;
+    padding: 50px 0; // Reduced from 80px to 50px for less unused space
     
     .c-hero__image img {
         border-radius: 12px;
@@ -2604,7 +2604,7 @@ iframe#dashboard {
     }
     
     .c-hero--events {
-        padding: 60px 0;
+        padding: 40px 0; // Reduced from 60px to 40px for mobile
         text-align: center;
         
         .c-hero__image {
@@ -2646,7 +2646,7 @@ iframe#dashboard {
 .c-hero--about {
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     color: white;
-    padding: 120px 0 80px;
+    padding: 70px 0 50px; // Reduced from 120px 0 80px for less unused space
     position: relative;
     overflow: hidden;
 
@@ -2688,6 +2688,11 @@ iframe#dashboard {
     .c-hero__image img {
         border-radius: 12px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    // Mobile responsive padding
+    @media (max-width: 768px) {
+        padding: 50px 0 40px; // Reduced mobile padding for better space utilization
     }
 }
 
