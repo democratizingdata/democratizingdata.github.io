@@ -4633,8 +4633,8 @@ iframe#dashboard {
 
 // Event Carousel Section
 .c-event-carousel {
-  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
-  color: white;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #1f2937;
   position: relative;
   overflow: hidden;
   
@@ -4646,21 +4646,21 @@ iframe#dashboard {
     right: 0;
     bottom: 0;
     background: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') bottom/cover;
-    opacity: 0.3;
+    opacity: 0.05;
     z-index: 1;
   }
   
-  // Add dark overlay for better text readability
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-  }
+  // Remove the dark overlay for a lighter feel
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: rgba(0, 0, 0, 0.6);
+  //   z-index: 2;
+  // }
   
   .container {
     position: relative;
@@ -4685,11 +4685,11 @@ iframe#dashboard {
       height: 12px;
       border-radius: 50%;
       margin: 0 4px;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(107, 114, 128, 0.5);
       border: none;
       
       &.active {
-        background-color: white;
+        background-color: #374151;
       }
     }
   }
@@ -4779,9 +4779,9 @@ iframe#dashboard {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.2);
     align-self: flex-start;
     
     @media (max-width: 767.98px) {
@@ -4794,8 +4794,8 @@ iframe#dashboard {
     font-weight: 700;
     margin-bottom: 12px;
     line-height: 1.3;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    color: #1f2937;
+    text-shadow: none;
     
     @media (max-width: 767.98px) {
       font-size: 1.25rem;
@@ -4810,8 +4810,8 @@ iframe#dashboard {
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    color: #4b5563;
+    text-shadow: none;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -4833,7 +4833,7 @@ iframe#dashboard {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(59, 130, 246, 0.9);
+    background: #3b82f6;
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -4841,9 +4841,10 @@ iframe#dashboard {
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: none;
+    border: none;
     align-self: flex-start;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
     
     @media (max-width: 767.98px) {
       align-self: center;
@@ -4856,11 +4857,11 @@ iframe#dashboard {
     }
     
     &:hover {
-      background: rgba(37, 99, 235, 0.95);
+      background: #2563eb;
       color: white;
       text-decoration: none;
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
     }
     
     svg {
