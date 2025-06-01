@@ -4651,29 +4651,30 @@ iframe#dashboard {
     z-index: 1;
   }
   
-  // Remove the dark overlay for a lighter feel
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: rgba(0, 0, 0, 0.6);
-  //   z-index: 2;
-  // }
-  
   .container {
     position: relative;
     z-index: 3;
+    max-width: 1140px; // Slightly narrower than default Bootstrap container
+    
+    @media (max-width: 1199.98px) {
+      max-width: 960px;
+    }
+    
+    @media (max-width: 991.98px) {
+      max-width: 720px;
+    }
+    
+    @media (max-width: 767.98px) {
+      max-width: 540px;
+    }
   }
   
   .carousel {
-    padding: 40px 0; // Increased padding for better spacing
-    margin: 0; // Remove horizontal margin to prevent arrow issues
+    padding: 30px 0; // Reduced from 40px to minimize height
+    margin: 0;
     
     @media (max-width: 767.98px) {
-      padding: 30px 0;
+      padding: 25px 0; // Reduced from 30px
     }
   }
   
@@ -4698,61 +4699,61 @@ iframe#dashboard {
   .carousel-inner {
     border-radius: 8px;
     overflow: hidden;
-    height: 370px; // Use min-height instead of fixed height
+    height: 290px; // Reduced from 370px to minimize unused space
     
     @media (max-width: 991.98px) {
-      height: 370px;
+      height: 290px; // Reduced from 370px
     }
     
     @media (max-width: 767.98px) {
-      height: 300px;
+      height: 275px; // Reduced from 300px
     }
     
     @media (max-width: 575.98px) {
-      height: 275px;
+      height: 240px; // Reduced from 275px
     }
   }
   
   .carousel-item {
     transition: transform 0.6s ease-in-out;
-    height: 370px; // Match the carousel-inner min-height
+    height: 290px; // Match the carousel-inner height
     
     @media (max-width: 991.98px) {
-      height: 370px;
+      height: 290px;
     }
     
     @media (max-width: 767.98px) {
-      height: 300px;
+      height: 275px;
     }
     
     @media (max-width: 575.98px) {
-      height: 275px;
+      height: 240px;
     }
   }
   
   .c-carousel-slide {
     display: flex;
     align-items: center;
-    height: 370px; // Ensure consistent minimum height
-    padding: 30px 60px; // Add horizontal padding to prevent arrow overlap
+    height: 290px; // Match the carousel-inner height
+    padding: 25px 80px; // Increased horizontal padding from 60px to 80px for more space from arrows
     border-radius: 8px;
     
     @media (max-width: 991.98px) {
-      padding: 25px 50px;
-      height: 370px;
+      padding: 20px 70px; // Increased from 50px to 70px
+      height: 290px;
     }
     
     @media (max-width: 767.98px) {
       flex-direction: column;
       text-align: center;
       justify-content: center;
-      padding: 20px 40px;
-      height: 300px;
+      padding: 15px 60px; // Increased from 40px to 60px
+      height: 275px;
     }
     
     @media (max-width: 575.98px) {
-      padding: 15px 30px;
-      height: 275px;
+      padding: 12px 50px; // Increased from 30px to 50px
+      height: 240px;
     }
   }
   
@@ -4820,13 +4821,13 @@ iframe#dashboard {
     
     @media (max-width: 767.98px) {
       font-size: 0.9rem;
-      -webkit-line-clamp: 4;
-      margin-bottom: 24px;
+      -webkit-line-clamp: 3; // Reduced from 4 to save space
+      margin-bottom: 20px; // Reduced from 24px
     }
     
     @media (max-width: 575.98px) {
       font-size: 0.85rem;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2; // Reduced from 3 to save space
     }
   }
   
@@ -4849,11 +4850,11 @@ iframe#dashboard {
     
     @media (max-width: 767.98px) {
       align-self: center;
-      padding: 14px 28px;
+      padding: 12px 24px; // Reduced from 14px 28px to save space
     }
     
     @media (max-width: 575.98px) {
-      padding: 12px 20px;
+      padding: 10px 18px; // Reduced from 12px 20px
       font-size: 0.9rem;
     }
     
@@ -4878,8 +4879,8 @@ iframe#dashboard {
   
   .c-carousel-slide__image {
     flex-shrink: 0;
-    width: 200px;
-    height: 150px;
+    width: 180px; // Slightly reduced from 200px to save space
+    height: 135px; // Proportionally reduced from 150px
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -4906,23 +4907,23 @@ iframe#dashboard {
     opacity: 1;
     z-index: 10;
     
-    // Position arrows outside the container but within safe bounds
+    // Position arrows further out to accommodate increased padding
     &.carousel-control-prev {
-      left: 10px; // Safe distance from edge
+      left: 15px; // Increased from 10px for more space
     }
     
     &.carousel-control-next {
-      right: 10px; // Safe distance from edge
+      right: 15px; // Increased from 10px for more space
     }
     
     // On smaller screens, position them safely without overlapping content
     @media (max-width: 991.98px) {
       &.carousel-control-prev {
-        left: 5px;
+        left: 10px; // Increased from 5px
       }
       
       &.carousel-control-next {
-        right: 5px;
+        right: 10px; // Increased from 5px
       }
     }
     
@@ -4931,11 +4932,11 @@ iframe#dashboard {
       height: 40px;
       
       &.carousel-control-prev {
-        left: 2px;
+        left: 8px; // Increased from 2px
       }
       
       &.carousel-control-next {
-        right: 2px;
+        right: 8px; // Increased from 2px
       }
     }
     
@@ -4944,11 +4945,11 @@ iframe#dashboard {
       height: 36px;
       
       &.carousel-control-prev {
-        left: 1px;
+        left: 5px; // Increased from 1px
       }
       
       &.carousel-control-next {
-        right: 1px;
+        right: 5px; // Increased from 1px
       }
     }
     
@@ -4994,11 +4995,6 @@ iframe#dashboard {
     }
   }
 }
-
-// =============================================================================
-// CONTENT SECTION BASE
-// CONTENT SECTION BASE
-// CONTENT SECTION BASE
 
 // =============================================================================
 // COLLABORATORS SECTION
