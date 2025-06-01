@@ -1,0 +1,15 @@
+# Deployment configuration for GitHub Pages preview
+# This overrides settings in _config.yml for the preview deployment
+
+# Replace these with your actual organization and repository names
+title: "Democratizing Data (Preview)"
+description: >-
+  Preview of the redesigned Democratizing Data website - A Search And Discovery Platform For Public Data Assets.
+
+# GitHub Pages settings - Update these for your organization
+# Example: if your org is "YourOrg" and repo is "democratizingdata-preview"
+url: "https://YourOrgName.github.io"  # Replace YourOrgName with actual org name  
+baseurl: "/democratizingdata-preview" # Replace with actual repository name
+
+# Keep all other settings from main config
+domain: ""  # Clear the custom domain for GitHub Pages preview 

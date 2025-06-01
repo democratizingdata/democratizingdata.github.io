@@ -1,0 +1,364 @@
+// =============================================================================
+// HEADER COMPONENT
+// =============================================================================
+// Main site header with branding bar and navigation
+// Based on Credential Engine design system analysis
+
+// Site Header Container
+.site-header {
+  position: relative;
+  z-index: 100;
+  background-color: $color-white;
+  box-shadow: $shadow-sm;
+  
+  @include respond-to(lg) {
+    position: sticky;
+    top: 0;
+  }
+}
+
+// =============================================================================
+// BRANDING BAR
+// =============================================================================
+
+.branding-header {
+  background-color: $color-primary;
+  padding: $space-xs 0;
+  border-bottom: 1px solid darken($color-primary, 10%);
+}
+
+.branding-container {
+  @include container();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-md;
+  
+  @include respond-to(md) {
+    justify-content: flex-end;
+  }
+}
+
+.branding-link {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity $transition-fast ease-in-out;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  &:focus {
+    @include focus-ring();
+    border-radius: $border-radius-sm;
+  }
+}
+
+.branding-logo {
+  height: 24px;
+  width: auto;
+  
+  @include respond-to(md) {
+    height: 28px;
+  }
+  
+  &.branding-tacc {
+    max-width: 80px;
+  }
+  
+  &.branding-utaustin {
+    max-width: 120px;
+  }
+}
+
+.branding-separator {
+  width: 1px;
+  height: 20px;
+  background-color: rgba($color-white, 0.3);
+  
+  @include respond-to(md) {
+    height: 24px;
+  }
+}
+
+// =============================================================================
+// MAIN NAVIGATION
+// =============================================================================
+
+.main-navigation {
+  background-color: $color-white;
+  padding: $space-sm 0;
+  border-bottom: 1px solid $color-border;
+  
+  .navbar-brand-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-logo {
+    display: inline-flex;
+    align-items: center;
+    padding: $space-xs;
+    border-radius: $border-radius-sm;
+    transition: all $transition-fast ease-in-out;
+    
+    &:hover {
+      background-color: $color-background-secondary;
+    }
+    
+    &:focus {
+      @include focus-ring();
+    }
+  }
+  
+  .portal-logo {
+    height: 40px;
+    width: auto;
+    
+    @include respond-to(md) {
+      height: 48px;
+    }
+  }
+}
+
+// Mobile Menu Toggle
+.mobile-menu-toggle {
+  border: 2px solid $color-primary;
+  border-radius: $border-radius-md;
+  padding: $space-xs $space-sm;
+  background-color: transparent;
+  color: $color-primary;
+  transition: all $transition-fast ease-in-out;
+  
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  
+  &:focus {
+    @include focus-ring();
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$color-primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  &:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$color-white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+// =============================================================================
+// NAVIGATION MENU
+// =============================================================================
+
+.main-nav {
+  .nav-item {
+    margin: 0 $space-xs;
+    
+    @include respond-to(xl) {
+      margin: 0 $space-sm;
+    }
+  }
+  
+  .nav-link {
+    color: $color-text-primary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    padding: $space-sm $space-md;
+    border-radius: $border-radius-md;
+    transition: all $transition-fast ease-in-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+    
+    &:hover {
+      color: $color-primary;
+      background-color: $color-background-secondary;
+    }
+    
+    &:focus {
+      @include focus-ring();
+    }
+    
+    &.active,
+    &[aria-expanded="true"] {
+      color: $color-primary;
+      background-color: lighten($color-primary, 45%);
+    }
+  }
+}
+
+// Dropdown Icons
+.dropdown-icon {
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: transform $transition-fast ease-in-out;
+  }
+  
+  .nav-link[aria-expanded="true"] & {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// External Link Icons
+.external-link-icon {
+  &::after {
+    content: '↗';
+    font-size: $font-size-sm;
+    margin-left: $space-xs;
+    opacity: 0.7;
+  }
+}
+
+// =============================================================================
+// DROPDOWN MENUS
+// =============================================================================
+
+.dropdown-menu {
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  padding: $space-sm 0;
+  margin-top: $space-xs;
+  background-color: $color-white;
+  min-width: 220px;
+  
+  .dropdown-item {
+    color: $color-text-primary;
+    padding: $space-sm $space-lg;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    transition: all $transition-fast ease-in-out;
+    border: none;
+    display: flex;
+    align-items: center;
+    
+    &:hover {
+      color: $color-primary;
+      background-color: lighten($color-primary, 48%);
+    }
+    
+    &:focus {
+      color: $color-primary;
+      background-color: lighten($color-primary, 45%);
+      outline: 2px solid $color-primary;
+      outline-offset: -2px;
+    }
+    
+    &:active {
+      background-color: lighten($color-primary, 40%);
+    }
+  }
+}
+
+// =============================================================================
+// RESPONSIVE BEHAVIOR
+// =============================================================================
+
+@include respond-to-max(xl) {
+  .main-navigation {
+    .navbar-collapse {
+      margin-top: $space-md;
+      padding-top: $space-md;
+      border-top: 1px solid $color-border;
+    }
+    
+    .main-nav {
+      flex-direction: column;
+      width: 100%;
+      
+      .nav-item {
+        margin: $space-xs 0;
+        width: 100%;
+      }
+      
+      .nav-link {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    
+    .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+      margin-top: 0;
+      background-color: $color-background-secondary;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      
+      .dropdown-item {
+        padding-left: $space-xl;
+        font-size: $font-size-sm;
+        
+        &:hover {
+          background-color: lighten($color-primary, 45%);
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// ACCESSIBILITY ENHANCEMENTS
+// =============================================================================
+
+// Skip to main content link
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: $color-primary;
+  color: $color-white;
+  padding: $space-sm $space-md;
+  text-decoration: none;
+  border-radius: $border-radius-md;
+  z-index: 1000;
+  
+  &:focus {
+    top: 6px;
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .site-header {
+    border-bottom: 2px solid $color-text-primary;
+  }
+  
+  .main-nav .nav-link {
+    border: 1px solid transparent;
+    
+    &:hover,
+    &:focus {
+      border-color: currentColor;
+    }
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .branding-link,
+  .site-logo,
+  .nav-link,
+  .dropdown-item,
+  .mobile-menu-toggle {
+    transition: none;
+  }
+  
+  .dropdown-icon::after {
+    transition: none;
+  }
+} 

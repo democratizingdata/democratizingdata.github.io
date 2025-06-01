@@ -1,0 +1,298 @@
+/*! Design System Variables */
+/*! SCSS Variables for Credential Engine Design System */
+
+// =============================================================================
+// DESIGN SYSTEM METADATA
+// =============================================================================
+
+$design-system-version: "1.0.0";
+$design-system-name: "Credential Engine Inspired";
+
+// =============================================================================
+// COLOR PALETTE
+// =============================================================================
+
+// Primary Brand Colors
+$color-primary: #1f4e79;
+$color-primary-light: #2563eb;
+$color-primary-lighter: #3b82f6;
+$color-primary-dark: #1e3a8a;
+$color-primary-darker: #1e40af;
+
+// Secondary Brand Colors
+$color-secondary: #2563eb;
+$color-secondary-light: #3b82f6;
+$color-secondary-lighter: #60a5fa;
+$color-secondary-dark: #1d4ed8;
+$color-secondary-darker: #1e40af;
+
+// Accent Colors
+$color-accent-orange: #f59e0b;
+$color-accent-orange-light: #fbbf24;
+$color-accent-orange-dark: #d97706;
+$color-accent-green: #10b981;
+
+// Text Colors
+$color-text-primary: #1f2937;
+$color-text-secondary: #6b7280;
+$color-text-light: #9ca3af;
+$color-text-white: #ffffff;
+$color-text-inverse: #ffffff;
+
+// Background Colors
+$color-bg-white: #ffffff;
+$color-bg-light: #f9fafb;
+$color-bg-gray: #f3f4f6;
+$color-bg-medium: #e5e7eb;
+$color-bg-dark: #374151;
+
+// Border Colors
+$color-border-light: #e5e7eb;
+$color-border-medium: #d1d5db;
+$color-border-dark: #9ca3af;
+$color-border-focus: #2563eb;
+
+// Semantic Colors
+$color-success: #10b981;
+$color-success-light: #d1fae5;
+$color-success-dark: #047857;
+$color-warning: #f59e0b;
+$color-warning-light: #fef3c7;
+$color-warning-dark: #d97706;
+$color-error: #ef4444;
+$color-error-light: #fee2e2;
+$color-error-dark: #dc2626;
+$color-info: #3b82f6;
+$color-info-light: #dbeafe;
+$color-info-dark: #1d4ed8;
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+// Font Families
+$font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "SF Mono", Monaco, Inconsolata, "Roboto Mono", Consolas, "Courier New", monospace;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Font Sizes - Heading Scale (Based on Credential Engine Analysis)
+$font-size-h1: 3.125rem;  // 50px (48-52px range)
+$font-size-h2: 2.375rem;  // 38px (36-40px range)
+$font-size-h3: 1.875rem;  // 30px (28-32px range)
+$font-size-h4: 1.5rem;    // 24px
+$font-size-h5: 1.25rem;   // 20px
+$font-size-h6: 1.125rem;  // 18px
+
+// Font Sizes - Body Scale
+$font-size-large: 1.125rem;  // 18px
+$font-size-body: 1rem;       // 16px
+$font-size-small: 0.875rem;  // 14px
+$font-size-caption: 0.75rem; // 12px
+
+// Line Heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.6;
+$line-height-loose: 1.8;
+
+// Letter Spacing
+$letter-spacing-tight: -0.025em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.025em;
+$letter-spacing-wider: 0.05em;
+
+// =============================================================================
+// SPACING
+// =============================================================================
+
+// Base Spacing Unit
+$space-base: 8px;
+
+// Spacing Scale
+$space-0: 0;
+$space-1: 4px;     // 0.5 * base
+$space-2: 8px;     // 1 * base
+$space-3: 12px;    // 1.5 * base
+$space-4: 16px;    // 2 * base
+$space-5: 20px;    // 2.5 * base
+$space-6: 24px;    // 3 * base
+$space-8: 32px;    // 4 * base
+$space-10: 40px;   // 5 * base
+$space-12: 48px;   // 6 * base
+$space-16: 64px;   // 8 * base
+$space-20: 80px;   // 10 * base
+$space-24: 96px;   // 12 * base
+$space-32: 128px;  // 16 * base
+$space-40: 160px;  // 20 * base
+$space-48: 192px;  // 24 * base
+$space-56: 224px;  // 28 * base
+$space-64: 256px;  // 32 * base
+
+// Semantic Spacing
+$space-component-xs: $space-1;   // 4px
+$space-component-sm: $space-2;   // 8px
+$space-component-md: $space-4;   // 16px
+$space-component-lg: $space-6;   // 24px
+$space-component-xl: $space-8;   // 32px
+
+$space-layout-xs: $space-4;      // 16px
+$space-layout-sm: $space-6;      // 24px
+$space-layout-md: $space-8;      // 32px
+$space-layout-lg: $space-12;     // 48px
+$space-layout-xl: $space-16;     // 64px
+
+$space-section-sm: $space-16;    // 64px
+$space-section-md: $space-20;    // 80px
+$space-section-lg: $space-24;    // 96px
+$space-section-xl: $space-32;    // 128px
+
+// =============================================================================
+// LAYOUT
+// =============================================================================
+
+// Border Radius
+$radius-none: 0;
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-full: 9999px;
+
+// Border Widths
+$border-width-0: 0;
+$border-width-1: 1px;
+$border-width-2: 2px;
+$border-width-4: 4px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+
+// Z-Index Scale
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Container Max Widths
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;
+
+// =============================================================================
+// ANIMATION
+// =============================================================================
+
+// Transition Durations
+$duration-fast: 150ms;
+$duration-normal: 200ms;
+$duration-slow: 300ms;
+$duration-slower: 500ms;
+
+// Transition Timing Functions
+$ease-linear: linear;
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ease-out: cubic-bezier(0, 0, 0.2, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+// =============================================================================
+// COMPONENT TOKENS
+// =============================================================================
+
+// Button Tokens
+$button-padding-sm: $space-1 $space-3;
+$button-padding-md: $space-2 $space-6;
+$button-padding-lg: $space-3 $space-8;
+$button-radius: $radius-md;
+$button-border-width: $border-width-2;
+$button-font-weight: $font-weight-semibold;
+$button-letter-spacing: $letter-spacing-wide;
+
+// Card Tokens
+$card-padding: $space-6;
+$card-radius: $radius-lg;
+$card-border-width: $border-width-1;
+$card-shadow: $shadow-sm;
+$card-shadow-hover: $shadow-md;
+
+// Form Tokens
+$input-padding: $space-2 $space-3;
+$input-radius: $radius-md;
+$input-border-width: $border-width-2;
+$input-font-size: $font-size-body;
+$input-line-height: $line-height-normal;
+
+// =============================================================================
+// LEGACY COMPATIBILITY ALIASES
+// =============================================================================
+// Aliases for variables used in component files to maintain compatibility
+
+// Typography Aliases
+$font-family-base: $font-family-primary;
+$font-family-heading: $font-family-primary;
+$font-family-mono: $font-family-monospace;
+$font-size-base: $font-size-body;
+$font-size-sm: $font-size-small;
+$font-size-lg: $font-size-large;
+$font-size-xl: $font-size-h5;
+$font-size-xs: $font-size-caption;
+$line-height-base: $line-height-normal;
+
+// Color Aliases
+$color-white: #ffffff;
+$color-black: #000000;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+$color-accent: $color-accent-orange; // Default accent color
+$color-accent-dark: $color-accent-orange-dark;
+$color-background-primary: $color-bg-white;
+$color-background-secondary: $color-bg-light;
+$color-text-heading: $color-text-primary;
+$color-border: $color-border-light;
+$color-focus: $color-border-focus;
+
+// Spacing Aliases
+$space-xs: $space-2;   // 8px
+$space-sm: $space-3;   // 12px
+$space-md: $space-4;   // 16px
+$space-lg: $space-6;   // 24px
+$space-xl: $space-8;   // 32px
+
+// Border Radius Aliases
+$border-radius-sm: $radius-sm;
+$border-radius-md: $radius-md;
+$border-radius-lg: $radius-lg;
+$border-radius-xl: $radius-xl;
+$border-radius-full: $radius-full;
+
+// Shadow Aliases
+$shadow: $shadow-md;
+
+// Transition Aliases
+$transition-fast: $duration-fast;
+$transition-normal: $duration-normal;

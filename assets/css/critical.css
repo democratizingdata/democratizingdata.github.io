@@ -1,0 +1,233 @@
+/*! Critical CSS for Above-the-Fold Content */
+/*! Inlined for optimal First Contentful Paint (FCP) */
+
+/* =============================================================================
+   CRITICAL LAYOUT STYLES
+   ============================================================================= */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* =============================================================================
+   CRITICAL HEADER STYLES
+   ============================================================================= */
+
+.c-navigation {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.c-navigation__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.c-navigation__logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* =============================================================================
+   CRITICAL EVENT BANNER STYLES
+   ============================================================================= */
+
+.c-event-banner {
+  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-event-banner__container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.c-event-banner__content {
+  flex: 1;
+}
+
+.c-event-banner__category {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.c-event-banner__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: white;
+}
+
+/* =============================================================================
+   CRITICAL HERO STYLES
+   ============================================================================= */
+
+.c-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: #ffffff;
+  padding: 120px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-hero--with-event-banner {
+  padding-top: 80px;
+}
+
+.c-hero__layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.c-hero__content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.c-hero__headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.c-hero__subheadline {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 48px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+}
+
+.c-hero__actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.c-hero__cta-primary {
+  background: #ffffff;
+  color: #1e3a8a;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.2s ease;
+}
+
+.c-hero__cta-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.2s ease;
+}
+
+/* =============================================================================
+   CRITICAL RESPONSIVE STYLES
+   ============================================================================= */
+
+@media (max-width: 991.98px) {
+  .c-hero__layout,
+  .c-event-banner__container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .c-hero__headline {
+    font-size: 2.5rem;
+  }
+  
+  .c-event-banner__title {
+    font-size: 2rem;
+  }
+  
+  .c-hero {
+    padding: 80px 0 60px 0;
+  }
+  
+  .c-event-banner {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-hero__headline {
+    font-size: 2rem;
+  }
+  
+  .c-hero__subheadline {
+    font-size: 1.25rem;
+  }
+  
+  .c-event-banner__title {
+    font-size: 1.75rem;
+  }
+  
+  .c-hero {
+    padding: 60px 0 40px 0;
+  }
+  
+  .c-hero__actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* =============================================================================
+   CRITICAL UTILITIES
+   ============================================================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} 

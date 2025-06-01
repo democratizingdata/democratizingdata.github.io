@@ -1,0 +1,73 @@
+<!-- Event Carousel Section -->
+<section class="c-event-carousel">
+    <div class="container">
+        <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <!-- Upcoming Webinar Slide -->
+                <div class="carousel-item active">
+                    <div class="c-carousel-slide">
+                        <div class="c-carousel-slide__content">
+                            <div class="c-carousel-slide__badge">{{ site.data.site.event_banner.title | upcase }}</div>
+                            <h2 class="c-carousel-slide__title">{{ site.data.site.event_banner.event_title }}</h2>
+                            <p class="c-carousel-slide__description">{{ site.data.site.event_banner.description }}</p>
+                            
+                            <a href="{{ site.baseurl }}{{ site.data.site.event_banner.link }}" class="c-carousel-slide__cta">
+                                {{ site.data.site.event_banner.button_text }}
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <div class="c-carousel-slide__image">
+                            <img src="{{ site.baseurl }}/assets/img/hero/conference-presentation.jpg"
+                                 alt="Professional conference presentation setting"
+                                 class="c-carousel-slide__img">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Harvard Data Science Review Slide -->
+                <div class="carousel-item">
+                    <div class="c-carousel-slide">
+                        <div class="c-carousel-slide__content">
+                            <div class="c-carousel-slide__badge">SPECIAL ISSUE</div>
+                            <h2 class="c-carousel-slide__title">Harvard Data Science Review Special Issue</h2>
+                            <p class="c-carousel-slide__description">Explore our comprehensive collection of research articles on "Democratizing Data: Discovering Data Use For Research and Policy" featuring leading experts in data science and policy.</p>
+                            
+                            <a href="{{ site.baseurl }}/events/2024/harvard-data-science-review/" class="c-carousel-slide__cta">
+                                Explore Special Issue
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <div class="c-carousel-slide__image">
+                            <img src="{{ site.baseurl }}/assets/img/hero/data-visualization-dashboard.jpg"
+                                 alt="Harvard Data Science Review special issue"
+                                 class="c-carousel-slide__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section> 

@@ -1,0 +1,115 @@
+<context>
+# Overview  
+Democratizing Data is a search and discovery platform for public data assets supporting research and public good. It leverages advanced machine learning and natural language processing to improve how government agencies and researchers find and reuse public datasets, and provides transparency for the impact of public investments in science.  
+
+**EXISTING JEKYLL SITE REDESIGN**: This project involves redesigning and rebranding an existing, fully functional Jekyll website (democratizingdata.ai) currently hosted on GitHub Pages. The site already has complete content, navigation structure, pages, and functionality. The goal is to refactor the existing design system, visual identity, and user experience to align with modern standards and the Credential Engine inspiration site, while preserving all existing content, URLs, and functionality.
+
+This redesign project aims to deliver a modern, accessible website that reflects the brand's innovative, community-driven, and academically rigorous identity. The redesigned website must also visibly demonstrate the value and transparency of public data use in science, inspire collaboration, and ensure universal accessibility.
+
+# Core Features  
+- Homepage modernization with professional, inspiring hero. Decision on rotating banners vs. single feature should be made to best fit the new brand directives, consulting the inspirational website for guidance.
+- Section landing pages: "Our Tools" (Dashboards, Jupyter Notebooks, Methodology), "Events" (including Past Events), "Resources" (including technical reports/publications), and "About" (Overview, Team, Data Partners, Contact).  
+- UX, UI, navigation, structure, color scheme, and visual motifs harmonized with the Credential Engine Credential Transparency Initiative site ([https://credentialengine.org/credentialtransparency-ai/](https://credentialengine.org/credentialtransparency-ai/)). Look and feel must be closely replicated; all iconography, typography, color palettes, whitespace, content grouping, and content clarity should be guided by the Credential Engine site and its listed subpages.
+    - Specifically use [All Resources](https://credentialengine.org/all-resources/) to inspire the Resources page (no search bar).
+    - Use [About Us](https://credentialengine.org/about-us/) and [Funders/Team](https://credentialengine.org/about-us/funders/) for About/Our Approach and Team/Partners.
+    - Use [Open Data Principles for the Education-to-Employment Ecosystem](https://credentialengine.org/resources/open-data-principles-framework-for-the-education-to-employment-ecosystem/) as the inspiration for the Dashboards and Technical Report landing pages.
+- Navigation: Persistent top menu with dropdowns, comprehensive and professional footer with organized links to all main site sections, legal/policy statements, and contact.
+- Accessibility & SEO: ADA/WCAG compliant, semantic structure, all images (including existing ones) must have alt text.  
+- Embedded forms.app forms are preserved via iframes.
+- All existing images and graphics should be reused in the new design wherever possible.
+- Responsive design: Layouts must adapt smoothly to desktop, tablet, and mobile devices with modern spacing and clear content arrangement.
+- Preserve all existing URLs and internal/external links.  
+- No new "News/Blog"/"Stories" section—Past Events and Resources/Publications fulfill this need.
+
+# User Experience  
+- User personas include: federal professionals, researchers, students, and community organizations interested in the use and impact of public data.
+- Key user flows:
+    - Navigate via top menu to Tools > Dashboards, view dashboards and methodology.
+    - Browse Events for upcoming or past engagement, access resources.
+    - Explore About for project, team, partner, and contact information.
+- UI/UX:
+    - Color palette based on Credential Engine (professional, accessible blues, whites).
+    - Large clear headings, whitespace, professional sans-serif font.
+    - Harmonize icon sets, motifs, and layouts as much as possible with the inspiration site.
+    - Banners/CTAs and event highlight sections per inspiration site's best practices.
+    - Replicate the clarity, accessibility, and navigation ease of the inspirational website.
+    - Responsive design: All layouts must adapt cleanly for desktop, laptop, tablet, and mobile with modern spacing.
+    - Professional footer: Must include well-organized links to site sections (About, Events, Tools, Resources, Policies: Privacy, Accessibility, Terms, etc.), neatly categorized, similar in quality to the Credential Engine site.
+</context>
+<PRD>
+# Technical Architecture  
+- **EXISTING SITE**: Static site already generated with Jekyll and hosted via GitHub Pages at democratizingdata.ai.
+- **CURRENT STRUCTURE**: Site already has modular includes for header, navigation, and footer that need redesign.
+- **REFACTORING APPROACH**: Analyze existing Jekyll structure, layouts, includes, and assets before implementing design changes.
+- **PRESERVATION REQUIREMENTS**: All content and navigation must use semantic HTML5, preserve existing URLs and functionality.
+- Images and resources statically served and referenced locally (existing assets to be reused).
+- Forms.app embedded via iframe (existing forms to be preserved).
+- No analytics planned for now.
+
+# Development Roadmap  
+- **MVP (Redesign Phase)**:
+    - **ANALYZE EXISTING SITE**: Review current Jekyll structure, content, layouts, and functionality.
+    - **REDESIGN SYSTEM**: Create new design system based on Credential Engine inspiration.
+    - **REFACTOR PAGES**: Update all main pages with new design while preserving URLs/links and content.
+    - **MODERNIZE LOOK/FEEL**: Apply Credential Engine-inspired design throughout the site.
+    - **ENHANCE ACCESSIBILITY**: Improve navigation, SEO, and accessibility compliance.
+    - **CONTENT REFINEMENT**: Polish content for clarity while keeping the public/academic voice.
+    - **PRESERVE FUNCTIONALITY**: Maintain all forms and core functionality during redesign.
+    - **RESPONSIVE OPTIMIZATION**: Ensure responsive breakpoints, mobile testing, and flexible spacing.
+    - **PROFESSIONAL FOOTER**: Redesign footer to be organized, accessible, and visible on all pages.
+- **Future Enhancements**:
+    - Dynamic or filterable events/resources (optional)
+    - Further icon harmonization if new pages are added in future
+- **Redesign Process**:
+    - **SITE ANALYSIS**: Use playwright mcp to analyze current site structure and functionality.
+    - **INSPIRATION STUDY**: Use playwright mcp to visit the inspirational site to extract layout/visual guidance.
+    - **REDESIGN VERIFICATION**: Use playwright mcp to review redesigned pages for alignment and asset coverage.
+
+# Logical Dependency Chain  
+1. **SITE ANALYSIS**: Analyze existing Jekyll structure, content, and current design patterns.
+2. **DESIGN SYSTEM**: Create new design system (palette, typography, nav, hero per Credential Engine inspiration).
+3. **CORE COMPONENTS**: Redesign homepage, navigation, and footer (with organized links).
+4. **SECTION REDESIGN**: Refactor Tools suite (including Dashboards, Jupyter Notebooks, Methodology).
+5. **CONTENT SECTIONS**: Redesign Resources (including technical reports/publications), and Events.
+6. **INFORMATION PAGES**: Redesign About (Overview, Team, Data Partners, Contact).
+7. **POLICY PAGES**: Redesign legal/policy pages.
+8. **ACCESSIBILITY AUDIT**: Verify alt text and asset referencing.
+9. **TESTING PHASE**: Accessibility and device testing, ensuring responsive spacing.
+10. **FINAL VERIFICATION**: Verify forms and all cross-page linking functionality.
+
+# Risks and Mitigations  
+- **Outdated look or UX**: Regularly benchmark with the Credential Engine site throughout design/dev.  
+- **Broken links, missing media**: Use automated/manual checks; leverage playwright mcp for final review.  
+- **Accessibility or mobile issues**: Iterative device/ARIA/wave testing after each migration step.
+- **Misalignment from inspirational reference**: Designers must document how each primary layout and motif draws from corresponding inspiration.
+
+# Appendix  
+**Inspirational source:**
+- Credential Engine main AI page: https://credentialengine.org/credentialtransparency-ai/
+- [All Resources](https://credentialengine.org/all-resources/) for resources page.
+- [About Us](https://credentialengine.org/about-us/) and [Funders/Team](https://credentialengine.org/about-us/funders/) for About, Our Approach, Team, and Partners.
+- [Open Data Principles for the Education-to-Employment Ecosystem](https://credentialengine.org/resources/open-data-principles-framework-for-the-education-to-employment-ecosystem/) for dashboards, technical report landing.
+- Inspirational site should be visited, reviewed, and analyzed to capture and closely replicate look and feel, clarity, accessibility, navigation, and responsive/professional footer arrangements.
+- Redesign team must use playwright mcp to review redesigned pages and the inspirational website to ensure full alignment and asset coverage.
+
+**Internal URLs inventory (must not change)**:  
+- `/site/`  
+- `/site/tools/`
+    - `/site/tools/dashboards/`
+    - `/site/tools/jupyter-notebooks/`
+    - `/site/tools/our-approach/`
+- `/site/events/` (all current and future dated subpages)
+- `/site/resources/`
+    - `/site/resources/technical-report/`
+- `/site/about/overview/`
+- `/site/about/team/`
+- `/site/about/data-partners/`
+- `/site/about/contact-us/`
+- `/site/about/privacy-policy`
+- `/site/about/terms-and-conditions`
+- `/site/about/accessibility-statement`
+- Plus any subpages and assets currently published.
+
+**Site assets:**  
+- All images, diagrams, illustrations, PDFs, and downloadable resources live or referenced on the current site.
+</PRD>

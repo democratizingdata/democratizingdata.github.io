@@ -1,0 +1,377 @@
+/*! Accessibility Utilities */
+/*! WCAG 2.1 AA compliant accessibility utilities and enhancements */
+
+// =============================================================================
+// SCREEN READER UTILITIES
+// =============================================================================
+
+// Visually hidden but accessible to screen readers
+.sr-only {
+  @include visually-hidden;
+}
+
+.sr-only-focusable {
+  @include visually-hidden;
+  
+  &:focus,
+  &:active {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+// Screen reader only text
+.sr-text {
+  @extend .sr-only;
+}
+
+// =============================================================================
+// FOCUS MANAGEMENT
+// =============================================================================
+
+// Enhanced focus indicators
+.focus-visible {
+  @include focus-ring;
+}
+
+// Focus trap for modals and dropdowns
+.focus-trap {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Skip links for keyboard navigation
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background-color: var(--ce-color-primary);
+  color: var(--ce-color-text-white);
+  padding: var(--ce-space-component-sm) var(--ce-space-component-md);
+  text-decoration: none;
+  border-radius: var(--ce-radius-md);
+  z-index: var(--ce-z-index-modal);
+  font-weight: var(--ce-font-weight-medium);
+  
+  &:focus {
+    top: 6px;
+    @include focus-ring;
+  }
+}
+
+// =============================================================================
+// COLOR CONTRAST UTILITIES
+// =============================================================================
+
+// High contrast text combinations (WCAG AA compliant)
+.text-high-contrast {
+  color: var(--ce-color-text-primary);
+  background-color: var(--ce-color-bg-white);
+}
+
+.text-high-contrast-inverse {
+  color: var(--ce-color-text-white);
+  background-color: var(--ce-color-primary);
+}
+
+// Ensure sufficient contrast for links
+.link-accessible {
+  color: var(--ce-color-link);
+  text-decoration: underline;
+  
+  &:hover {
+    color: var(--ce-color-link-hover);
+    text-decoration: none;
+  }
+  
+  &:focus {
+    @include focus-ring;
+    text-decoration: none;
+  }
+  
+  &:visited {
+    color: var(--ce-color-link-visited);
+  }
+}
+
+// =============================================================================
+// MOTION AND ANIMATION ACCESSIBILITY
+// =============================================================================
+
+// Respect user's motion preferences
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .fade-in,
+  .slide-up,
+  .hover-lift {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+// Safe animation class that respects motion preferences
+.animate-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all var(--ce-duration-normal) var(--ce-ease-out);
+  }
+}
+
+// =============================================================================
+// KEYBOARD NAVIGATION
+// =============================================================================
+
+// Keyboard-only focus indicators
+.keyboard-focus {
+  &:focus-visible {
+    @include focus-ring;
+  }
+  
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+// Tab order utilities
+.tab-order-1 { tab-index: 1; }
+.tab-order-2 { tab-index: 2; }
+.tab-order-3 { tab-index: 3; }
+.tab-order-none { tab-index: -1; }
+
+// =============================================================================
+// ARIA UTILITIES
+// =============================================================================
+
+// Live regions for dynamic content
+.live-region {
+  &[aria-live="polite"] {
+    // Polite announcements
+  }
+  
+  &[aria-live="assertive"] {
+    // Urgent announcements
+  }
+}
+
+// Status indicators
+.status-indicator {
+  &[aria-label] {
+    // Ensure status has accessible label
+  }
+}
+
+// =============================================================================
+// FORM ACCESSIBILITY
+// =============================================================================
+
+// Required field indicators
+.required {
+  &::after {
+    content: " *";
+    color: var(--ce-color-error);
+    font-weight: var(--ce-font-weight-bold);
+    margin-left: var(--ce-space-1);
+  }
+}
+
+// Error state styling
+.error {
+  color: var(--ce-color-error);
+  border-color: var(--ce-color-error);
+  
+  &:focus {
+    box-shadow: 0 0 0 2px var(--ce-color-error-light);
+  }
+}
+
+// Success state styling
+.success {
+  color: var(--ce-color-success);
+  border-color: var(--ce-color-success);
+  
+  &:focus {
+    box-shadow: 0 0 0 2px var(--ce-color-success-light);
+  }
+}
+
+// Form validation messages
+.validation-message {
+  font-size: var(--ce-font-size-small);
+  margin-top: var(--ce-space-1);
+  
+  &.error {
+    color: var(--ce-color-error);
+  }
+  
+  &.success {
+    color: var(--ce-color-success);
+  }
+}
+
+// =============================================================================
+// RESPONSIVE TEXT SIZING
+// =============================================================================
+
+// Ensure text can scale up to 200% without horizontal scrolling
+.scalable-text {
+  font-size: clamp(var(--ce-font-size-small), 2.5vw, var(--ce-font-size-large));
+  line-height: var(--ce-line-height-relaxed);
+}
+
+// Minimum touch target size (44px x 44px)
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// =============================================================================
+// CONTENT ACCESSIBILITY
+// =============================================================================
+
+// Proper heading hierarchy
+.heading-hierarchy {
+  h1 { font-size: var(--ce-font-size-h1); }
+  h2 { font-size: var(--ce-font-size-h2); }
+  h3 { font-size: var(--ce-font-size-h3); }
+  h4 { font-size: var(--ce-font-size-h4); }
+  h5 { font-size: var(--ce-font-size-h5); }
+  h6 { font-size: var(--ce-font-size-h6); }
+}
+
+// Readable line length (45-75 characters)
+.readable-width {
+  max-width: 65ch;
+}
+
+// Sufficient line spacing
+.readable-spacing {
+  line-height: var(--ce-line-height-relaxed);
+}
+
+// =============================================================================
+// LANDMARK UTILITIES
+// =============================================================================
+
+// Semantic landmark roles
+.landmark-main {
+  // Main content area
+}
+
+.landmark-nav {
+  // Navigation area
+}
+
+.landmark-aside {
+  // Sidebar or complementary content
+}
+
+.landmark-footer {
+  // Footer content
+}
+
+// =============================================================================
+// PRINT ACCESSIBILITY
+// =============================================================================
+
+@media print {
+  // Ensure good contrast in print
+  .print-high-contrast {
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  // Show URLs for links in print
+  .print-urls a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: smaller;
+  }
+  
+  // Hide decorative elements in print
+  .print-hide {
+    display: none !important;
+  }
+}
+
+// =============================================================================
+// ACCESSIBILITY TESTING UTILITIES
+// =============================================================================
+
+// Highlight elements missing alt text
+img:not([alt]) {
+  outline: 3px solid red;
+}
+
+// Highlight elements with empty alt text (decorative)
+img[alt=""] {
+  outline: 1px solid orange;
+}
+
+// Highlight interactive elements without accessible names
+button:not([aria-label]):not([aria-labelledby]):empty,
+a:not([aria-label]):not([aria-labelledby]):empty {
+  outline: 3px solid red;
+}
+
+// =============================================================================
+// DARK MODE ACCESSIBILITY
+// =============================================================================
+
+@media (prefers-color-scheme: dark) {
+  .auto-dark-mode {
+    color: var(--ce-color-text-light);
+    background-color: var(--ce-color-bg-dark);
+  }
+  
+  .auto-dark-mode .link-accessible {
+    color: var(--ce-color-link-light);
+    
+    &:hover {
+      color: var(--ce-color-link-light-hover);
+    }
+  }
+}
+
+// =============================================================================
+// ACCESSIBILITY ANNOUNCEMENTS
+// =============================================================================
+
+// Live region for status updates
+.status-announcer {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// Loading state announcements
+.loading-announcer {
+  @extend .status-announcer;
+}
+
+// Error announcements
+.error-announcer {
+  @extend .status-announcer;
+}
+
+// Success announcements
+.success-announcer {
+  @extend .status-announcer;
+} 

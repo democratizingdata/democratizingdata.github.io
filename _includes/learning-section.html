@@ -1,0 +1,87 @@
+{% comment %}
+  Learning section include - Redesigned for better UX and accessibility
+  Usage: {% include learning-section.html %}
+{% endcomment %}
+
+<section class="c-learning-section" aria-labelledby="learning-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <header class="c-learning-section__header c-learning-section__header--clean">
+                    <h2 id="learning-heading">HOW TO LEARN AND CONTRIBUTE</h2>
+                    <p class="c-learning-section__intro">Discover insights from leading researchers and contribute to the future of trusted data through podcasts, presentations, and community engagement.</p>
+                </header>
+            </div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+                <img src="{{ site.baseurl }}/assets/img/thumbnails/fa/a7/faa7a103-e156-4ba6-8126-311c715a58cb/understanding.png__680.0x352.0_subsampling-2.png" alt="Learning and understanding data visualization representing knowledge sharing and research insights" class="c-learning-section__flourish">
+            </div>
+        </div>
+
+        <!-- Podcasts Section -->
+        <div class="c-learning-content">
+            <div class="c-learning-category">
+                <div class="c-learning-category__header">
+                    <div class="c-learning-category__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="c-learning-category__title">{{ site.data.learning.podcasts.title }}</h3>
+                        <p class="c-learning-category__description">Listen to researchers share how they used federal data to drive meaningful insights and policy changes.</p>
+                    </div>
+                </div>
+
+                <div class="c-podcast-grid">
+                    {% for podcast in site.data.podcasts %}
+                    <article class="c-podcast-card c-podcast-card--content-only">
+                        <div class="c-podcast-card__content">
+                            <h4 class="c-podcast-card__title">{{ podcast.title }}</h4>
+                            <p class="c-podcast-card__description">{{ podcast.description }}</p>
+                            <a href="{{ podcast.link }}" class="c-podcast-card__link" target="_blank" rel="noopener noreferrer">
+                                Listen Now
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Presentations Section -->
+            <div class="c-learning-category">
+                <div class="c-learning-category__header">
+                    <div class="c-learning-category__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="c-learning-category__title">{{ site.data.learning.presentations.title }}</h3>
+                        <p class="c-learning-category__description">{{ site.data.learning.presentations.header_description }}</p>
+                    </div>
+                </div>
+
+                <div class="c-presentation-card">
+                    <div class="c-presentation-card__image">
+                        <img src="{{ site.baseurl }}{{ site.data.learning.presentations.image }}" alt="Data insights and analytics visualization from presentations and webinars" class="c-presentation-card__img">
+                    </div>
+                    <div class="c-presentation-card__content">
+                        <div class="c-presentation-card__text">
+                            <p>{{ site.data.learning.presentations.description }}</p>
+                            <p>{{ site.data.learning.presentations.additional_info }}</p>
+                        </div>
+                        <a href="{{ site.baseurl }}{{ site.data.learning.presentations.learn_more_link }}" class="c-presentation-card__link">
+                            Explore Events
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

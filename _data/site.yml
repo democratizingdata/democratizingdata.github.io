@@ -1,0 +1,66 @@
+title: "Democratizing Data"
+description: "A Search And Discovery Platform For Public Data Assets"
+tagline: "Democratizing Data builds a community-driven data ecosystem by identifying how datasets are used and reducing barriers to accessing high-quality public data. The initiative enhances the discoverability, usability, and relevance of data for researchers, policymakers, and stakeholder communities. A suite of tools and strategic partnerships supports this work by connecting users to the data, insights, and networks needed to inform decisions and generate impact."
+
+# Event Banner
+event_banner:
+  enabled: true
+  title: "Upcoming Webinar"
+  event_title: "Envisioning food and agricultural data for the future: Developing a new roadmap for trusted data"
+  description: "Join us on June 20, 2025, at 12:00 PM ET for an important discussion on trusted data. Learn how to contribute to a community-driven roadmap for improving the accessibility, transparency, and utility of food and agricultural data."
+  link: "/events/2025/trusted-data-webinar/"
+  button_text: "Register for Webinar"
+
+# Main sections
+sections:
+  federal_agencies:
+    title: "FOR FEDERAL AGENCIES"
+    heading: "Evidence-based policy making"
+    description: "The platform provides federal agencies with comprehensive insights into how their data assets are being utilized in scientific research. Our machine learning algorithms analyze over 90 million documents to identify dataset citations, research applications, and impact metrics that support evidence-based decision making."
+    links:
+      - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
+        text: "here"
+        external: true
+  
+  researchers:
+    title: "FOR RESEARCHERS"
+    heading: "Discover trusted datasets"
+    description: "Researchers can use our platform to discover relevant federal datasets for their work, understand how data have been used in similar studies, and access tools that facilitate responsible data use. Our search and discovery tools help connect researchers with the data they need for high-quality research."
+    links:
+      - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
+        text: "here"
+        external: true
+      - url: "https://www.bea.gov/system/files/2022-10/acdeb-year-2-report.pdf"
+        text: "here"
+        external: true
+  
+  get_involved:
+    title: "GET INVOLVED"
+    heading: "Ways to democratize data"
+    description: "The goal is to develop a community of practice through workshops, webinars, and direct engagement with the user community. The user community built the initial models through <a href=\"https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data\" target=\"_blank\">a Kaggle</a> competition; a <a href=\"https://coleridgeinitiative.org/show-us-the-data-conference\" target=\"_blank\">Show Us the Data</a> conference brought together researchers, academic institutions, chief data officers, and publishers; subsequent conferences have built on the ideas. More are planned."
+    links:
+      - url: "https://hdsr.mitpress.mit.edu/pub/g6e8noiy/release/2"
+        text: "here"
+        external: true
+      - url: "https://mitpress.mit.edu/9780262542746/democratizing-our-data/"
+        text: "here"
+        external: true
+
+# Technical Report
+technical_report:
+  title: "📋 Technical Report Available"
+  description: "This report introduces a methodology for identifying dataset mentions in research publications and comparing coverage across citation databases. Tracking these mentions helps measure the reach of federal datasets and supports future data investment decisions. The analysis also highlights the range of research topics where these datasets are used across disciplines."
+  highlights:
+    - "Code repository for data cleaning and standardization"
+    - "Data schemas by citation database"
+    - "Standardized institution tables using IPEDS identifiers"
+    - "Data visualizations summarizing report findings"
+  link: "/resources/technical-report/"
+  button_text: "Access Technical Report"
+
+# About section
+about:
+  title: "About us"
+  description: "The Democratizing Data initiative is working with a number of government agencies to ensure that data are more effectively used for public decision-making."
+  team_link: "/about/"
+  team_text: "Our Team & Partners" 

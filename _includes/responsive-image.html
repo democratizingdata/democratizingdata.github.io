@@ -1,0 +1,69 @@
+{% comment %}
+  Enhanced Responsive image include with WebP support and lazy loading
+  Usage: {% include responsive-image.html src="path/to/image" alt="Alt text" class="additional-classes" lazy="true" %}
+  Note: src should be the full path to the image
+{% endcomment %}
+
+{% assign lazy_loading = include.lazy | default: false %}
+{% assign loading_attr = lazy_loading | ternary: "lazy", "eager" %}
+
+{% comment %} Check if this is already a processed image with size suffix {% endcomment %}
+{% assign is_processed = false %}
+{% if include.src contains '__' %}
+  {% assign is_processed = true %}
+{% endif %}
+
+{% if is_processed %}
+  {% comment %} For already processed images, use them directly {% endcomment %}
+  <img src="{{ site.baseurl }}{{ include.src }}"
+       alt="{{ include.alt }}"
+       class="{{ include.class | default: 'img-fluid' }}"
+       loading="{{ loading_attr }}">
+{% else %}
+  {% comment %} For unprocessed images, use existing processed variants {% endcomment %}
+  {% comment %} The actual files keep the full original filename with extension, then add size suffix {% endcomment %}
+  
+  {% comment %} Get the file extension {% endcomment %}
+  {% assign src_parts = include.src | split: '.' %}
+  {% assign file_ext = src_parts | last %}
+  
+  {% comment %} Determine the correct size based on the specific image {% endcomment %}
+  {% assign main_size = "684.0x352.0" %}
+  {% assign main_width = "684" %}
+  
+  {% if include.src contains "understanding.png" %}
+    {% assign main_size = "680.0x352.0" %}
+    {% assign main_width = "680" %}
+  {% elsif include.src contains "flourish1.png" %}
+    {% assign main_size = "647.0x100.0" %}
+    {% assign main_width = "647" %}
+  {% endif %}
+  
+  {% if file_ext == "jpg" or file_ext == "jpeg" %}
+    <img src="{{ site.baseurl }}{{ include.src }}__{{ main_size }}_q85_subsampling-2.{{ file_ext }}"
+         alt="{{ include.alt }}"
+         class="{{ include.class | default: 'img-fluid' }}"
+         loading="{{ loading_attr }}"
+         srcset="
+             {{ site.baseurl }}{{ include.src }}__576x576_q85_subsampling-2.{{ file_ext }} 576w,
+             {{ site.baseurl }}{{ include.src }}__{{ main_size }}_q85_subsampling-2.{{ file_ext }} {{ main_width }}w
+         "
+         sizes="
+             (max-width: 576px) 576px,
+             {{ main_width }}px
+         ">
+  {% else %}
+    <img src="{{ site.baseurl }}{{ include.src }}__{{ main_size }}_subsampling-2.{{ file_ext }}"
+         alt="{{ include.alt }}"
+         class="{{ include.class | default: 'img-fluid' }}"
+         loading="{{ loading_attr }}"
+         srcset="
+             {{ site.baseurl }}{{ include.src }}__576x576_subsampling-2.{{ file_ext }} 576w,
+             {{ site.baseurl }}{{ include.src }}__{{ main_size }}_subsampling-2.{{ file_ext }} {{ main_width }}w
+         "
+         sizes="
+             (max-width: 576px) 576px,
+             {{ main_width }}px
+         ">
+  {% endif %}
+{% endif %} 

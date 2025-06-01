@@ -1,0 +1,127 @@
+// =============================================================================
+// BASE TYPOGRAPHY
+// =============================================================================
+// Base typography styles that complement the design system
+// These are foundational styles for HTML elements
+
+// Base font settings applied to html/body
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: $color-text-primary;
+  background-color: $color-background-primary;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  color: $color-text-heading;
+  margin-top: 0;
+  margin-bottom: $space-md;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+// Paragraphs and text elements
+p {
+  margin-top: 0;
+  margin-bottom: $space-md;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Links
+a {
+  color: $color-primary;
+  text-decoration: underline;
+  transition: color $transition-fast ease-in-out;
+  
+  &:hover {
+    color: $color-primary-dark;
+    text-decoration-style: dashed;
+  }
+  
+  &:focus {
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $space-md;
+  padding-left: $space-lg;
+}
+
+li {
+  margin-bottom: $space-xs;
+}
+
+// Text formatting
+strong, b {
+  font-weight: $font-weight-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+// Code and preformatted text
+code {
+  font-family: $font-family-mono;
+  font-size: 0.875em;
+  background-color: $color-background-secondary;
+  padding: 0.125rem 0.25rem;
+  border-radius: $border-radius-sm;
+}
+
+pre {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  background-color: $color-background-secondary;
+  padding: $space-md;
+  border-radius: $border-radius-md;
+  overflow-x: auto;
+  margin-bottom: $space-md;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: 0 0 $space-md;
+  padding: $space-md;
+  border-left: 4px solid $color-primary;
+  background-color: $color-background-secondary;
+  font-style: italic;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+} 

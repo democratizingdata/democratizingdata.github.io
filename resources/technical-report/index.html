@@ -1,0 +1,191 @@
+---
+title: "Technical Report: Democratizing Data Platform"
+layout: default
+description: "This report presents a methodology for identifying dataset mentions in research publications across various citation databases and evaluating their differences."
+---
+
+<!-- Technical Report Hero Section -->
+<section class="c-hero c-hero--technical-report">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="c-hero__content">
+                    <div class="c-hero__category">
+                        <span class="c-category-badge">TECHNICAL DOCUMENTATION</span>
+                    </div>
+                    <h1 class="c-hero__title">
+                        Technical Report
+                    </h1>
+                    <p class="c-hero__description">
+                        This report presents a methodology for identifying dataset mentions in research publications across various citation databases and evaluating their differences.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="c-hero__actions">
+                    <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html" target="_blank" class="c-button c-button--primary c-button--large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z" fill="currentColor"/>
+                        </svg>
+                        View Technical Report
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Report Overview Section -->
+<section class="c-content-section" id="report-overview" style="padding-top: 60px; padding-bottom: 60px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <header class="c-section-header c-section-header--left" style="margin-bottom: 40px;">
+                    <h2 class="c-section-header__title">What is the Issue?</h2>
+                    <p class="c-section-header__description">
+                        Federal datasets are widely used in research, but tracking their impact requires identifying where and how they are cited in publications. Tools like the Food and Agricultural Research Data Usage Dashboard rely on these mentions to measure reach which informs future data investments.
+                    </p>
+                </header>
+
+                <!-- How to Use This Report -->
+                <div class="c-info-card" style="margin-bottom: 50px; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: #1e40af; margin-bottom: 20px; font-size: 1.5rem;">How to Use This Report</h3>
+                    <p style="margin-bottom: 20px; color: #4b5563;">The report is preliminary in nature.  It provides an initial approach to characterizing dataset mentions about food and agriculture research datasets in research papers reported in various databases, specifically <a href="https://www.elsevier.com/products/scopus" target="_blank" rel="noopener noreferrer">Scopus</a>, <a href="https://openalex.org/" target="_blank" rel="noopener noreferrer">OpenAlex</a>, and <a href="https://www.digital-science.com/product/dimensions/" target="_blank" rel="noopener noreferrer">Dimensions</a>. It includes procedures for:</p>
+                    <ul style="margin-bottom: 25px; padding-left: 20px; list-style: disc;">
+                        <li style="margin-bottom: 8px; color: #6b7280;">Identifying publication coverage across citation databases</li>
+                        <li style="margin-bottom: 8px; color: #6b7280;">Cross-referencing publications between datasets</li>
+                        <li style="margin-bottom: 8px; color: #6b7280;">Analyzing research themes and institutional representation</li>
+                    </ul>
+                    
+                    <h4 style="color: #1e40af; margin-bottom: 20px; font-size: 1.2rem;">Stakeholder Applications</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
+                                <div class="card-body p-0">
+                                    <h5 style="color: #059669; margin-bottom: 12px; font-size: 1rem;">Research Evaluation</h5>
+                                    <ul style="margin: 0; padding-left: 16px; list-style: disc; font-size: 0.9rem;">
+                                        <li style="margin-bottom: 6px; color: #6b7280;">Track and evaluate the use of public datasets in academic research</li>
+                                        <li style="margin-bottom: 6px; color: #6b7280;">Improve methods for measuring research impact and dataset reach</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
+                                <div class="card-body p-0">
+                                    <h5 style="color: #059669; margin-bottom: 12px; font-size: 1rem;">Strategic Planning</h5>
+                                    <ul style="margin: 0; padding-left: 16px; list-style: disc; font-size: 0.9rem;">
+                                        <li style="margin-bottom: 6px; color: #6b7280;">Understand coverage differences across citation databases</li>
+                                        <li style="margin-bottom: 6px; color: #6b7280;">Inform decisions about data preservation, access, and investment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 15px; background-color: #f8fafc; border-radius: 8px;">
+                        <p style="margin: 0; color: #4b5563; font-size: 0.9rem;"><strong>Note:</strong> The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
+                    </div>
+                </div>
+
+                <!-- Report Features -->
+                <div class="c-feature-section" style="margin-bottom: 40px;">
+                    <h3 style="color: #1e40af; margin-bottom: 20px; font-size: 1.5rem;">Report Features</h3>
+                    <p style="margin-bottom: 30px; color: #4b5563;">The report features these reusable components:</p>
+                    <div class="c-feature-list">
+                        <div class="c-feature-item" style="display: flex; align-items: flex-start; margin-bottom: 20px; padding: 20px; background: #f9fafb; border-radius: 8px;">
+                            <div class="c-feature-item__icon" style="margin-right: 16px; margin-top: 4px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#10b981" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="c-feature-item__content">
+                                <h4 style="color: #1f2937; margin-bottom: 8px; font-size: 1.1rem;">Code Repository</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Data cleaning and standardization tools</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-feature-item" style="display: flex; align-items: flex-start; margin-bottom: 20px; padding: 20px; background: #f9fafb; border-radius: 8px;">
+                            <div class="c-feature-item__icon" style="margin-right: 16px; margin-top: 4px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#10b981" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="c-feature-item__content">
+                                <h4 style="color: #1f2937; margin-bottom: 8px; font-size: 1.1rem;">Data Schemas</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Structured schemas by citation database</p>
+                            </div>
+                        </div>
+                        
+                        <div class="c-feature-item" style="display: flex; align-items: flex-start; margin-bottom: 20px; padding: 20px; background: #f9fafb; border-radius: 8px;">
+                            <div class="c-feature-item__icon" style="margin-right: 16px; margin-top: 4px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#10b981" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="c-feature-item__content">
+                                <h4 style="color: #1f2937; margin-bottom: 8px; font-size: 1.1rem;">Standardized Institution Tables</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Institution tables using IPEDS identifiers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="c-sidebar" style="position: sticky; top: 20px;">
+                    <!-- Report Highlights -->
+                    <div class="c-sidebar-card c-sidebar-card--highlight" style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <h4 style="color: #1e40af; margin-bottom: 20px; font-size: 1.3rem;">Report Highlights</h4>
+                        <ul class="c-highlight-list" style="margin-bottom: 30px; padding-left: 0;">
+                            <li style="margin-bottom: 12px; color: #4b5563; line-height: 1.5;">Citation overlap across databases is limited; many DOIs appear in only one source.</li>
+                            <li style="margin-bottom: 12px; color: #4b5563; line-height: 1.5;">Databases recover different sets of publications depending on the dataset.</li>
+                            <li style="margin-bottom: 12px; color: #4b5563; line-height: 1.5;">Topical coverage varies by dataset, reflecting diverse policy and disciplinary uses.</li>
+                            <li style="margin-bottom: 12px; color: #4b5563; line-height: 1.5;">Relying on a single database can undercount usage and research scope.</li>
+                        </ul>
+                        
+                        <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 1.1rem;">Target Audience</h5>
+                        <p style="margin-bottom: 15px; color: #6b7280; font-size: 0.9rem;">This report is designed for:</p>
+                        <ul class="c-audience-list" style="margin-bottom: 30px; padding-left: 0;">
+                            <li style="margin-bottom: 8px; color: #6b7280; font-size: 0.9rem;">Researchers</li>
+                            <li style="margin-bottom: 8px; color: #6b7280; font-size: 0.9rem;">Data scientists</li>
+                            <li style="margin-bottom: 8px; color: #6b7280; font-size: 0.9rem;">Program officers</li>
+                            <li style="margin-bottom: 8px; color: #6b7280; font-size: 0.9rem;">Academics</li>
+                            <li style="margin-bottom: 8px; color: #6b7280; font-size: 0.9rem;">Policymakers</li>
+                            <li style="margin-bottom: 8px; color: #6b7280; font-size: 0.9rem;">Local and federal government officials</li>
+                        </ul>
+                        
+                        <div class="c-sidebar-card__action">
+                            <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html" target="_blank" class="c-button c-button--primary c-button--full" style="width: 100%; text-align: center; padding: 12px 20px; border-radius: 8px;">
+                                Access Technical Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Citation Section -->
+<section class="c-content-section c-content-section--gray" style="background-color: #f8fafc; padding: 60px 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="c-citation-card" style="background: #ffffff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <div class="c-citation-card__header" style="text-align: center; margin-bottom: 40px;">
+                        <h3 style="color: #1e40af; margin-bottom: 15px; font-size: 1.8rem;">How to Cite Our Work</h3>
+                        <p style="color: #6b7280; font-size: 1rem;">Please use the following citation when referencing our methodology.</p>
+                    </div>
+                    
+                    <div class="c-citation-item" style="padding: 25px; background: #f9fafb; border-radius: 8px;">
+                        <div class="c-citation-text" style="font-family: 'Courier New', monospace; background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #e5e7eb; font-size: 0.9rem; color: #374151;">
+                            Chenarides, L., Bryan, C., Ladislau, R., & Lane, J. (2025). Methodology for comparing citation database coverage of dataset usage. Available at: <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html" target="_blank" style="color: #3b82f6; text-decoration: none;">https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

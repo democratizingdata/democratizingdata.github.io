@@ -1,0 +1,362 @@
+/*! Footer Layout */
+/*! Footer layout styles based on Credential Engine design analysis */
+
+// =============================================================================
+// FOOTER CONTAINER
+// =============================================================================
+
+.footer {
+  background-color: var(--ce-color-bg-dark);
+  color: var(--ce-color-text-light);
+  margin-top: auto; // Push footer to bottom when using flexbox layout
+}
+
+.footer-main {
+  padding-top: var(--ce-space-section-lg);
+  padding-bottom: var(--ce-space-section-md);
+  border-bottom: 1px solid var(--ce-color-border-dark);
+}
+
+.footer-bottom {
+  padding-top: var(--ce-space-layout-md);
+  padding-bottom: var(--ce-space-layout-md);
+  background-color: var(--ce-color-bg-darker);
+}
+
+// =============================================================================
+// FOOTER CONTENT
+// =============================================================================
+
+.footer-content {
+  @include container;
+}
+
+.footer-grid {
+  @extend .grid-responsive-4;
+  gap: var(--ce-space-layout-lg);
+  
+  @include respond-to-max(md) {
+    gap: var(--ce-space-layout-md);
+  }
+}
+
+// =============================================================================
+// FOOTER SECTIONS
+// =============================================================================
+
+.footer-section {
+  h3, h4, h5 {
+    color: var(--ce-color-text-white);
+    margin-bottom: var(--ce-space-component-lg);
+    font-weight: var(--ce-font-weight-semibold);
+  }
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ce-space-component-lg);
+  
+  @include respond-to(lg) {
+    grid-column: span 2;
+  }
+}
+
+.footer-logo {
+  height: 48px;
+  width: auto;
+  filter: brightness(0) invert(1); // Make logo white
+}
+
+.footer-description {
+  color: var(--ce-color-text-muted);
+  line-height: var(--ce-line-height-relaxed);
+  max-width: 400px;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--ce-space-component-md);
+  margin-top: var(--ce-space-component-md);
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--ce-color-bg-light-alpha);
+  color: var(--ce-color-text-light);
+  text-decoration: none;
+  border-radius: var(--ce-radius-full);
+  transition: all var(--ce-duration-normal) var(--ce-ease-out);
+  
+  &:hover {
+    background-color: var(--ce-color-primary);
+    color: var(--ce-color-text-white);
+    transform: translateY(-2px);
+  }
+  
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+// =============================================================================
+// FOOTER NAVIGATION
+// =============================================================================
+
+.footer-nav {
+  h4 {
+    font-size: var(--ce-font-size-h6);
+    margin-bottom: var(--ce-space-component-md);
+  }
+}
+
+.footer-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ce-space-component-sm);
+}
+
+.footer-nav-link {
+  color: var(--ce-color-text-muted);
+  text-decoration: none;
+  transition: color var(--ce-duration-normal) var(--ce-ease-out);
+  
+  &:hover {
+    color: var(--ce-color-text-white);
+  }
+  
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+// =============================================================================
+// FOOTER NEWSLETTER
+// =============================================================================
+
+.footer-newsletter {
+  h4 {
+    font-size: var(--ce-font-size-h6);
+    margin-bottom: var(--ce-space-component-md);
+  }
+  
+  p {
+    color: var(--ce-color-text-muted);
+    margin-bottom: var(--ce-space-component-lg);
+  }
+}
+
+.footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ce-space-component-md);
+  
+  @include respond-to(sm) {
+    flex-direction: row;
+  }
+}
+
+.footer-newsletter-input {
+  flex: 1;
+  padding: var(--ce-space-component-md);
+  background-color: var(--ce-color-bg-light-alpha);
+  border: 1px solid var(--ce-color-border-dark);
+  border-radius: var(--ce-radius-md);
+  color: var(--ce-color-text-white);
+  font-size: var(--ce-font-size-body);
+  
+  &::placeholder {
+    color: var(--ce-color-text-muted);
+  }
+  
+  &:focus {
+    @include focus-ring;
+    border-color: var(--ce-color-primary);
+  }
+}
+
+.footer-newsletter-button {
+  @extend .btn;
+  @extend .btn--primary;
+  white-space: nowrap;
+}
+
+// =============================================================================
+// FOOTER BOTTOM
+// =============================================================================
+
+.footer-bottom-content {
+  @include container;
+  @include flex-between;
+  flex-direction: column;
+  gap: var(--ce-space-component-lg);
+  
+  @include respond-to(md) {
+    flex-direction: row;
+    gap: var(--ce-space-layout-md);
+  }
+}
+
+.footer-copyright {
+  color: var(--ce-color-text-muted);
+  font-size: var(--ce-font-size-small);
+  text-align: center;
+  
+  @include respond-to(md) {
+    text-align: left;
+  }
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--ce-space-layout-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  @include respond-to(md) {
+    justify-content: flex-end;
+  }
+}
+
+.footer-legal-link {
+  color: var(--ce-color-text-muted);
+  text-decoration: none;
+  font-size: var(--ce-font-size-small);
+  transition: color var(--ce-duration-normal) var(--ce-ease-out);
+  
+  &:hover {
+    color: var(--ce-color-text-white);
+  }
+  
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+// =============================================================================
+// FOOTER VARIANTS
+// =============================================================================
+
+.footer-light {
+  background-color: var(--ce-color-bg-light);
+  color: var(--ce-color-text-primary);
+  
+  .footer-main {
+    border-bottom-color: var(--ce-color-border-light);
+  }
+  
+  .footer-bottom {
+    background-color: var(--ce-color-bg-white);
+  }
+  
+  .footer-section h3,
+  .footer-section h4,
+  .footer-section h5 {
+    color: var(--ce-color-text-primary);
+  }
+  
+  .footer-nav-link {
+    color: var(--ce-color-text-secondary);
+    
+    &:hover {
+      color: var(--ce-color-primary);
+    }
+  }
+  
+  .footer-social-link {
+    background-color: var(--ce-color-bg-white);
+    color: var(--ce-color-text-primary);
+    
+    &:hover {
+      background-color: var(--ce-color-primary);
+      color: var(--ce-color-text-white);
+    }
+  }
+  
+  .footer-newsletter-input {
+    background-color: var(--ce-color-bg-white);
+    border-color: var(--ce-color-border-light);
+    color: var(--ce-color-text-primary);
+    
+    &::placeholder {
+      color: var(--ce-color-text-muted);
+    }
+  }
+  
+  .footer-copyright,
+  .footer-legal-link {
+    color: var(--ce-color-text-secondary);
+    
+    &:hover {
+      color: var(--ce-color-primary);
+    }
+  }
+  
+  .footer-logo {
+    filter: none; // Remove white filter for light footer
+  }
+}
+
+.footer-compact {
+  .footer-main {
+    padding-top: var(--ce-space-section-md);
+    padding-bottom: var(--ce-space-section-sm);
+  }
+  
+  .footer-grid {
+    @extend .grid-responsive-2;
+  }
+  
+  .footer-brand {
+    @include respond-to(lg) {
+      grid-column: span 1;
+    }
+  }
+}
+
+// =============================================================================
+// FOOTER UTILITIES
+// =============================================================================
+
+.footer-divider {
+  height: 1px;
+  background-color: var(--ce-color-border-dark);
+  margin: var(--ce-space-section-sm) 0;
+  
+  .footer-light & {
+    background-color: var(--ce-color-border-light);
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ce-space-component-sm);
+  
+  .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--ce-space-component-sm);
+    color: var(--ce-color-text-muted);
+    
+    .footer-light & {
+      color: var(--ce-color-text-secondary);
+    }
+  }
+  
+  .footer-contact-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+} 

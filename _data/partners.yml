@@ -1,0 +1,37 @@
+federal_agencies:
+  title: "Federal Agency Data Partners:"
+  partners:
+    - name: "United States Department of Agriculture - Economic Research Service (ERS)"
+      url: "https://www.ers.usda.gov/"
+    - name: "National Center for Science and Engineering Statistics (NCSES)"
+      url: "https://ncses.nsf.gov/"
+    - name: "National Institutes of Health (NIH)"
+      url: "https://www.nih.gov/"
+    - name: "Department of Education - National Center for Education Statistics (NCES)"
+      url: "https://nces.ed.gov/"
+    - name: "Department of Commerce - National Oceanic and Atmospheric Administration (NOAA)"
+      url: "https://www.noaa.gov/"
+
+current_team:
+  title: "Current Team Members:"
+  members:
+    - name: "National Data Platform"
+      url: "https://nationaldataplatform.org/"
+    - name: "Digital Science"
+      url: "https://www.digital-science.com/"
+
+previous_team:
+  title: "Previous Team Members:"
+  members:
+    - name: "New York University (NYU)"
+      url: "https://www.nyu.edu/"
+    - name: "Johns Hopkins University - IDIES"
+      url: "https://www.idies.jhu.edu/"
+    - name: "University of Maryland - SoDA"
+      url: "https://socialdatascience.umd.edu/"
+    - name: "Elsevier"
+      url: "https://www.elsevier.com/"
+    - name: "Texas Advanced Computing Center"
+      url: "https://www.tacc.utexas.edu/"
+    - name: "University of Texas at San Antonio (UTSA)"
+      url: "https://www.utsa.edu/" 

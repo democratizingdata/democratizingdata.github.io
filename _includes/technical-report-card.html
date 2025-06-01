@@ -1,0 +1,25 @@
+<div class="c-technical-report">
+    <div class="c-technical-report__content">
+        <div class="c-technical-report__category">RESOURCES</div>
+        <h3 class="c-technical-report__title">{{ site.data.site.technical_report.title }}</h3>
+        <p class="c-technical-report__description">{{ site.data.site.technical_report.description }}</p>
+        <div class="c-technical-report__highlights">
+            <h4>Report Highlights:</h4>
+            <ul>
+                {% for highlight in site.data.site.technical_report.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="c-technical-report__button">
+            <a class="c-button c-button--primary" href="{{ site.baseurl }}{{ site.data.site.technical_report.link }}">
+                {{ site.data.site.technical_report.button_text }}
+            </a>
+        </div>
+    </div>
+    <div class="c-technical-report__image">
+        <img src="{{ site.baseurl }}/assets/img/hero/data-analysis-workspace.jpg"
+             alt="Professional data analysis workspace with charts, graphs, and technical documentation representing comprehensive research methodology"
+             class="c-technical-report__img img-fluid">
+    </div>
+</div> 

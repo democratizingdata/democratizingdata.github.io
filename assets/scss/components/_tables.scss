@@ -1,0 +1,50 @@
+// =============================================================================
+// TABLE COMPONENTS
+// =============================================================================
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $space-lg;
+  background-color: $color-background-primary;
+}
+
+.table__header {
+  background-color: $color-background-secondary;
+}
+
+.table__cell {
+  padding: $space-md;
+  text-align: left;
+  border-bottom: 1px solid $color-border;
+  vertical-align: top;
+}
+
+.table__header .table__cell {
+  font-weight: $font-weight-semibold;
+  color: $color-text-heading;
+}
+
+.table--striped {
+  .table__row:nth-child(even) {
+    background-color: $color-background-secondary;
+  }
+}
+
+.table--bordered {
+  border: 1px solid $color-border;
+  
+  .table__cell {
+    border-right: 1px solid $color-border;
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.table--hover {
+  .table__row:hover {
+    background-color: $color-background-secondary;
+  }
+} 

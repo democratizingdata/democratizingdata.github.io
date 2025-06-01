@@ -1,0 +1,41 @@
+{% if site.data.site.event_banner.enabled %}
+<section class="c-event-banner">
+    <div class="container">
+        <div class="c-event-banner__content">
+            <div class="c-event-banner__text">
+                <div class="c-event-banner__category">{{ site.data.site.event_banner.title | upcase }}</div>
+                <h2 class="c-event-banner__title">{{ site.data.site.event_banner.event_title }}</h2>
+                <p class="c-event-banner__description">{{ site.data.site.event_banner.description }}</p>
+                
+                <div class="c-event-banner__meta">
+                    <div class="c-event-banner__meta-item">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>June 20, 2025</span>
+                    </div>
+                    <div class="c-event-banner__meta-item">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>12:00 PM Eastern</span>
+                    </div>
+                </div>
+                
+                <a href="{{ site.baseurl }}{{ site.data.site.event_banner.link }}" class="c-event-banner__button">
+                    {{ site.data.site.event_banner.button_text }}
+                    <svg fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="c-event-banner__image">
+                <img src="{{ site.baseurl }}/assets/img/hero/conference-presentation.jpg"
+                     alt="Professional conference presentation setting with audience and speaker"
+                     class="c-event-banner__img img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %} 

@@ -1,0 +1,76 @@
+// =============================================================================
+// CARD COMPONENTS
+// =============================================================================
+// Card styles that complement the existing design system
+
+.card {
+  @extend %card-base;
+  
+  background-color: $color-background-primary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+  padding: $space-lg;
+  margin-bottom: $space-md;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card--elevated {
+  box-shadow: $shadow-md;
+  border: none;
+  
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+    transition: all $transition-fast ease-in-out;
+  }
+}
+
+.card--interactive {
+  cursor: pointer;
+  transition: all $transition-fast ease-in-out;
+  
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: $shadow-md;
+  }
+  
+  &:focus {
+    @extend %focus-ring;
+  }
+}
+
+.card__header {
+  margin-bottom: $space-md;
+  padding-bottom: $space-md;
+  border-bottom: 1px solid $color-border;
+}
+
+.card__title {
+  margin: 0 0 $space-xs;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-heading;
+}
+
+.card__subtitle {
+  margin: 0;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.card__body {
+  margin-bottom: $space-md;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card__footer {
+  margin-top: $space-md;
+  padding-top: $space-md;
+  border-top: 1px solid $color-border;
+} 

@@ -1,0 +1,63 @@
+// Test file to verify compilation
+.btn {
+  background: transparent;
+  color: inherit;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-height: 44px; // Accessibility requirement
+}
+
+.btn-primary {
+  background: #1f4e79 !important;
+  color: white !important;
+  border-color: #1f4e79;
+}
+
+.btn-primary:hover {
+  background: #1e3a8a !important;
+  color: white !important;
+  border-color: #1e3a8a;
+  text-decoration: none;
+}
+
+.btn-outline-primary {
+  background: transparent !important;
+  border: 2px solid #1f4e79 !important;
+  color: #1f4e79 !important;
+}
+
+.btn-outline-primary:hover {
+  background: #1f4e79 !important;
+  color: white !important;
+  border-color: #1f4e79;
+  text-decoration: none;
+}
+
+// BEM-style classes for backward compatibility
+.btn--primary {
+  @extend .btn-primary;
+}
+
+.btn--outline {
+  @extend .btn-outline-primary;
+}
+
+.btn--sm {
+  min-height: 36px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn--lg {
+  min-height: 52px;
+  padding: 12px 24px;
+  font-size: 18px;
+} 

@@ -1,566 +1,85 @@
-<footer class="c-footer  s-footer">
-    <div class="container footer-nav">
-        <div class="row">
-            <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                <div class="row">
-                    <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <p class="footer-head">About Us</p>
-                        <p class="footer-nav"><a href="{{ site.baseurl }}/about/team/">Our Team</a><br>
-                            <a href="{{ site.baseurl }}/about/data-partners/">Data Partners</a>
-                        </p>
-                        <p class="footer-head">Events</p>
-                        <p class="footer-nav"><a href="{{ site.baseurl }}/events/">Workshops</a></p>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <p class="footer-head">Our Tools</p>
-                        <p class="footer-nav"><a href="{{ site.baseurl }}/tools/dashboards/">Dashboards</a><br>
-                            <a href="{{ site.baseurl }}/tools/jupyter-notebooks/">Jupyter notebooks</a>
-                        </p>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <p class="footer-head">Our Approach</p>
-                        <p class="footer-nav"><a href="https://democratizingdata.gitbook.io/userguide/05-algorithms"
-                                target="_blank">ML algorithms</a><br>
-                            <a href="https://democratizingdata.gitbook.io/userguide/06-validationtools" target="_blank">Data
-                                validation</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-12 col-sm-12 col-md-12 col-lg-3 offset-lg-1 col-xl-3 offset-xl-1">
-                <h3 style="text-align: left;">Stay Engaged!</h3>
-                <p class="footer-nav">Let us know if you have any comments or suggestions.</p>
-                <p style="text-align: left;"><a class="c-button c-button--primary"
-                        href="{{ site.baseurl }}/about/contact-us/"
-                        style="background-color: #FEFCFC; color: #6667AB; text-align: left;">Contact us</a></p>
-            </div>
+<footer class="c-footer s-footer" id="footer-navigation">
+  <div class="container">
+    <!-- Main footer navigation -->
+    <div class="row footer-nav">
+      <div class="col-12 col-md-6 col-lg-2">
+        <nav aria-label="About navigation">
+          <h3 class="footer-head">About</h3>
+          <ul class="footer-nav-list">
+            <li><a href="{{ site.baseurl }}/about/">About</a></li>
+            <li><a href="{{ site.baseurl }}/about/">Our Team & Partners</a></li>
+            <li><a href="{{ site.baseurl }}/about/">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-2">
+        <nav aria-label="Tools navigation">
+          <h3 class="footer-head">Our Tools</h3>
+          <ul class="footer-nav-list">
+            <li><a href="{{ site.baseurl }}/tools/dashboard/food-agricultural-research/">Food And Agricultural Research Dashboard</a></li>
+            <li><a href="{{ site.baseurl }}/tools/dashboard/workforce-skills-dashboard/">Workforce & Skills Dashboard</a></li>
+            <li><a href="{{ site.baseurl }}/tools/national-data-platform/">National Data Platform</a></li>
+            <li><a href="https://github.com/democratizingdata" target="_blank" rel="noopener noreferrer">Github Repository</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-2">
+        <nav aria-label="Events navigation">
+          <h3 class="footer-head">Events</h3>
+          <ul class="footer-nav-list">
+            <li><a href="{{ site.baseurl }}/events/">Workshops</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-2">
+        <nav aria-label="Resources navigation">
+          <h3 class="footer-head">Resources</h3>
+          <ul class="footer-nav-list">
+            <li><a href="{{ site.baseurl }}/resources/">Technical Report</a></li>
+            <li><a href="https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data" target="_blank" rel="noopener noreferrer">Code Competition</a></li>
+            <li><a href="{{ site.baseurl }}/resources/">Additional Resources</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="col-12 col-lg-4">
+        <div class="footer-cta">
+          <h4>Stay Engaged!</h4>
+          <p>Let us know if you have any comments or suggestions.</p>
+          <a href="{{ site.baseurl }}/about/" class="c-presentation-card__link">Contact Us</a>
         </div>
-        <div class="row">
-            <div class="col">
-                <hr class="white-line">
-                <p class="footer-legal"><a class="footer-legal" href="{{ site.baseurl }}/about/privacy-policy">Privacy
-                        Policy</a> <a class="footer-legal" href="{{ site.baseurl }}/about/terms-and-conditions">Terms
-                        and Conditions </a><a class="footer-legal"
-                        href="{{ site.baseurl }}/about/accessibility-statement">Accessibility Statement</a><br>
-                    © 2023 Democratizing Data. All Rights Reserved.</p>
-            </div>
-        </div>
+      </div>
     </div>
-    <style>
-        h1 {
-            font-family: 'Familjen Grotesk';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 48px;
-            line-height: 150%;
-            display: flex;
-            align-items: center;
-            text-transform: capitalize;
-            color: #FFFFFF;
-            margin: 0px 0px 15px 0px;
-            padding: 0px;
-        }
-
-        h2 {
-            font-family: 'Familjen Grotesk';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 150%;
-            color: #6667AB;
-            margin: 0px 0px 15px 0px;
-            padding: 0px;
-        }
-
-        h3 {
-            font-family: 'Familjen Grotesk';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 150%;
-            color: #FEFCFC;
-            margin: 0px 0px 15px 0px;
-            padding: 0px;
-        }
-
-        h4 {
-            font-family: 'Familjen Grotesk';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 150%;
-            color: #000000;
-            margin: 0px 0px 15px 0px;
-            padding: 0px;
-        }
-
-
-        h5 {
-            font-family: 'Archivo';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 26px;
-            text-transform: uppercase;
-            color: #000000;
-            margin: 0px 0px 5px 0px;
-            padding: 0px;
-        }
-
-        h6 {
-            font-family: 'General Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 150%;
-            color: #FEFCFC;
-            margin: 10px 0px 10px 0px;
-        }
-
-        p {
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
-            color: #252525;
-            margin: 0px 0px 10px 0px;
-            padding: 0px;
-        }
-
-        .link-slides {
-            text-decoration: none;
-            color: rgb(245, 130, 130);
-            font-size: 16px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-            font-family: 'Familjen Grotesk';
-        }
-
-        ul,
-        ol {
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
-            color: #252525;
-        }
-
-        .subhead {
-            font-family: 'General Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 30px;
-            line-height: 150%;
-            color: #000000;
-            margin: 20px 0px 10px 0px;
-        }
-
-        .c-button {
-            margin: 15px 0px 15px 0px;
-            padding: 15px 25px;
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
-            color: #FEFCFC;
-            text-transform: capitalize;
-            border-radius: 8px;
-        }
-
-        .purplebg {
-            background-color: #6667AB;
-            margin: 0px 0px 15px 0px;
-            padding: 10px 30px 5px 30px;
-            color: #FEFCFC;
-        }
-
-        h1.purplebg {
-            margin: 0px 0px 5px 0px;  
-        }
-
-        p.purplebg {
-            color: #FEFCFC;
-            padding: 0px;
-        }
-
-        a.purplebg:link,
-        a.purplebg:visited,
-        .purplebga:active {
-            color: white;
-        }
-
-        a.purplebg:hover {
-            color: #CCCCCC;
-        }
-
-        p.purple {
-            color: #6667AB;
-            font-weight: bold;
-            margin: 25px 0px 25px 0px;
-        }
-
-        .event-info {
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
-            color: #000000;
-        }
-
-        .event-img {
-            width: 15px;
-            margin: 3px 10px 10px 0px;
-        }
-
-        /* FAQ: The .graybg class is used on sectiosn that need muted section class */
-        /* !!!: Sometimes such sections are nested causing horz. overflow of <body> */
-        .graybg {
-            background-color: rgba(233, 233, 243, 0.5);
-        }
-
-        .o-section--style-muted {
-            --color--bkgd: rgba(233, 233, 243, 0.5);
-        }
-
-        .whitebg {
-            background-color: #FEFCFC;
-            padding: 30px;
-            margin: 25px 0px 25px 0px;
-        }
-
-        .data-partners {
-            max-height: 65px;
-            margin-bottom: 25px;
-        }
-
-        .bottom-spacer {
-            margin-bottom: 25px;
-        }
-
-        .top-spacer {
-            margin-top: 25px;
-        }
-
-        .green-line {
-            border-top: solid 1px #00A979;
-            width: 75%;
-            margin-top: 35px;
-            margin-bottom: 35px;
-        }
-
-        .white-line {
-            border-top: solid 1px #ffffff;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        /** BANNER STYLES **/
-
-        .dd-banner {
-            padding: 100px 0% 90px 0%;
-        }
-
-        @media (max-width: 767px) {
-            .dd-banner {
-                background-image:
-                    url('{{ site.baseurl }}/assets/img/thumbnails/82/b5/82b53d42-937e-4713-a43e-97c3044c8e73/bg-main.png');
-                background-size:
-                    cover;
-                background-position:
-                    center center;
-                background-repeat:
-                    no-repeat;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .dd-banner {
-                background-image:
-                    url('{{ site.baseurl }}/assets/img/thumbnails/e0/12/e012834e-228f-4e3e-b2f0-925aa85aaf23/bg-left.png'),
-                    url('{{ site.baseurl }}/assets/img/thumbnails/36/57/3657a768-2bdd-4b20-b2f0-0f724a1a5fc4/bg-right.png'),
-                    url('{{ site.baseurl }}/assets/img/thumbnails/82/b5/82b53d42-937e-4713-a43e-97c3044c8e73/bg-main.png');
-                background-size:
-                    auto,
-                    auto,
-                    cover;
-                background-position:
-                    left bottom,
-                    right bottom,
-                    center center;
-                background-repeat:
-                    no-repeat,
-                    no-repeat,
-                    no-repeat;
-            }
-        }
-
-        .dd-bannertext {
-            font-family: 'Familjen Grotesk';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 45px;
-            line-height: 150%;
-            text-align: center;
-            text-transform: capitalize;
-            color: #1B3675;
-            margin: 0px 0px 20px 0px;
-            padding: 0px;
-        }
-
-        .dd-bannertext2 {
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
-            text-align: center;
-            color: #252525;
-            margin: 0px 0px 50px 0px;
-            padding: 0px;
-        }
-
-        .dd-event-banner {
-            padding: 10px 0% 9px 0%;
-        }
-
-        @media (max-width: 767px) {
-            .dd-event-banner {
-                background-image:
-                    url('{{ site.baseurl }}/assets/img/thumbnails/3f/c1/3fc1b241-359d-45c4-a89f-a12a582e35b7/dem_data_banner.jpg__1920x1920_q85_subsampling-2.jpg');
-                background-size:
-                    cover;
-                background-position:
-                    center center;
-                background-repeat:
-                    no-repeat;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .dd-event-banner {
-                background-image:
-                    url('{{ site.baseurl }}/assets/img/thumbnails/3f/c1/3fc1b241-359d-45c4-a89f-a12a582e35b7/dem_data_banner.jpg__1920x1920_q85_subsampling-2.jpg');
-                background-size:
-                    cover;
-                background-position:
-                    center center;
-                background-repeat:
-                    no-repeat;
-            }
-        }
-
-        .dd-event-bannertext {
-            font-family: 'Familjen Grotesk';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 28px;
-            line-height: 150%;
-            text-align: center;
-            text-transform: capitalize;
-            color: #FEFCFC;
-            margin: 0px 0px 20px 0px;
-            padding: 0px;
-            display: block;
-        }
-
-        .dd-event-banner-a {
-/*             text-decoration: none; */
-            color: #f58282;
-        }
-
-        .dd-event-bannertext2 {
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 150%;
-            text-align: center;
-            color: #FEFCFC;
-            margin: 0px 0px 20px 0px;
-            padding: 0px;
-        }
-
-        /** FOOTER STYLES **/
-
-        p.footer-head {
-            text-align: left;
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            color: #FFFFFF;
-        }
-
-        p.footer-nav {
-            text-align: left;
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
-            color: #FFFFFF;
-            margin-bottom: 25px;
-        }
-
-        p.footer-legal {
-            text-align: left;
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 150%;
-            color: #FFFFFF;
-            margin-bottom: 25px;
-        }
-
-        a.footer-legal:link,
-        a.footer-legal:visited,
-        .footer-legal:active {
-            color: white;
-        }
-
-        a.footer-legal:hover {
-            color: #CCCCCC;
-        }
-        
-        
-        /* Default iframe style for desktop devices */
-        iframe#dashboard {
-        width: 100%;
-        height: 1450px; /* Height for desktop */
-        overflow: hidden;
-        }
-
-        /* Media query for mobile devices */
-        @media screen and (max-width: 767px) {
-        iframe#dashboard {
-            height: 3200px; /* Height for mobile */
-        }
-        }
-
-
-
-    </style>
-    <style id="dd-header-styles">
-        .branding-header {
-            display: none;
-        }
-
-        /* To match design via TACC/Core-CMS selectors */
-        .s-header.navbar {
-            background-color: var(--global-color-primary--xx-light);
-        }
-
-        #s-header .nav-link,
-        #s-header .nav-link>a {
-            color: var(--global-color-accent--normal);
-        }
-
-        @media only screen and (min-width: 992px) {
-            .s-header {
-                /* NOTE: Design intentionally not matched has a "TACC:" comment */
-                height: 125px;
-                /* TACC: design is 160px */
-            }
-        }
-
-        .portal-logo {
-            height: 90px;
-        }
-    </style>
-    <style class="dd-footer-styles">
-        .c-footer {
-            background-color: var(--global-color-accent--normal);
-        }
-
-        .s-footer a {
-            color: var(--global-color-primary--xxx-light);
-        }
-
-        /* To remove top border */
-        .c-footer::before {
-            display: none;
-        }
-    </style>
-    <style id="dd-color-variables">
-        body {
-
-            /* Neutral */
-            --global-color-primary--dark: #646464;
-            /* from design */
-            --global-color-primary--dark-rgb: 100, 100, 100;
-            --global-color-primary--xx-dark: #252525;
-            /* from design */
-            --global-color-primary--xx-dark-rgb: 37, 37, 37;
-
-            /* Accent */
-            --global-color-accent--xx-light: #b8b9d8;
-            --global-color-accent--x-light: #9799c1;
-            --global-color-accent--light: #7b7db0;
-            --global-color-accent--normal: #6667ab;
-            /* from design */
-            --global-color-accent--dark: #4f508f;
-            --global-color-accent--x-dark: #33316d;
-            --global-color-accent--xx-dark: #1c164f;
-
-            --global-color-secondary--xx-light: var(--global-color-accent--xx-light);
-            --global-color-secondary--x-light: var(--global-color-accent--x-light);
-            --global-color-secondary--light: var(--global-color-accent--light);
-            --global-color-secondary--normal: var(--global-color-accent--normal);
-            --global-color-secondary--dark: var(--global-color-accent--dark);
-            --global-color-secondary--x-dark: var(--global-color-accent--x-dark);
-            --global-color-secondary--xx-dark: var(--global-color-accent--xx-dark);
-
-            --global-color-tertiary--xx-light: #e8fef8;
-            --global-color-tertiary--x-light: #dafff4;
-            /* from design */
-            --global-color-tertiary--light: #00ce9e;
-            /* from design */
-            --global-color-tertiary--normal: #009b77;
-            /* from design */
-            --global-color-tertiary--dark: #006850;
-            /* from design */
-            --global-color-tertiary--x-dark: #003529;
-            /* from design */
-            --global-color-tertiary--xx-dark: #061a15;
-
-            --global-color-accent--alt: #9394AD;
-            --global-color-accent--weak: #4f508f40;
-
-        }
-    </style>
-    <style id="dd-undo-tacc-styles">
-        /* To undo style#css-utility-match-column-heights */
-        /* IMPORTANT: (2023-02-01) Can delete after next deploy */
-        .o-section .col {
-            display: unset;
-            align-content: normal;
-        }
-    </style>
-    <style id="dd-undo-ecep-styles">
-        /* To undo overzealous ECEP irregular link styles that ignore .c-button */
-        a.c-button:not(.c-button--as-link) {
-            text-decoration: none;
-        }
-    </style>
-    <style id="dd-undo-core-styles">
-        /* To let buttons wrap */
-        /* TODO: Decide whether to fix this in Core */
-        /* SEE: TACC/Core-Styles#148 */
-        .c-button {
-            /* https://github.com/TACC/Core-Styles/blob/823b7b9/src/lib/_imports/tools/x-truncate.css#L42-L46 */
-            overflow: visible;
-            white-space: normal;
-        }
-    </style>
-    <!-- TODO: Load only the font weights and styles needed -->
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+    
+    <!-- Footer legal section -->
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-legal">
+          <nav aria-label="Legal navigation">
+            <a href="{{ site.baseurl }}/about/privacy-policy">Privacy Policy</a>
+            <a href="{{ site.baseurl }}/about/terms-and-conditions">Terms and Conditions</a>
+            <a href="{{ site.baseurl }}/about/accessibility-statement">Accessibility Statement</a>
+          </nav>
+          <p>&copy; 2023 Democratizing Data. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer disclaimers -->
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-disclaimers">
+          <div class="footer-disclaimer-item">
+            <p><strong>Beta Version:</strong> This is a beta version of our website. Features and content may be updated as we continue to improve the user experience.</p>
+          </div>
+          <div class="footer-disclaimer-item">
+            <p><strong>AI Assistance Disclosure:</strong> This website was developed with the assistance of artificial intelligence tools to enhance content creation, design, and user experience. All content has been reviewed and approved by our team to ensure accuracy and quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

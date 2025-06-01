@@ -1,0 +1,73 @@
+/*! Credential Engine Design System - Main SCSS Entry Point */
+/*! Modular SCSS Architecture for Democratizing Data Website */
+/*! Based on comprehensive analysis of credentialengine.org/credentialtransparency-ai/ */
+
+// =============================================================================
+// ABSTRACTS
+// =============================================================================
+// Variables, functions, mixins, and placeholders
+// These don't output any CSS when compiled
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+// =============================================================================
+// BASE
+// =============================================================================
+// Reset, normalize, base element styles
+// Low-specificity, foundational styles
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/elements';
+
+// =============================================================================
+// LAYOUT
+// =============================================================================
+// Grid systems, containers, layout patterns
+// Structural styles for page layout
+
+@import 'layout/containers';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+// =============================================================================
+// COMPONENTS
+// =============================================================================
+// Reusable UI components
+// Modular, self-contained component styles
+
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/alerts';
+@import 'components/badges';
+@import 'components/navigation';
+@import 'components/header';
+@import 'components/modals';
+@import 'components/tables';
+
+// =============================================================================
+// UTILITIES
+// =============================================================================
+// Helper classes, overrides, and utility styles
+// High-specificity, single-purpose classes
+
+@import 'utilities/spacing';
+@import 'utilities/typography';
+@import 'utilities/colors';
+@import 'utilities/display';
+@import 'utilities/positioning';
+@import 'utilities/responsive';
+@import 'utilities/accessibility';
+
+// =============================================================================
+// SHAME
+// =============================================================================
+// Temporary fixes, hacks, and overrides
+// Code that needs refactoring or removal
+
+@import 'shame'; 

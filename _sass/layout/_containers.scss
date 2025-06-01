@@ -1,0 +1,311 @@
+/*! Container System */
+/*! Responsive containers based on Credential Engine design analysis */
+
+// =============================================================================
+// BASE CONTAINER
+// =============================================================================
+
+.container {
+  @include container;
+}
+
+// =============================================================================
+// CONTAINER SIZES
+// =============================================================================
+
+.container-sm {
+  @include container($container-sm);
+}
+
+.container-md {
+  @include container($container-md);
+}
+
+.container-lg {
+  @include container($container-lg);
+}
+
+.container-xl {
+  @include container($container-xl);
+}
+
+.container-xxl {
+  @include container($container-xxl);
+}
+
+// =============================================================================
+// FLUID CONTAINERS
+// =============================================================================
+
+.container-fluid {
+  width: 100%;
+  padding-left: var(--ce-space-layout-sm);
+  padding-right: var(--ce-space-layout-sm);
+  
+  @include respond-to(sm) {
+    padding-left: var(--ce-space-layout-md);
+    padding-right: var(--ce-space-layout-md);
+  }
+  
+  @include respond-to(lg) {
+    padding-left: var(--ce-space-layout-lg);
+    padding-right: var(--ce-space-layout-lg);
+  }
+}
+
+// =============================================================================
+// SECTION CONTAINERS
+// =============================================================================
+
+.section {
+  padding-top: var(--ce-space-section-md);
+  padding-bottom: var(--ce-space-section-md);
+  
+  @include respond-to(md) {
+    padding-top: var(--ce-space-section-lg);
+    padding-bottom: var(--ce-space-section-lg);
+  }
+  
+  @include respond-to(lg) {
+    padding-top: var(--ce-space-section-xl);
+    padding-bottom: var(--ce-space-section-xl);
+  }
+}
+
+.section-sm {
+  padding-top: var(--ce-space-section-sm);
+  padding-bottom: var(--ce-space-section-sm);
+  
+  @include respond-to(md) {
+    padding-top: var(--ce-space-section-md);
+    padding-bottom: var(--ce-space-section-md);
+  }
+}
+
+.section-lg {
+  padding-top: var(--ce-space-section-lg);
+  padding-bottom: var(--ce-space-section-lg);
+  
+  @include respond-to(md) {
+    padding-top: var(--ce-space-section-xl);
+    padding-bottom: var(--ce-space-section-xl);
+  }
+  
+  @include respond-to(lg) {
+    padding-top: calc(var(--ce-space-section-xl) * 1.5);
+    padding-bottom: calc(var(--ce-space-section-xl) * 1.5);
+  }
+}
+
+// =============================================================================
+// CONTENT CONTAINERS
+// =============================================================================
+
+.content {
+  max-width: 65ch; // Optimal reading width
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-wide {
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-narrow {
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// =============================================================================
+// HERO CONTAINERS
+// =============================================================================
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--ce-space-section-lg);
+  padding-bottom: var(--ce-space-section-lg);
+  
+  @include respond-to(md) {
+    min-height: 70vh;
+    padding-top: var(--ce-space-section-xl);
+    padding-bottom: var(--ce-space-section-xl);
+  }
+}
+
+.hero-full {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-compact {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--ce-space-section-md);
+  padding-bottom: var(--ce-space-section-md);
+  
+  @include respond-to(md) {
+    min-height: 50vh;
+  }
+}
+
+// =============================================================================
+// CARD CONTAINERS
+// =============================================================================
+
+.card-container {
+  padding: var(--ce-space-layout-md);
+  
+  @include respond-to(sm) {
+    padding: var(--ce-space-layout-lg);
+  }
+}
+
+.card-container-sm {
+  padding: var(--ce-space-layout-sm);
+  
+  @include respond-to(sm) {
+    padding: var(--ce-space-layout-md);
+  }
+}
+
+.card-container-lg {
+  padding: var(--ce-space-layout-lg);
+  
+  @include respond-to(sm) {
+    padding: var(--ce-space-layout-xl);
+  }
+}
+
+// =============================================================================
+// RESPONSIVE CONTAINERS
+// =============================================================================
+
+// Breakpoint-specific containers
+.container-mobile {
+  @include respond-to-max(sm) {
+    @include container($container-sm);
+  }
+}
+
+.container-tablet {
+  @include respond-between($breakpoint-sm, $breakpoint-lg) {
+    @include container($container-md);
+  }
+}
+
+.container-desktop {
+  @include respond-to(lg) {
+    @include container($container-xl);
+  }
+}
+
+// =============================================================================
+// UTILITY CONTAINERS
+// =============================================================================
+
+.wrapper {
+  overflow: hidden;
+}
+
+.wrapper-x {
+  overflow-x: hidden;
+}
+
+.wrapper-y {
+  overflow-y: hidden;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.scrollable-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.scrollable-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// =============================================================================
+// ASPECT RATIO CONTAINERS
+// =============================================================================
+
+.aspect-square {
+  @include aspect-ratio(1, 1);
+}
+
+.aspect-video {
+  @include aspect-ratio(16, 9);
+}
+
+.aspect-photo {
+  @include aspect-ratio(4, 3);
+}
+
+.aspect-wide {
+  @include aspect-ratio(21, 9);
+}
+
+// =============================================================================
+// CENTERED CONTAINERS
+// =============================================================================
+
+.center {
+  @include flex-center;
+}
+
+.center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.center-y {
+  display: flex;
+  align-items: center;
+}
+
+.center-content {
+  text-align: center;
+}
+
+// =============================================================================
+// SPACING CONTAINERS
+// =============================================================================
+
+.space-y > * + * {
+  margin-top: var(--ce-space-layout-md);
+}
+
+.space-y-sm > * + * {
+  margin-top: var(--ce-space-layout-sm);
+}
+
+.space-y-lg > * + * {
+  margin-top: var(--ce-space-layout-lg);
+}
+
+.space-x {
+  display: flex;
+  gap: var(--ce-space-layout-md);
+}
+
+.space-x-sm {
+  display: flex;
+  gap: var(--ce-space-layout-sm);
+}
+
+.space-x-lg {
+  display: flex;
+  gap: var(--ce-space-layout-lg);
+} 

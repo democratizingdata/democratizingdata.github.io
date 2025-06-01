@@ -1,0 +1,57 @@
+// =============================================================================
+// SEMANTIC UTILITIES
+// =============================================================================
+// Utility styles for semantic HTML5 wrapper elements
+// Ensures semantic elements don't interfere with existing component styling
+
+// Screen reader only content (for semantic headings that shouldn't be visible)
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Semantic wrapper elements should not add any visual styling
+.c-technical-report-wrapper,
+.c-section-card-wrapper,
+.c-about-content,
+.c-partners-section {
+  // Reset any potential inherited styles
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  
+  // Ensure they don't interfere with flexbox/grid layouts
+  display: contents;
+}
+
+// For cases where display: contents isn't supported (IE)
+@supports not (display: contents) {
+  .c-technical-report-wrapper,
+  .c-section-card-wrapper,
+  .c-about-content,
+  .c-partners-section {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Ensure semantic elements maintain accessibility
+article,
+aside,
+section {
+  // Provide implicit ARIA roles for older browsers
+  &:not([role]) {
+    &[aria-labelledby] {
+      // Ensure proper semantic association
+      outline: none;
+    }
+  }
+} 

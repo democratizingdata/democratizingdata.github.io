@@ -1,0 +1,40 @@
+{% comment %}
+  Podcast carousel include
+  Usage: {% include podcast-carousel.html %}
+{% endcomment %}
+
+<div class="carousel slide cms-plugin cms-plugin-12121" id="carousel-12121" data-interval="5000"
+     data-keyboard="true" data-pause="hover" data-ride="carousel" data-wrap="true">
+    <ol class="carousel-indicators">
+        {% for podcast in site.data.podcasts %}
+        <li data-target="#carousel-12121" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+        {% endfor %}
+    </ol>
+
+    <div class="carousel-inner">
+        {% for podcast in site.data.podcasts %}
+        <div class="carousel-item{% if forloop.first %} active{% endif %} cms-plugin cms-plugin-12122">
+            <img class="d-block w-100"
+                 src="{{ site.baseurl }}{{ podcast.image }}"
+                 alt="{{ podcast.title }} - Podcast episode featuring research insights"
+                 loading="lazy">
+            <div class="carousel-caption" style="top: 0;">
+                <h3 style="font-size: {% if podcast.title contains 'Dr. Janet Currie' %}18px{% else %}20px{% endif %};">{{ podcast.title }}</h3>
+                <p class="purplebg" style="font-size: 18px;">{{ podcast.description }}</p>
+                <p class="purplebg" style="font-size: 18px;">Learn more <a
+                        href="{{ podcast.link }}"
+                        style="color: #ffffff;" target="_blank">here</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <a class="carousel-control-prev" href="#carousel-12121" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-12121" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div> 

@@ -1,0 +1,38 @@
+{% comment %}
+  Section card include
+  Usage: {% include section-card.html section=site.data.site.sections.federal_agencies %}
+{% endcomment %}
+
+{% assign card_class = "c-section-card" %}
+{% if include.section.title == "FOR FEDERAL AGENCIES" %}
+  {% assign card_class = "c-section-card c-section-card--federal" %}
+{% elsif include.section.title == "FOR RESEARCHERS" %}
+  {% assign card_class = "c-section-card c-section-card--researchers" %}
+{% elsif include.section.title == "GET INVOLVED" %}
+  {% assign card_class = "c-section-card c-section-card--involved" %}
+{% endif %}
+
+<div class="{{ card_class }}">
+    <div class="c-section-card__category">{{ include.section.title }}</div>
+    <h2 class="c-section-card__title">{{ include.section.heading }}</h2>
+    <p class="c-section-card__description">{{ include.section.description }}</p>
+    
+    {% if include.section.button %}
+    <div class="c-section-card__button">
+        <a class="c-button c-button--primary" href="{{ include.section.button.link }}" target="_blank">
+            {{ include.section.button.text }}
+        </a>
+    </div>
+    {% endif %}
+    
+    {% if include.section.links %}
+    <div class="c-section-card__links">
+        <p>Read more 
+            {% for link in include.section.links %}
+                <a href="{{ link.url }}"{% if link.external %} target="_blank"{% endif %}>{{ link.text }}</a>
+                {% unless forloop.last %} and {% endunless %}
+            {% endfor %}
+        </p>
+    </div>
+    {% endif %}
+</div> 
