@@ -81,6 +81,10 @@
                   {% assign crumb_title = 'Workforce and Skills Dashboard' %}
                 {% when 'workforce-skills-dashboard' %}
                   {% assign crumb_title = 'Workforce and Skills Dashboard' %}
+                {% when 'food-agricultural-research-landing' %}
+                  {% assign crumb_title = 'Food Agricultural Research Dashboard' %}
+                {% when 'food-agricultural-research' %}
+                  {% assign crumb_title = 'Food Agricultural Research Dashboard' %}
                 {% else %}
                   {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% endcase %}
@@ -136,6 +140,10 @@
                   {% assign crumb_title = 'Workforce and Skills Dashboard' %}
                 {% when 'workforce-skills-dashboard' %}
                   {% assign crumb_title = 'Workforce and Skills Dashboard' %}
+                {% when 'food-agricultural-research-landing' %}
+                  {% assign crumb_title = 'Food Agricultural Research Dashboard' %}
+                {% when 'food-agricultural-research' %}
+                  {% assign crumb_title = 'Food Agricultural Research Dashboard' %}
                 {% else %}
                   {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% endcase %}
