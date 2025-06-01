@@ -7,7 +7,7 @@ event_banner:
   enabled: true
   title: "Upcoming Webinar"
   event_title: "Envisioning food and agricultural data for the future: Developing a new roadmap for trusted data"
-  description: "Join us on June 20, 2025 at 12:00 PM Eastern for this important discussion on the future of trusted data infrastructures"
+  description: "Join us on June 20, 2025, at 12:00 PM ET for an important discussion on trusted data. Learn how to contribute to a community-driven roadmap for improving the accessibility, transparency, and utility of food and agricultural data."
   link: "/events/2025/trusted-data-webinar/"
   button_text: "Register for Webinar"
 
