@@ -77,6 +77,10 @@
                   {% assign crumb_title = 'June 20 Webinar' %}
                 {% when 'trusted-data-webinar' %}
                   {% assign crumb_title = 'Trusted Data Webinar' %}
+                {% when 'workforce-landing' %}
+                  {% assign crumb_title = 'Workforce and Skills Dashboard' %}
+                {% when 'workforce-skills-dashboard' %}
+                  {% assign crumb_title = 'Workforce and Skills Dashboard' %}
                 {% else %}
                   {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% endcase %}
@@ -128,6 +132,10 @@
                   {% assign crumb_title = 'June 20 Webinar' %}
                 {% when 'trusted-data-webinar' %}
                   {% assign crumb_title = 'Trusted Data Webinar' %}
+                {% when 'workforce-landing' %}
+                  {% assign crumb_title = 'Workforce and Skills Dashboard' %}
+                {% when 'workforce-skills-dashboard' %}
+                  {% assign crumb_title = 'Workforce and Skills Dashboard' %}
                 {% else %}
                   {% assign crumb_title = crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
               {% endcase %}
