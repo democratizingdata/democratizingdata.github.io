@@ -8,11 +8,11 @@ description: "Frequently asked questions about using the Food and Agricultural R
 <section class="c-hero">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="c-hero__content">
                     <h1 class="c-hero__title">Frequently Asked Questions</h1>
                     <p class="c-hero__description">
-                        Get answers to common questions about using the Food and Agricultural Research Dashboard, including how to filter data, search for authors, and navigate the interface.
+                        Get answers to common questions about using the Food and Agricultural Research Dashboard, including how to filter data, search for authors, and navigate the interface effectively.
                     </p>
                 </div>
             </div>
@@ -24,47 +24,66 @@ description: "Frequently asked questions about using the Food and Agricultural R
 <section class="c-content-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-10 mx-auto">
-                
-                <!-- Table of Contents -->
-                <div class="c-info-card mb-5">
-                    <h3>Quick Navigation</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#dashboard-access" class="text-decoration-none">• Dashboard Access</a></li>
-                        <li><a href="#filtering-basics" class="text-decoration-none">• Filtering Basics</a></li>
-                        <li><a href="#author-filtering" class="text-decoration-none">• Author Filtering</a></li>
-                        <li><a href="#affiliation-filtering" class="text-decoration-none">• Affiliation Filtering</a></li>
-                        <li><a href="#advanced-search" class="text-decoration-none">• Advanced Search</a></li>
-                        <li><a href="#filter-management" class="text-decoration-none">• Filter Management</a></li>
-                    </ul>
-                </div>
-
-                <!-- Dashboard Access -->
-                <div id="dashboard-access" class="mb-5">
-                    <h2 class="h3 mb-4">Dashboard Access</h2>
-                    
-                    <div class="accordion" id="accessAccordion">
-                        <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAccess1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccess1" aria-expanded="true" aria-controls="collapseAccess1">
-                                    How do I access the Food and Agricultural Research Dashboard?
-                                </button>
-                            </h3>
-                            <div id="collapseAccess1" class="accordion-collapse collapse show" aria-labelledby="headingAccess1" data-bs-parent="#accessAccordion">
-                                <div class="accordion-body">
-                                    <p>To access the dashboard, navigate to:</p>
-                                    <code>https://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/#dashboard-container</code>
-                                    <p class="mt-2">You can also access it through the main navigation menu on our website under <strong>Tools → Dashboard → Food and Agricultural Research</strong>.</p>
-                                    
-                                    <div class="mt-3">
-                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-000.jpg" alt="Dashboard landing page view" class="img-fluid rounded shadow-sm">
-                                        <p class="text-muted small mt-2">The Food and Agricultural Research Dashboard main interface</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Floating Quick Navigation Sidebar -->
+            <div class="col-lg-4">
+                <div class="faq-navigation-sidebar" style="position: sticky; top: 120px; height: fit-content;">
+                    <div class="c-info-card">
+                        <h3>Quick Navigation</h3>
+                        <nav>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#filtering-basics" class="text-decoration-none d-flex align-items-center nav-link-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                                            <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"/>
+                                        </svg>
+                                        Filtering Basics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#author-filtering" class="text-decoration-none d-flex align-items-center nav-link-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="12" cy="7" r="4"/>
+                                        </svg>
+                                        Author Filtering
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#affiliation-filtering" class="text-decoration-none d-flex align-items-center nav-link-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                                            <path d="M3 21h18"/>
+                                            <path d="M5 21V7l8-4v18"/>
+                                            <path d="M19 21V11l-6-4"/>
+                                        </svg>
+                                        Affiliation Filtering
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#advanced-search" class="text-decoration-none d-flex align-items-center nav-link-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                                            <circle cx="11" cy="11" r="8"/>
+                                            <path d="M21 21l-4.35-4.35"/>
+                                        </svg>
+                                        Advanced Search
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#filter-management" class="text-decoration-none d-flex align-items-center nav-link-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                                            <path d="M12 20h9"/>
+                                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                                        </svg>
+                                        Filter Management
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
+            </div>
+
+            <!-- Main FAQ Content -->
+            <div class="col-lg-8">
 
                 <!-- Filtering Basics -->
                 <div id="filtering-basics" class="mb-5">
@@ -72,48 +91,47 @@ description: "Frequently asked questions about using the Food and Agricultural R
                     
                     <div class="accordion" id="filteringAccordion">
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingFilter1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter1" aria-expanded="true" aria-controls="collapseFilter1">
-                                    How do I view currently applied filters?
+                            <h3 class="accordion-header" id="filtering1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-filtering1" aria-expanded="false" aria-controls="collapse-filtering1">
+                                    How do I view my current filters?
                                 </button>
                             </h3>
-                            <div id="collapseFilter1" class="accordion-collapse collapse show" aria-labelledby="headingFilter1" data-bs-parent="#filteringAccordion">
+                            <div id="collapse-filtering1" class="accordion-collapse collapse" aria-labelledby="filtering1" data-bs-parent="#filteringAccordion">
                                 <div class="accordion-body">
-                                    <p>To see the filters that have been applied:</p>
-                                    <ol>
-                                        <li>Go to the top of the dashboard</li>
-                                        <li>Look for the filter display area where active filters are shown</li>
-                                        <li>Each active filter will be displayed with its criteria</li>
-                                    </ol>
-                                    
-                                    <div class="mt-3">
-                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-001.jpg" alt="Filter display area at top of dashboard" class="img-fluid rounded shadow-sm">
-                                        <p class="text-muted small mt-2">Active filters are displayed at the top of the dashboard</p>
-                                    </div>
+                                    <p>Your active filters are displayed in the filter area at the top of the dashboard:</p>
+                                    <ul>
+                                        <li>Look for the filter display area near the top of the dashboard</li>
+                                        <li>Applied filters appear as tags or chips with filter names and values</li>
+                                        <li>Each filter shows the field name and the selected criteria</li>
+                                        <li>You can see all active filters at a glance in this area</li>
+                                    </ul>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-004.jpg" 
+                                         alt="Filter display area showing active filters" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingFilter2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter2" aria-expanded="false" aria-controls="collapseFilter2">
+                            <h3 class="accordion-header" id="filtering2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-filtering2" aria-expanded="false" aria-controls="collapse-filtering2">
                                     How do I remove filters?
                                 </button>
                             </h3>
-                            <div id="collapseFilter2" class="accordion-collapse collapse" aria-labelledby="headingFilter2" data-bs-parent="#filteringAccordion">
+                            <div id="collapse-filtering2" class="accordion-collapse collapse" aria-labelledby="filtering2" data-bs-parent="#filteringAccordion">
                                 <div class="accordion-body">
-                                    <p>To remove filters:</p>
-                                    <ol>
-                                        <li>Go to the top of the dashboard where filters are displayed</li>
-                                        <li>Find the filter you want to remove</li>
-                                        <li>Click the <strong>"x"</strong> button next to the filter</li>
-                                        <li>The filter will be removed and the dashboard will update automatically</li>
-                                    </ol>
-                                    
-                                    <div class="mt-3">
-                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-002.jpg" alt="Remove filter by clicking X button" class="img-fluid rounded shadow-sm">
-                                        <p class="text-muted small mt-2">Click the "x" button to remove individual filters</p>
-                                    </div>
+                                    <p>You can remove filters in several ways:</p>
+                                    <ul>
+                                        <li>Click the "X" button on individual filter tags to remove specific filters</li>
+                                        <li>Use the "Clear all filters" option to remove all applied filters at once</li>
+                                        <li>Right-click on chart elements to access filter removal options</li>
+                                        <li>Use the filter panels to modify or clear specific filter criteria</li>
+                                    </ul>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-002.jpg" 
+                                         alt="Filter removal options and clear buttons" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
@@ -126,99 +144,76 @@ description: "Frequently asked questions about using the Food and Agricultural R
                     
                     <div class="accordion" id="authorAccordion">
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAuthor1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuthor1" aria-expanded="true" aria-controls="collapseAuthor1">
-                                    How do I filter by author using the interactive method?
+                            <h3 class="accordion-header" id="author1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-author1" aria-expanded="false" aria-controls="collapse-author1">
+                                    How do I filter by author category using hover and +/- buttons?
                                 </button>
                             </h3>
-                            <div id="collapseAuthor1" class="accordion-collapse collapse show" aria-labelledby="headingAuthor1" data-bs-parent="#authorAccordion">
+                            <div id="collapse-author1" class="accordion-collapse collapse" aria-labelledby="author1" data-bs-parent="#authorAccordion">
                                 <div class="accordion-body">
-                                    <p>To filter by author directly from the dashboard:</p>
-                                    <ol>
-                                        <li><strong>Hover</strong> your mouse over an author's name in the data visualization</li>
-                                        <li>You'll see interactive options appear</li>
-                                        <li>Click the <strong>"+"</strong> button if you want to <em>include</em> this author in your search</li>
-                                        <li>Click the <strong>"-"</strong> button if you want to <em>exclude</em> this author from your search</li>
-                                        <li>The dashboard will update automatically with your filter applied</li>
-                                    </ol>
-                                    
-                                    <div class="mt-3">
-                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-003.jpg" alt="Hover over author to see + and - buttons" class="img-fluid rounded shadow-sm">
-                                        <p class="text-muted small mt-2">Hover over an author name to reveal the + and - filter buttons</p>
-                                    </div>
+                                    <p>To filter by author category interactively:</p>
+                                    <ul>
+                                        <li>Hover your mouse over author names or categories in the visualization</li>
+                                        <li>Look for the "+" (plus) and "-" (minus) buttons that appear</li>
+                                        <li>Click the "+" button to include only that author/category in your filter</li>
+                                        <li>Click the "-" button to exclude that author/category from your results</li>
+                                        <li>The dashboard will update automatically to reflect your filter choices</li>
+                                    </ul>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-003.jpg" 
+                                         alt="Interactive filtering with plus and minus buttons on hover" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAuthor2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuthor2" aria-expanded="false" aria-controls="collapseAuthor2">
-                                    How do I search for specific authors using the advanced method?
+                            <h3 class="accordion-header" id="author2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-author2" aria-expanded="false" aria-controls="collapse-author2">
+                                    Can I search for specific authors?
                                 </button>
                             </h3>
-                            <div id="collapseAuthor2" class="accordion-collapse collapse" aria-labelledby="headingAuthor2" data-bs-parent="#authorAccordion">
+                            <div id="collapse-author2" class="accordion-collapse collapse" aria-labelledby="author2" data-bs-parent="#authorAccordion">
                                 <div class="accordion-body">
-                                    <p>To search for specific authors using the advanced filter interface:</p>
-                                    <ol>
-                                        <li>Go to the top of the dashboard and click the blue <strong>"+"</strong> button</li>
-                                        <li>Click the <strong>"Select a field"</strong> dropdown</li>
-                                        <li>Type <strong>"author"</strong> to find the author field</li>
-                                        <li>Click <strong>"author"</strong> from the dropdown options</li>
-                                        <li>Click the <strong>"Select operator"</strong> field</li>
-                                        <li>Select <strong>"is"</strong> as the operator</li>
-                                        <li>Click the <strong>"Enter a value"</strong> field</li>
-                                        <li>Type the name of the author you're looking for</li>
-                                        <li>Add <strong>"*"</strong> before or after the string as a wildcard if necessary (Example: <code>*Tyler*</code>)</li>
-                                        <li>Note that the search is <strong>case sensitive</strong></li>
-                                        <li>Click <strong>"Add filter"</strong></li>
-                                        <li>Check the authors table to verify only matching authors are displayed</li>
-                                    </ol>
+                                    <p>Yes! You can search for specific authors using the advanced search functionality:</p>
+                                    <ul>
+                                        <li>Access the filter controls or search panel</li>
+                                        <li>Look for author-specific search fields</li>
+                                        <li>Enter the author's name (full or partial)</li>
+                                        <li>Use wildcards (*) for broader searches</li>
+                                        <li>Apply the filter to see results for that specific author</li>
+                                    </ul>
+                                    <p>This is particularly useful when you're looking for publications by a known researcher in the field.</p>
                                     
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-004.jpg" alt="Click the blue + button to add filters" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 1: Click the blue "+" button to start adding filters</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-005.jpg" alt="Select a field dropdown" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 2: Click "Select a field" dropdown</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-006.jpg" alt="Type author in the field" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 3: Type "author" to find the author field</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-007.jpg" alt="Select author from dropdown" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 4: Select "author" from the dropdown</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-008.jpg" alt="Select operator field" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 5: Click "Select operator" field</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-009.jpg" alt="Select is operator" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 6: Select "is" as the operator</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-010.jpg" alt="Enter a value field" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 7: Click "Enter a value" field</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-011.jpg" alt="Type author name with wildcard" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 8: Type author name (with wildcards if needed)</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-012.jpg" alt="Click Add filter button" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 9: Click "Add filter" to apply</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-013.jpg" alt="Verify results in authors table" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Step 10: Check the authors table for matching results</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="alert alert-info mt-3">
-                                        <strong>Tip:</strong> Use wildcards (*) to find partial matches. For example, "*Smith*" will find "John Smith", "Mary Smith-Jones", etc.
+                                    <div class="mt-3">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-005.jpg" 
+                                             alt="Author search interface step 1" 
+                                             class="img-fluid rounded border mb-3"
+                                             style="width: 100%;">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-006.jpg" 
+                                             alt="Author search interface step 2" 
+                                             class="img-fluid rounded border mb-3"
+                                             style="width: 100%;">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-007.jpg" 
+                                             alt="Author search interface step 3" 
+                                             class="img-fluid rounded border mb-3"
+                                             style="width: 100%;">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-008.jpg" 
+                                             alt="Author search interface step 4" 
+                                             class="img-fluid rounded border mb-3"
+                                             style="width: 100%;">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-009.jpg" 
+                                             alt="Author search interface step 5" 
+                                             class="img-fluid rounded border mb-3"
+                                             style="width: 100%;">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-010.jpg" 
+                                             alt="Author search interface step 6" 
+                                             class="img-fluid rounded border mb-3"
+                                             style="width: 100%;">
+                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-011.jpg" 
+                                             alt="Author search interface step 7" 
+                                             class="img-fluid rounded border"
+                                             style="width: 100%;">
                                     </div>
                                 </div>
                             </div>
@@ -232,67 +227,51 @@ description: "Frequently asked questions about using the Food and Agricultural R
                     
                     <div class="accordion" id="affiliationAccordion">
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAffiliation1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAffiliation1" aria-expanded="true" aria-controls="collapseAffiliation1">
-                                    How do I filter by affiliation?
+                            <h3 class="accordion-header" id="affiliation1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-affiliation1" aria-expanded="false" aria-controls="collapse-affiliation1">
+                                    How do I filter by author affiliation?
                                 </button>
                             </h3>
-                            <div id="collapseAffiliation1" class="accordion-collapse collapse show" aria-labelledby="headingAffiliation1" data-bs-parent="#affiliationAccordion">
+                            <div id="collapse-affiliation1" class="accordion-collapse collapse" aria-labelledby="affiliation1" data-bs-parent="#affiliationAccordion">
                                 <div class="accordion-body">
-                                    <p>Filtering by affiliation works similarly to author filtering:</p>
-                                    <ol>
-                                        <li><strong>Hover</strong> your mouse over an affiliation name in the data visualization</li>
-                                        <li>Interactive options will appear</li>
-                                        <li>Click the <strong>"+"</strong> button to <em>include</em> this affiliation in your search</li>
-                                        <li>Click the <strong>"-"</strong> button to <em>exclude</em> this affiliation from your search</li>
-                                        <li>The dashboard will update to show only data matching your affiliation criteria</li>
-                                    </ol>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-003.jpg" alt="Interactive filtering interface" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Interactive filtering works the same for both authors and affiliations</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-001.jpg" alt="Applied filters display" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">View your applied affiliation filters at the top of the dashboard</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="alert alert-info mt-3">
-                                        <strong>Note:</strong> The same hover-and-click mechanism used for authors applies to affiliations. Look for + and - buttons when you hover over affiliation names in the visualization.
-                                    </div>
+                                    <p>To filter by institutional affiliation:</p>
+                                    <ul>
+                                        <li>Look for affiliation-related charts or lists in the dashboard</li>
+                                        <li>Hover over institution names to reveal filter options</li>
+                                        <li>Use the "+" button to filter for specific institutions</li>
+                                        <li>Use the "-" button to exclude certain institutions</li>
+                                        <li>You can apply multiple affiliation filters simultaneously</li>
+                                    </ul>
+                                    <p>This helps you focus on research from specific universities, organizations, or geographic regions.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-003.jpg" 
+                                         alt="Affiliation filtering interface with institutional options" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAffiliation2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAffiliation2" aria-expanded="false" aria-controls="collapseAffiliation2">
-                                    How do I search for specific affiliations using the advanced method?
+                            <h3 class="accordion-header" id="affiliation2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-affiliation2" aria-expanded="false" aria-controls="collapse-affiliation2">
+                                    Can I search for specific institutions or organizations?
                                 </button>
                             </h3>
-                            <div id="collapseAffiliation2" class="accordion-collapse collapse" aria-labelledby="headingAffiliation2" data-bs-parent="#affiliationAccordion">
+                            <div id="collapse-affiliation2" class="accordion-collapse collapse" aria-labelledby="affiliation2" data-bs-parent="#affiliationAccordion">
                                 <div class="accordion-body">
-                                    <p>To search for specific affiliations using the advanced filter interface:</p>
-                                    <ol>
-                                        <li>Click the blue <strong>"+"</strong> button at the top of the dashboard</li>
-                                        <li>Select <strong>"affiliation"</strong> from the field dropdown instead of "author"</li>
-                                        <li>Choose your operator (typically "is" or "contains")</li>
-                                        <li>Enter the affiliation name (use wildcards like <code>*University*</code> for broader matches)</li>
-                                        <li>Click <strong>"Add filter"</strong> to apply</li>
-                                    </ol>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-004.jpg" alt="Add filter button" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Click the "+" button to start creating an affiliation filter</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-006.jpg" alt="Field selection" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Type "affiliation" to find the affiliation field option</p>
-                                        </div>
-                                    </div>
+                                    <p>Yes, you can search for specific institutions using advanced filtering:</p>
+                                    <ul>
+                                        <li>Access the advanced filter options</li>
+                                        <li>Select affiliation or institution fields</li>
+                                        <li>Enter the organization name (use partial names for broader results)</li>
+                                        <li>Apply wildcards (*) to match multiple similar institutions</li>
+                                        <li>Filter to see research from your target organizations</li>
+                                    </ul>
+                                    <p>This is useful for tracking research output from specific universities, government agencies, or research institutes.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-005.jpg" 
+                                         alt="Advanced affiliation search with institutional filtering" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
@@ -305,98 +284,74 @@ description: "Frequently asked questions about using the Food and Agricultural R
                     
                     <div class="accordion" id="advancedAccordion">
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAdvanced1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced1" aria-expanded="true" aria-controls="collapseAdvanced1">
-                                    Can I use logical operators like AND and OR in my filters?
+                            <h3 class="accordion-header" id="advanced1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-advanced1" aria-expanded="false" aria-controls="collapse-advanced1">
+                                    How do I use advanced search with field selection and operators?
                                 </button>
                             </h3>
-                            <div id="collapseAdvanced1" class="accordion-collapse collapse show" aria-labelledby="headingAdvanced1" data-bs-parent="#advancedAccordion">
+                            <div id="collapse-advanced1" class="accordion-collapse collapse" aria-labelledby="advanced1" data-bs-parent="#advancedAccordion">
                                 <div class="accordion-body">
-                                    <p>Yes! The dashboard supports advanced logical operations:</p>
+                                    <p>For advanced searching with specific criteria:</p>
                                     <ul>
-                                        <li><strong>AND logic:</strong> Apply multiple filters to narrow down results (e.g., show papers by "Author A" AND from "University B")</li>
-                                        <li><strong>OR logic:</strong> Use OR operators to broaden your search (e.g., show papers by "Author A" OR "Author B")</li>
-                                        <li><strong>Combination filters:</strong> You can combine multiple filters with different logical operators</li>
-                                        <li><strong>Remove filters:</strong> Each filter can be removed individually without affecting others</li>
+                                        <li>Access the advanced filter panel or search interface</li>
+                                        <li>Select the field you want to search (author, title, keyword, etc.)</li>
+                                        <li>Choose an operator (contains, equals, starts with, etc.)</li>
+                                        <li>Enter your search value or criteria</li>
+                                        <li>Apply the filter to see targeted results</li>
                                     </ul>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-009.jpg" alt="Operator selection interface" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Choose logical operators like "is", "contains", or "is not"</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-001.jpg" alt="Multiple filters applied" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Multiple filters work together using AND/OR logic</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="alert alert-success mt-3">
-                                        <strong>Pro Tip:</strong> Experiment with different combinations of filters to find the exact data you're looking for!
-                                    </div>
+                                    <p>Available operators typically include: contains, equals, starts with, ends with, and pattern matching.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-006.jpg" 
+                                         alt="Advanced search interface with field selection and operators" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAdvanced2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced2" aria-expanded="false" aria-controls="collapseAdvanced2">
-                                    What wildcard characters can I use in searches?
+                            <h3 class="accordion-header" id="advanced2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-advanced2" aria-expanded="false" aria-controls="collapse-advanced2">
+                                    What are wildcards and how do I use them?
                                 </button>
                             </h3>
-                            <div id="collapseAdvanced2" class="accordion-collapse collapse" aria-labelledby="headingAdvanced2" data-bs-parent="#advancedAccordion">
+                            <div id="collapse-advanced2" class="accordion-collapse collapse" aria-labelledby="advanced2" data-bs-parent="#advancedAccordion">
                                 <div class="accordion-body">
-                                    <p>The dashboard supports the asterisk (*) wildcard character:</p>
+                                    <p>Wildcards help you search for patterns and partial matches:</p>
                                     <ul>
-                                        <li><strong>*</strong> (asterisk) - Matches any number of characters</li>
-                                        <li><strong>Examples:</strong>
-                                            <ul class="mt-2">
-                                                <li><code>*Tyler*</code> - Finds any name containing "Tyler"</li>
-                                                <li><code>Smith*</code> - Finds names starting with "Smith"</li>
-                                                <li><code>*University</code> - Finds affiliations ending with "University"</li>
-                                            </ul>
-                                        </li>
+                                        <li><strong>Asterisk (*)</strong> - Matches any number of characters</li>
+                                        <li><strong>Example:</strong> "Smith*" finds Smith, Smithson, Smithfield</li>
+                                        <li><strong>Example:</strong> "*climate*" finds anything containing "climate"</li>
+                                        <li><strong>Example:</strong> "Univ*" finds University, Universities, etc.</li>
                                     </ul>
-                                    
-                                    <div class="mt-3">
-                                        <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-011.jpg" alt="Wildcard usage example" class="img-fluid rounded shadow-sm">
-                                        <p class="text-muted small mt-2">Example of using wildcards (*) in search values for broader matches</p>
-                                    </div>
-                                    
-                                    <div class="alert alert-warning mt-3">
-                                        <strong>Important:</strong> Searches are case-sensitive, so "tyler" and "Tyler" will return different results.
-                                    </div>
+                                    <p>Wildcards are especially useful when you're not sure of exact spellings or want to capture variations of terms.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-007.jpg" 
+                                         alt="Wildcard search examples and pattern matching" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingAdvanced3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced3" aria-expanded="false" aria-controls="collapseAdvanced3">
-                                    How do I create complex multi-step filters?
+                            <h3 class="accordion-header" id="advanced3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-advanced3" aria-expanded="false" aria-controls="collapse-advanced3">
+                                    Are searches case-sensitive?
                                 </button>
                             </h3>
-                            <div id="collapseAdvanced3" class="accordion-collapse collapse" aria-labelledby="headingAdvanced3" data-bs-parent="#advancedAccordion">
+                            <div id="collapse-advanced3" class="accordion-collapse collapse" aria-labelledby="advanced3" data-bs-parent="#advancedAccordion">
                                 <div class="accordion-body">
-                                    <p>For complex filtering scenarios, follow this systematic approach:</p>
-                                    <ol>
-                                        <li>Start with your most specific filter first</li>
-                                        <li>Add additional filters one at a time</li>
-                                        <li>Review results after each filter to ensure you're getting expected data</li>
-                                        <li>Use the filter display area to monitor your active filters</li>
-                                        <li>Remove or modify filters as needed to refine your search</li>
-                                    </ol>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-012.jpg" alt="Adding multiple filters" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Build complex searches by adding multiple filters step by step</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-013.jpg" alt="Results verification" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Always verify your results match your search expectations</p>
-                                        </div>
-                                    </div>
+                                    <p>Search behavior varies by field and interface:</p>
+                                    <ul>
+                                        <li><strong>Most searches are case-insensitive</strong> - "smith" will find "Smith", "SMITH", "smith"</li>
+                                        <li>Some advanced filter options may have case-sensitive settings</li>
+                                        <li>Check for case sensitivity options in the filter interface</li>
+                                        <li>When in doubt, try searches in lowercase for broader results</li>
+                                    </ul>
+                                    <p>Generally, it's safe to use any case when searching, as the system is designed to be user-friendly.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-008.jpg" 
+                                         alt="Case sensitivity options and search settings" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
@@ -409,97 +364,102 @@ description: "Frequently asked questions about using the Food and Agricultural R
                     
                     <div class="accordion" id="managementAccordion">
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingManagement1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManagement1" aria-expanded="true" aria-controls="collapseManagement1">
-                                    How do I verify that my filters are working correctly?
+                            <h3 class="accordion-header" id="management1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-management1" aria-expanded="false" aria-controls="collapse-management1">
+                                    How do I combine multiple filters with AND/OR logic?
                                 </button>
                             </h3>
-                            <div id="collapseManagement1" class="accordion-collapse collapse show" aria-labelledby="headingManagement1" data-bs-parent="#managementAccordion">
+                            <div id="collapse-management1" class="accordion-collapse collapse" aria-labelledby="management1" data-bs-parent="#managementAccordion">
                                 <div class="accordion-body">
-                                    <p>After applying filters, you can verify they're working by:</p>
-                                    <ol>
-                                        <li><strong>Check the data tables:</strong> Look at the authors table or other data displays to ensure only matching results are shown</li>
-                                        <li><strong>Review active filters:</strong> Go to the top of the dashboard to see all currently applied filters</li>
-                                        <li><strong>Monitor data counts:</strong> Notice how the number of results changes when you add or remove filters</li>
-                                        <li><strong>Test filter combinations:</strong> Try different combinations to ensure the logic is working as expected</li>
-                                    </ol>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-013.jpg" alt="Data table verification" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Verify filters are working by checking the data tables</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-001.jpg" alt="Active filters monitoring" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Monitor your active filters at the top of the dashboard</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingManagement2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManagement2" aria-expanded="false" aria-controls="collapseManagement2">
-                                    What should I do if the dashboard isn't responding to my filters?
-                                </button>
-                            </h3>
-                            <div id="collapseManagement2" class="accordion-collapse collapse" aria-labelledby="headingManagement2" data-bs-parent="#managementAccordion">
-                                <div class="accordion-body">
-                                    <p>If filters aren't working as expected, try these troubleshooting steps:</p>
-                                    <ol>
-                                        <li><strong>Refresh the page:</strong> Sometimes a simple page refresh resolves display issues</li>
-                                        <li><strong>Clear all filters:</strong> Remove all filters and start over to ensure a clean state</li>
-                                        <li><strong>Check filter syntax:</strong> Ensure you're using the correct case and wildcard characters</li>
-                                        <li><strong>Wait for loading:</strong> The dashboard may need a moment to process complex filter combinations</li>
-                                        <li><strong>Check your internet connection:</strong> Ensure you have a stable connection to the server</li>
-                                    </ol>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-002.jpg" alt="Clearing filters" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Clear problematic filters using the "x" button</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-000.jpg" alt="Dashboard refresh" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Start fresh by refreshing the dashboard page</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="alert alert-info mt-3">
-                                        <strong>Note:</strong> This is a beta version dashboard. If you continue to experience issues, please contact our support team for assistance.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingManagement3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManagement3" aria-expanded="false" aria-controls="collapseManagement3">
-                                    How do I manage multiple filters efficiently?
-                                </button>
-                            </h3>
-                            <div id="collapseManagement3" class="accordion-collapse collapse" aria-labelledby="headingManagement3" data-bs-parent="#managementAccordion">
-                                <div class="accordion-body">
-                                    <p>For efficient filter management with multiple active filters:</p>
+                                    <p>The dashboard supports complex filter combinations:</p>
                                     <ul>
-                                        <li><strong>Start broad, then narrow:</strong> Begin with general filters and add specific ones</li>
-                                        <li><strong>Name your approach:</strong> Keep track of what each filter is meant to accomplish</li>
-                                        <li><strong>Test incrementally:</strong> Add one filter at a time and check results</li>
-                                        <li><strong>Use the filter display:</strong> Regularly review the active filters area</li>
-                                        <li><strong>Save successful combinations:</strong> Note filter combinations that work well for future use</li>
+                                        <li><strong>AND Logic (default):</strong> Multiple filters narrow results (must match all criteria)</li>
+                                        <li><strong>OR Logic:</strong> Available in some advanced filter interfaces (matches any criteria)</li>
+                                        <li>Apply multiple filters step-by-step to refine your search</li>
+                                        <li>Use the filter display area to monitor your active criteria</li>
+                                        <li>Remove filters individually to broaden results as needed</li>
                                     </ul>
-                                    
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-004.jpg" alt="Adding new filters" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Add filters incrementally using the "+" button</p>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-012.jpg" alt="Filter organization" class="img-fluid rounded shadow-sm">
-                                            <p class="text-muted small mt-2">Organize your filtering strategy systematically</p>
-                                        </div>
-                                    </div>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-009.jpg" 
+                                         alt="Multiple filter combination showing AND/OR logic options" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="management2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-management2" aria-expanded="false" aria-controls="collapse-management2">
+                                    How can I verify that my filters are working correctly?
+                                </button>
+                            </h3>
+                            <div id="collapse-management2" class="accordion-collapse collapse" aria-labelledby="management2" data-bs-parent="#managementAccordion">
+                                <div class="accordion-body">
+                                    <p>To confirm your filters are working properly:</p>
+                                    <ul>
+                                        <li>Check the filter display area to see all active filters</li>
+                                        <li>Notice how result counts change when filters are applied</li>
+                                        <li>Review the data in charts and tables to confirm they match your criteria</li>
+                                        <li>Try removing and reapplying filters to see the difference</li>
+                                        <li>Use the dashboard's data summary or count indicators</li>
+                                    </ul>
+                                    <p>The dashboard should show immediate visual feedback when filters are applied or removed.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-010.jpg" 
+                                         alt="Filter verification and result validation interface" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="management3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-management3" aria-expanded="false" aria-controls="collapse-management3">
+                                    What should I do if filters aren't working as expected?
+                                </button>
+                            </h3>
+                            <div id="collapse-management3" class="accordion-collapse collapse" aria-labelledby="management3" data-bs-parent="#managementAccordion">
+                                <div class="accordion-body">
+                                    <p>If you're experiencing filter issues:</p>
+                                    <ul>
+                                        <li><strong>Clear all filters</strong> and start fresh</li>
+                                        <li><strong>Refresh the page</strong> to reset the dashboard state</li>
+                                        <li><strong>Check spelling</strong> in your search terms</li>
+                                        <li><strong>Try broader search terms</strong> or wildcards</li>
+                                        <li><strong>Remove conflicting filters</strong> that might exclude all results</li>
+                                        <li><strong>Verify field selections</strong> in advanced search</li>
+                                    </ul>
+                                    <p>Most filter issues can be resolved by starting with simpler criteria and building complexity gradually.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-011.jpg" 
+                                         alt="Filter troubleshooting and reset options" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="management4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-management4" aria-expanded="false" aria-controls="collapse-management4">
+                                    Are there any tips for more efficient filtering?
+                                </button>
+                            </h3>
+                            <div id="collapse-management4" class="accordion-collapse collapse" aria-labelledby="management4" data-bs-parent="#managementAccordion">
+                                <div class="accordion-body">
+                                    <p>Best practices for effective dashboard filtering:</p>
+                                    <ul>
+                                        <li><strong>Start broad, then narrow:</strong> Begin with general filters and add specificity</li>
+                                        <li><strong>Use the interactive hover filters</strong> for quick exploration</li>
+                                        <li><strong>Monitor result counts</strong> to ensure you're not over-filtering</li>
+                                        <li><strong>Save or bookmark</strong> useful filter combinations if the dashboard supports it</li>
+                                        <li><strong>Explore related data</strong> before applying restrictive filters</li>
+                                        <li><strong>Use wildcards strategically</strong> for flexible searching</li>
+                                    </ul>
+                                    <p>Remember that the goal is to find insights, so balance precision with exploration.</p>
+                                    <img src="{{ site.baseurl }}/assets/images/faq/dashboard-step-012.jpg" 
+                                         alt="Efficient filtering tips and best practices interface" 
+                                         class="img-fluid rounded border mt-3"
+                                         style="width: 100%;">
                                 </div>
                             </div>
                         </div>
@@ -521,4 +481,60 @@ description: "Frequently asked questions about using the Food and Agricultural R
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+<!-- Custom CSS for hover effects and responsiveness -->
+<style>
+    .faq-navigation-sidebar .nav-link-item {
+        color: #1e3a8a;
+        font-weight: 500;
+        padding: 0.375rem 0.5rem;
+        border-radius: 0.375rem;
+        transition: all 0.2s;
+        margin-bottom: 0.25rem;
+        display: block;
+        white-space: nowrap;
+    }
+    
+    .faq-navigation-sidebar .nav-link-item:hover {
+        background-color: #f1f5f9;
+        color: #1e40af;
+    }
+    
+    .faq-navigation-sidebar .nav-link-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .faq-navigation-sidebar ul {
+        margin-bottom: 0;
+    }
+    
+    .faq-navigation-sidebar li {
+        margin-bottom: 0;
+    }
+    
+    @media (max-width: 991.98px) {
+        .faq-navigation-sidebar {
+            position: static !important;
+            margin-bottom: 2rem;
+        }
+        
+        .faq-navigation-sidebar .nav-link-item {
+            white-space: normal;
+        }
+    }
+    
+    .faq-navigation-sidebar svg {
+        flex-shrink: 0;
+    }
+
+    /* Custom styles for bullet points in lists */
+    .accordion-body ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+    }
+    
+    .accordion-body ul li {
+        margin-bottom: 0.5rem;
+    }
+</style> 
