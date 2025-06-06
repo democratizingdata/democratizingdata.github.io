@@ -18,37 +18,91 @@ description: "Discover how workforce development and skills datasets are utilize
             </div>
             <div class="col-lg-5">
                 <p class="c-hero__description" style="margin-bottom: 0; font-size: 0.95rem;">
-                    <strong>Dashboard Coming Soon:</strong> We are currently developing and validating the workforce dashboard. This page provides information about the upcoming dashboard that will analyze how workforce development and skills datasets are utilized in labor market research, education studies, and human capital development publications.
+                    <strong>This is a beta version dashboard.</strong> We are currently validating the collected metadata and refining our analysis methods. Discover how workforce development and skills datasets are utilized in labor market research, education studies, and human capital development publications.
                 </p>
             </div>
             <div class="col-lg-3">
                 <div class="c-hero__actions" style="text-align: left;">
-                    <a href="#dashboard-features" class="c-button c-button--primary" style="margin-bottom: 0.5rem; display: block;">
-                        Explore Features
-                        <svg class="c-button__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
+                    <a href="{{ site.baseurl }}/tools/dashboard/dimensions/workforce/" class="c-button c-button--primary" style="margin-bottom: 0.5rem; display: block;">
+                        Explore Beta Dashboard
                     </a>
-                    <div class="c-button c-button--secondary c-button--disabled" style="display: block; background: #6b7280; cursor: not-allowed; border-color: #6b7280; color: white;">
-                        Coming Soon
-                    </div>
+                    <a href="#dashboard-features" class="c-button c-button--secondary" style="margin-bottom: 0.5rem; display: block;">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Coming Soon Section -->
-<section class="c-content-section" style="padding: 60px 0;">
+<!-- Dashboard Features Section -->
+<section id="dashboard-features" class="c-content-section" style="padding: 60px 0;">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-                <div class="c-button c-button--primary c-button--large c-button--disabled" style="background: #6b7280; cursor: not-allowed; border-color: #6b7280; color: white;">
-                    Dashboard on Workforce and Skills Data Coming Soon
-                    <svg class="c-button__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12,6 12,12 16,14"/>
-                    </svg>
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="h3 mb-3">Dashboard Features</h2>
+                    <p class="text-muted">
+                        Our workforce and skills dashboard provides comprehensive insights into how federal workforce datasets are being utilized in research and policy development.
+                    </p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="c-feature-card">
+                            <div class="c-feature-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="text-primary">
+                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                                </svg>
+                            </div>
+                            <h4 class="h6 mb-2">Interactive Visualizations</h4>
+                            <p class="small text-muted">Explore workforce data usage patterns through dynamic charts and interactive filtering capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="c-feature-card">
+                            <div class="c-feature-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="text-primary">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h4 class="h6 mb-2">Research Impact Analysis</h4>
+                            <p class="small text-muted">Track how workforce datasets influence research in employment, education, and skills development.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="c-feature-card">
+                            <div class="c-feature-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="text-primary">
+                                    <path d="M3 3v18h18"/>
+                                    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                                </svg>
+                            </div>
+                            <h4 class="h6 mb-2">Trend Analysis</h4>
+                            <p class="small text-muted">Monitor temporal trends in workforce data usage across different research domains and policy areas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="c-feature-card">
+                            <div class="c-feature-card__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="text-primary">
+                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                                </svg>
+                            </div>
+                            <h4 class="h6 mb-2">Dataset Discovery</h4>
+                            <p class="small text-muted">Discover which workforce datasets are most frequently referenced in academic and policy research.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="{{ site.baseurl }}/tools/dashboard/dimensions/workforce/" class="btn btn-primary btn-lg">
+                        Explore Beta Dashboard
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="ms-2">
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>

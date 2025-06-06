@@ -33,7 +33,7 @@ permalink: /tools/dashboard/dimensions/
         
         <!-- Food And Agricultural Research Dashboard -->
         <div class="col-md-6">
-          <div class="c-section-card h-100">
+          <div class="c-section-card h-100 d-flex flex-column">
             <div class="c-section-card__icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
@@ -43,7 +43,7 @@ permalink: /tools/dashboard/dimensions/
             <p class="c-section-card__description">
               Explore comprehensive agricultural data from food and agricultural research, including crop production, livestock statistics, and agricultural economic indicators.
             </p>
-            <div class="c-section-card__details">
+            <div class="c-section-card__details flex-grow-1">
               <ul class="list-unstyled mb-3">
                 <li class="mb-2 d-flex align-items-center">
                   <span class="me-2" style="color: #6b7280; font-weight: bold;">•</span>
@@ -63,8 +63,8 @@ permalink: /tools/dashboard/dimensions/
                 </li>
               </ul>
             </div>
-            <div class="c-section-card__links">
-              <a href="/tools/dashboard/dimensions/food-agricultural-research/" class="btn btn-primary">
+            <div class="c-section-card__links mt-auto">
+              <a href="{{ site.baseurl }}/tools/dashboard/dimensions/food-agricultural-research/" class="btn btn-primary">
                 Explore Food And Agricultural Research Dashboard
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="ms-1">
                   <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
@@ -76,7 +76,7 @@ permalink: /tools/dashboard/dimensions/
 
         <!-- Workforce Dashboard -->
         <div class="col-md-6">
-          <div class="c-section-card h-100">
+          <div class="c-section-card h-100 d-flex flex-column">
             <div class="c-section-card__icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2 1l-3 4v2h2l2.54-3.4L16.5 18H20zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9V9c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v6h1.5v7H7.5z"/>
@@ -86,7 +86,7 @@ permalink: /tools/dashboard/dimensions/
             <p class="c-section-card__description">
               Analyze workforce development trends, employment statistics, and skills data to understand labor market dynamics and educational outcomes.
             </p>
-            <div class="c-section-card__details">
+            <div class="c-section-card__details flex-grow-1">
               <ul class="list-unstyled mb-3">
                 <li class="mb-2 d-flex align-items-center">
                   <span class="me-2" style="color: #6b7280; font-weight: bold;">•</span>
@@ -106,14 +106,13 @@ permalink: /tools/dashboard/dimensions/
                 </li>
               </ul>
             </div>
-            <div class="c-section-card__links">
-              <button class="btn btn-secondary" disabled style="background-color: #9ca3af; border-color: #9ca3af; color: #6b7280; cursor: not-allowed; opacity: 0.6;">
-                Workforce Dashboard Coming Soon
+            <div class="c-section-card__links mt-auto">
+              <a href="{{ site.baseurl }}/tools/dashboard/dimensions/workforce/" class="btn btn-primary">
+                Explore Workforce Dashboard
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="ms-1">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -170,7 +169,7 @@ permalink: /tools/dashboard/dimensions/
             <p class="text-muted mb-4">
               Discover our complete suite of tools including Jupyter notebooks, methodology documentation, and additional resources.
             </p>
-            <a href="/tools/" class="btn btn-outline-primary btn-lg me-3">
+            <a href="{{ site.baseurl }}/tools/" class="btn btn-outline-primary btn-lg me-3">
               View All Tools
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="ms-2">
                 <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
