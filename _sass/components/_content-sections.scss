@@ -4675,11 +4675,15 @@ iframe#dashboard {
   }
   
   .carousel {
-    padding: 30px 0; // Reduced from 40px to minimize height
+    padding: 30px 0 20px 0; // Match hero section padding
     margin: 0;
     
+    @media (max-width: 991.98px) {
+      padding: 25px 0 15px 0;
+    }
+    
     @media (max-width: 767.98px) {
-      padding: 25px 0; // Reduced from 30px
+      padding: 20px 0 10px 0;
     }
   }
   
@@ -4740,11 +4744,11 @@ iframe#dashboard {
     display: flex;
     align-items: center;
     height: 290px; // Match the carousel-inner height
-    padding: 25px 80px; // Increased horizontal padding from 60px to 80px for more space from arrows
+    padding: 25px 0; // Remove horizontal padding to align with hero content
     border-radius: 8px;
     
     @media (max-width: 991.98px) {
-      padding: 20px 70px; // Increased from 50px to 70px
+      padding: 20px 0;
       height: 290px;
     }
     
@@ -4752,12 +4756,12 @@ iframe#dashboard {
       flex-direction: column;
       text-align: center;
       justify-content: center;
-      padding: 15px 60px; // Increased from 40px to 60px
+      padding: 15px 0;
       height: 275px;
     }
     
     @media (max-width: 575.98px) {
-      padding: 12px 50px; // Increased from 30px to 50px
+      padding: 12px 0;
       height: 240px;
     }
   }
@@ -4997,6 +5001,27 @@ iframe#dashboard {
       border-color: white;
       transform: scale(1.1);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  // Static Event Card (replaces carousel functionality)
+  .c-static-event-card {
+    padding: 30px 0 20px 0; // Match hero section padding
+    margin: 0;
+    
+    @media (max-width: 991.98px) {
+      padding: 25px 0 15px 0;
+    }
+    
+    @media (max-width: 767.98px) {
+      padding: 20px 0 10px 0;
+    }
+    
+    .c-carousel-slide {
+      background: transparent;
+      backdrop-filter: none;
+      border: none;
+      box-shadow: none;
     }
   }
 }
