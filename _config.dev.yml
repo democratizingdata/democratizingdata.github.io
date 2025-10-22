@@ -1,7 +1,9 @@
 #
 # Use this file in local development to override Production settings
+# Load with: bundle exec jekyll serve --config "_config.yml,_config.dev.yml"
 # 
 
 title: Democratizing Data
 url: "http://localhost:4000"
 baseurl: "/site"
+environment: development

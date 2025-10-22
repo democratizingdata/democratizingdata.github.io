@@ -24,6 +24,13 @@ domain: democratizingdata.ai       # if you want to force HTTPS, specify the dom
 url: "https://democratizingdata.ai" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""          # the subpath of your site, e.g. /blog
 
+# Dashboard URLs
+dashboard_urls:
+  workforce:
+    production: "https://workforce.democratizingdata.ai/usage-statistics"
+    development: "http://localhost:8080/usage-statistics"
+    development: "http://localhost:8080/usage-statistics"
+
 # SEO and Performance
 plugins:
   - jekyll-seo-tag

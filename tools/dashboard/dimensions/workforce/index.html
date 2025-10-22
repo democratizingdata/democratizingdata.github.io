@@ -55,14 +55,39 @@ description: "Analyze workforce and skills dataset usage in research through our
             </div>
         </div>
         
-        <div class="c-dashboard-container">
-            <iframe frameborder="0" 
-                    src="https://appserver.democratizingdata.ai:5601/app/dashboards?auth_provider_hint=anonymous1#/view/fdbe9fa3-7275-4e5b-b850-939575cc85a6?embed=true&_g=(time%3A(from%3Anow-15m%2Cto%3Anow))&show-time-filter=false" 
-                    id="dashboard"
-                    style="height: 2000px;"
-                    title="Workforce and Skills Dataset Usage Beta Dashboard"
-                    aria-label="Interactive beta dashboard showing workforce and skills dataset usage patterns and research impact">
+        <div class="c-dashboard-container" id="dashboard-container">
+            <!-- Loading State -->
+            <div id="dashboard-loading" class="dashboard-loading">
+                <div class="spinner"></div>
+                <p>Loading workforce dashboard...</p>
+            </div>
+            
+            <!-- Dashboard iframe -->
+            <!-- Previous Kibana URL (kept for reference/rollback):
+                 https://appserver.democratizingdata.ai:5601/app/dashboards?auth_provider_hint=anonymous1#/view/fdbe9fa3-7275-4e5b-b850-939575cc85a6?embed=true&_g=(time%3A(from%3Anow-15m%2Cto%3Anow))&show-time-filter=false
+            -->
+            <iframe 
+                id="dashboard-iframe"
+                frameborder="0"
+                scrolling="no"
+                {% if site.environment == 'development' %}
+                src="{{ site.dashboard_urls.workforce.development }}"
+                {% else %}
+                src="{{ site.dashboard_urls.workforce.production }}"
+                {% endif %}
+                style="height: 6000px; opacity: 0; transition: opacity 0.3s; overflow: hidden;"
+                title="Workforce and Skills Dataset Usage Dashboard"
+                aria-label="Interactive dashboard showing workforce and skills dataset usage patterns, research impact, publication trends, and researcher engagement across employment, education, and skills domains"
+                allow="clipboard-write"
+                onload="this.style.opacity='1'; document.getElementById('dashboard-loading').style.display='none';"
+                onerror="document.getElementById('dashboard-error').style.display='block'; document.getElementById('dashboard-loading').style.display='none';">
             </iframe>
+            
+            <!-- Error State -->
+            <div id="dashboard-error" class="dashboard-error" style="display: none;">
+                <p>Unable to load the dashboard. Please check your internet connection and try again.</p>
+                <button onclick="location.reload()">Retry</button>
+            </div>
         </div>
     </div>
 </section>

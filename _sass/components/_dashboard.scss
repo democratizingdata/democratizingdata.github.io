@@ -1,0 +1,207 @@
+/*! Dashboard Component Styles */
+/*! Styles for embedded workforce dashboard integration */
+
+// =============================================================================
+// DASHBOARD CONTAINER
+// =============================================================================
+
+.c-dashboard-container {
+  position: relative;
+  width: 100%;
+  min-height: 2500px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  // Ensure iframe fills container
+  iframe {
+    width: 100%;
+    border: none;
+    display: block;
+  }
+}
+
+// =============================================================================
+// LOADING STATE
+// =============================================================================
+
+.dashboard-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  padding: 2rem;
+  
+  // Loading spinner animation
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6667AB;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  p {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+// Spinner animation keyframes
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+// =============================================================================
+// ERROR STATE
+// =============================================================================
+
+.dashboard-error {
+  padding: 2rem;
+  text-align: center;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  margin: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  p {
+    color: #856404;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  button {
+    background: #6667AB;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    
+    &:hover {
+      background: darken(#6667AB, 10%);
+    }
+    
+    &:focus {
+      outline: 2px solid #6667AB;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+// =============================================================================
+// RESPONSIVE DESIGN
+// =============================================================================
+
+// Tablet and below
+@media (max-width: 768px) {
+  .c-dashboard-container {
+    min-height: 5800px;
+    border-radius: 4px;
+    
+    iframe {
+      height: 5800px !important;
+    }
+  }
+  
+  .dashboard-loading {
+    padding: 1.5rem;
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border-width: 3px;
+    }
+    
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .dashboard-error {
+    padding: 1.5rem;
+    margin: 1rem;
+    
+    p {
+      font-size: 0.9rem;
+    }
+    
+    button {
+      padding: 0.4rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Mobile devices
+@media (max-width: 480px) {
+  .c-dashboard-container {
+    min-height: 1800px;
+    border-radius: 0;
+    
+    iframe {
+      height: 1800px !important;
+    }
+  }
+  
+  .dashboard-loading {
+    padding: 1rem;
+    
+    .spinner {
+      width: 35px;
+      height: 35px;
+    }
+    
+    p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  .dashboard-error {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    
+    p {
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    button {
+      padding: 0.35rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// Large screens - optimize for better viewing
+@media (min-width: 1440px) {
+  .c-dashboard-container {
+    min-height: 4000px;
+    
+    iframe {
+      height: 4000px !important;
+    }
+  }
+}
