@@ -57,15 +57,38 @@ description: "Explore Food And Agricultural Research dataset usage patterns and 
             </div>
         </div>
         
-        <div class="c-dashboard-container">
-            <div class="c-dashboard-iframe-container">
-                <iframe 
-                    src="https://appserver.democratizingdata.ai:5601/app/dashboards?auth_provider_hint=anonymous1#/view/f6a73129-5895-44bc-ac13-333dd89893a9?embed=true&_g=(time%3A(from%3Anow-15m%2Cto%3Anow))&show-time-filter=false"
-                    frameborder="0"
-                    style="height: 1750px;"
-                    title="Food And Agricultural Research Dataset Usage Dashboard (Beta Version)"
-                    aria-label="Interactive beta dashboard showing Food And Agricultural Research dataset usage patterns and research impact">
-                </iframe>
+        <div class="c-dashboard-container" id="dashboard-container">
+            <!-- Loading State -->
+            <div id="dashboard-loading" class="dashboard-loading">
+                <div class="spinner"></div>
+                <p>Loading food and agricultural research dashboard...</p>
+            </div>
+            
+            <!-- Dashboard iframe -->
+            <!-- Previous Kibana URL (kept for reference/rollback):
+                 https://appserver.democratizingdata.ai:5601/app/dashboards?auth_provider_hint=anonymous1#/view/f6a73129-5895-44bc-ac13-333dd89893a9?embed=true&_g=(time%3A(from%3Anow-15m%2Cto%3Anow))&show-time-filter=false
+            -->
+            <iframe 
+                id="dashboard-iframe"
+                frameborder="0"
+                scrolling="no"
+                {% if site.environment == 'development' %}
+                src="{{ site.dashboard_urls.food_agriculture.development }}"
+                {% else %}
+                src="{{ site.dashboard_urls.food_agriculture.production }}"
+                {% endif %}
+                style="height: 8000px; opacity: 0; transition: opacity 0.3s; overflow: hidden;"
+                title="Food And Agricultural Research Dataset Usage Dashboard"
+                aria-label="Interactive dashboard showing food and agricultural research dataset usage patterns, research impact, publication trends, and researcher engagement across agricultural and food policy studies"
+                allow="clipboard-write"
+                onload="this.style.opacity='1'; document.getElementById('dashboard-loading').style.display='none';"
+                onerror="document.getElementById('dashboard-error').style.display='block'; document.getElementById('dashboard-loading').style.display='none';">
+            </iframe>
+            
+            <!-- Error State -->
+            <div id="dashboard-error" class="dashboard-error" style="display: none;">
+                <p>Unable to load the dashboard. Please check your internet connection and try again.</p>
+                <button onclick="location.reload()">Retry</button>
             </div>
         </div>
     </div>

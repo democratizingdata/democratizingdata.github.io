@@ -29,6 +29,8 @@ dashboard_urls:
   workforce:
     production: "https://workforce.democratizingdata.ai/usage-statistics"
     development: "http://localhost:8080/usage-statistics"
+  food_agriculture:
+    production: "https://food-agriculture.democratizingdata.ai/usage-statistics"
     development: "http://localhost:8080/usage-statistics"
 
 # SEO and Performance
