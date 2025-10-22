@@ -17,6 +17,15 @@
     <link rel="preconnect" href="https://code.jquery.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Dashboard Performance Optimizations -->
+    {% if site.environment == 'development' %}
+    <link rel="preconnect" href="http://localhost:8080">
+    <link rel="preconnect" href="http://localhost:3001">
+    {% else %}
+    <link rel="preconnect" href="https://workforce.democratizingdata.ai">
+    <link rel="preconnect" href="https://food-agriculture.democratizingdata.ai">
+    {% endif %}
 
     <!-- Critical CSS for above-the-fold content -->
     <link rel="preload" href="{{ site.baseurl }}/assets/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
